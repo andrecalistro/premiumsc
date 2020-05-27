@@ -372,8 +372,5 @@ return [
         'timeout' => 0
     ],
     'TrustProxy' => false,
-    'Theme' => 'Theme',
-	'activePluginCheckout' => true,
-	'activePluginCheckoutV2' => false,
-    'activePluginUfoAdmin' => false
+    'Theme' => 'Theme'
 ];
