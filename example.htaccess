@@ -1,0 +1,18 @@
+#<IfModule pagespeed_module>
+#    ModPagespeed off
+#</IfModule>
+#ModPagespeedDisallow "*/admin/*"
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+
+    #RewriteCond %{HTTPS} !=on
+    #RewriteCond %{REQUEST_URI} ^/\.well-known/
+    #RewriteRule (.*) - [L,NC]
+
+    #RewriteCond %{HTTP_HOST} ^futebol.dev$
+    #RewriteCond %{HTTPS} !=on
+    #RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R=302,L]
+
+    RewriteRule    ^$    webroot/    [L]
+    RewriteRule    (.*) webroot/$1    [L]
+</IfModule>

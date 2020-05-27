@@ -1,0 +1,31 @@
+.mfp-slide-bottom .zoom-anim-dialog {
+	opacity: 0;
+	transition: all 0.2s ease-out;
+	transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+}
+      
+/* animate in */
+.mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
+	opacity: 1;
+	transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+}
+
+/* animate out */
+.mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
+	opacity: 0;
+	transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+}
+
+/* Dark overlay, start state */
+.mfp-slide-bottom.mfp-bg {
+	opacity: 0;
+	transition: opacity 0.15s ease-out;
+}
+/* animate in */
+.mfp-slide-bottom.mfp-ready.mfp-bg {
+	opacity: 0.8;
+}
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing.mfp-bg {
+	opacity: 0;
+}

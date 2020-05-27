@@ -1,0 +1,61 @@
+// stylelint-disable
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #f0f0f0 !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #666666 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$primary: $color-primary !default;
+$secondary: $color-secondary !default;
+
+$success: $color-success !default;
+
+$font-family-base: 'Fira Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-size-base: 15.5px;
+$font-weight-base: 400;
+$line-height-base: 1.5;
+
+$font-title-base: 'News Cycle' !default;
+
+$body-bg: $white;
+$body-color: $gray-700;
+
+$headings-margin-bottom: 1.125rem;
+
+$paragraph-margin-bottom: 1.125rem;
+$label-margin-bottom: 1.125rem;
+
+$dt-font-weight: 700;
+
+$link-color: $primary;
+$link-decoration: none !default;
+
+$link-hover-color: $primary;
+$link-hover-decoration: underline !default;
+
+$table-cell-padding: .75rem;
+$table-caption-color: $primary;
+
+$navbar-height: 75px !default;
+$navbar-background: $white !default;
+
+$z-index-default:   1 !default;
+$z-index-navbar:    101 !default;
+$z-index-overlay:   1001 !default;
+$z-index-drawer:    1010 !default;
+$z-index-modal:     10001 !default;
+$z-index-tooltip:   10110 !default;
+
+$input-valid-bg-color: #f5fbf7;
+$input-valid-border-color: #36b263;
+
+$input-invalid-bg-color: #fbf4f3 !default;
+$input-invalid-border-color: $primary !default;
+
+$input-padding: 12px 14px !default;

@@ -1,0 +1,140 @@
+$md-chip-height: 28px;
+$md-chip-color: $primary;
+$md-chip-text-color: $white;
+
+.chip {
+    display: inline-block;
+    background: $md-chip-color;
+    padding: 0 12px;
+    border-radius: 32px;
+    color: $md-chip-text-color;
+    font-size: 13px;
+    height: $md-chip-height;
+    line-height: $md-chip-height;
+    span {
+        margin-left: 25px;
+        padding-right: 7px;
+    }
+}
+
+.chip-remove {
+    display: inline-block;
+    border: 0;
+    background: $md-chip-color;
+    height: 20px;
+    width: 20px;
+    padding: 0;
+    margin: 4px 0;
+    cursor: pointer;
+    font-size: 25px;
+    line-height: 20px;
+    font-size: 25px;
+    position: absolute;
+    &:after { 
+      color: #d9908d;
+      content: '\00d7';
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.category-filters {
+    background: $gray-200;
+    padding: 25px 30px;
+
+    @include bp-lg {
+        padding: 20px;
+    }
+}
+
+.filter-block {
+    margin-bottom: 25px;
+    h4 {
+        font-size: 1.1em;
+        text-transform: uppercase;
+        color: $gray-600;
+        margin-bottom: 7px;
+    }
+    ul {
+        list-style: none;
+        padding-left: 27px;
+        margin: 0;
+        li {
+            a {
+                text-decoration: underline;
+                text-underline-position: under;
+                color: $gray-900;
+                font-weight: 500;
+                + ul {
+                    list-style: none;
+                    margin-top: 5px;
+                    padding: 0;
+                    li {
+                        a {
+                            font-weight: 400;
+                            text-decoration: none;
+                            font-size: 0.85em;
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .form-group {
+        [type="radio"] + label {
+            display: block;
+        }
+    }
+
+    &.last {
+        margin-bottom: 15px;
+    }
+}
+
+.category-products {
+    padding-top: 25px;
+    padding-bottom: 45px;
+    position: relative;
+    display: table;
+    width: 100%;
+    ul.product-list {
+        li {
+            width: 25%;
+            a.product {
+                min-height: 465px;
+            }
+        
+            @include bp-lg {
+                width: 33.333%;
+                a.product {
+                    height: 465px;
+                }
+            }
+
+            @include bp-md {
+                a.product {
+                    height: 485px;
+                }
+            }
+
+
+            @include bp-sm {
+                width: 50%;
+                a.product {
+                    height: 525px;
+                }
+            }
+        
+            @include bp-xs {
+                a.product {
+                    height: auto;
+                }
+            }
+
+        }
+    }
+}

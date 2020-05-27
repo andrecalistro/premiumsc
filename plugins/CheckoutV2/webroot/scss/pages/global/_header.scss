@@ -1,0 +1,271 @@
+header {
+	background: $header-background;
+
+	> .container {
+		padding-top: 7px;
+		padding-bottom: 0;
+	}
+
+	.brand {
+		background: none;
+		width: auto;
+		height: auto;
+		top: 0;
+	}
+
+	.progress-steps {
+		padding: 0;
+		ul {
+			li {
+				padding: 3px 5px;
+				color: rgba($step-text-color, 0.35);
+				font-weight: 400;
+				&:before {
+					background: $step-background-color;
+					border-color: $step-border-color;
+					position: relative;
+				}
+				&:after {
+					top: 18px;
+					background: $step-line-color;
+				}
+				&.complete {
+					color: $step-text-color;
+				}
+
+				&.active {
+					color: $step-text-color;
+				}
+				a {
+					color: $step-text-color;
+				}
+			}
+		}
+
+	}
+
+	//&:after {
+	//	background: url(../img/header-bg.jpg) no-repeat center center;
+	//	background-size: cover;
+	//	content: '';
+	//	width: 100%;
+	//	height: 100%;
+	//	position: absolute;
+	//	top: 0;
+	//	z-index: -1;
+	//	opacity: 0.2;
+	//}
+}
+
+section.main {
+	background: $white;
+	position: relative;
+	margin-top: 20px;
+
+	@include bp-md {
+		margin-top: 120px;
+	}
+
+	@include bp-xs {
+		margin-top: 105px;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-title-base;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 2.25em;
+}
+
+@include bp-md {
+	h2 {
+		font-size: 1.65em;
+	}
+}
+
+.text-right {
+	text-align: right;
+}
+
+.float-left {
+	float: left;
+}
+.float-right {
+	float: right;
+}
+
+.text-center {
+	float: none;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	clear: both;
+
+	&.spaced {
+		padding: 25px 0;
+	}
+}
+
+.breadcrumb {
+	position: relative;
+	padding: 40px 0 25px;
+	display: table;
+	width: 100%;
+	ul {
+		position: relative;
+		margin: 0;
+		list-style: none;
+		padding: 0;
+		font-size: 1.075em;
+		font-weight: 500;
+		color: $primary;
+		li {
+			float: left;
+			a {
+				font-weight: 400;
+				color: $gray-800;
+				text-decoration: underline;
+				text-underline-position: under;
+				&:hover {
+					color: $primary;
+				}
+			}
+			&:after {
+				@include icon($icomoon-font-family);
+				content: $icon-arrow-left;
+				color: $gray-800;
+				transform: rotate(180deg);
+				display: inline-block;
+				position: relative;
+				top: 2px;
+				margin-left: 4px;
+				margin-right: 4px;
+			}
+
+			&:last-child {
+				&:after {
+					content: none;
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+.progress-steps {
+	padding: 5px 0 35px;
+	ul{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: table;
+		width: 100%;
+		position: relative;
+		li {
+			display: table-cell;
+			width: 1%;
+			text-align: center;
+			padding: 20px 5px;
+			position: relative;
+			line-height: 1.1;
+			font-weight: 500;
+			font-size: 0.9em;
+			color: rgba($gray-800,0.35);
+
+			&:before {
+				width: 30px;
+				height: 30px;
+				border: 2px solid rgba($primary,0.35);
+				border-radius: 100%;
+				display: block;
+				position: relative;
+				z-index: 2;
+				@include icon($icomoon-font-family);
+				content: $icon-circle;
+				line-height: 27px;
+				font-size: 17px;
+				color: rgba($primary, 0.35);
+				margin: 0 auto 10px;
+				background: $step-background-color;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				display: inline-block;
+				height: 2px;
+				width: 100%;
+				left: 50%;
+				top: 35px;
+				z-index: 1;
+				background: rgba($primary, 0.35);
+			}
+
+
+			&:last-child {
+				&:after {
+					content: none;
+				}
+			}
+
+			&.complete {
+				color: $gray-800;
+				&:after {
+					background: $primary;
+				}
+				&:before {
+					border-color: $primary;
+					color: $primary;
+				}
+			}
+
+			&.active {
+				color: $gray-800;
+				&:before {
+					border-color: $primary;
+					color: $primary;
+				}
+			}
+
+		}
+	}
+	@include bp-xs {
+		ul {
+			li {
+				display: none;
+				&.active {
+					display: inline-block;
+					width: 100%;
+					&:after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+.modal {
+	background: $white;
+	max-width: 560px;
+	width: auto;
+	margin: 0 auto;
+	padding: 35px;
+}
+
+.custom-pagination {
+	width: 100%;
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	list-style: none;
+	li {
+		float: left;
+		padding: 5px 10px;
+		border: solid 1px rgba(219, 219, 219, 0.5);
+	}
+}

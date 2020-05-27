@@ -1,0 +1,19 @@
+<svg width="20" height="27" xmlns="http://www.w3.org/2000/svg">
+ <metadata id="metadata8">image/svg+xml</metadata>
+ <defs>
+  <clipPath id="clipPath20" clipPathUnits="userSpaceOnUse">
+   <path id="path18" d="m0,3.82432l270,0l0,370l-270,0l0,-370z"/>
+  </clipPath>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="22" height="29" id="canvas_background" fill="none"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g stroke="null" id="svg_3">
+   <path stroke="null" id="path22" d="m19.23736,24.34679l-0.9295,-7.29351c-0.31791,-2.50096 -2.44458,-4.34881 -4.96841,-4.34881l-6.84974,0c-2.52301,0 -4.64966,1.84785 -4.96843,4.34881l-0.92893,7.30775c-0.0642,0.51024 0.09155,1.15251 0.43236,1.54049c0.34081,0.3852 0.83179,0.73382 1.34538,0.73382l15.0895,0c0.51384,0 1.0046,-0.35728 1.34537,-0.74219c0.34027,-0.3852 0.49684,-1.03555 0.43238,-1.54636l0.00001,0z" fill-rule="nonzero" fill="#666666"/>
+   <path stroke="null" id="path24" d="m15.24869,5.69814c0,2.94535 -2.38877,5.33412 -5.33412,5.33412c-2.94476,0 -5.33351,-2.38877 -5.33351,-5.33412c0,-2.94756 2.38875,-5.33348 5.33351,-5.33348c2.94535,0 5.33412,2.38592 5.33412,5.33348z" fill-rule="nonzero" fill="#666666"/>
+  </g>
+ </g>
+</svg>

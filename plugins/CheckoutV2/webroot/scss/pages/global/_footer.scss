@@ -1,0 +1,135 @@
+body.checkout {
+  footer {
+    .copyright{
+      padding: 40px 0;
+    }
+  }
+}
+
+footer {
+  @if $footer-background-image {
+    background: $footer-background-color url($footer-background-image) no-repeat bottom center;
+    background-size: cover;
+  } @else {
+    background: $footer-background-color;
+  }
+  color: $footer-text-color;
+
+  .copyright {
+    text-align: center;
+    font-size: 0.85em;
+    padding-bottom: 35px;
+    a {
+      text-decoration: none;
+      color: $footer-text-color;
+      text-transform: uppercase;
+    }
+  }
+
+  .newsletter-cta {
+    background: $primary;
+    background: linear-gradient(to right, $primary 0%, $secondary 100%);
+    color: $white;
+    width: 100%;
+    padding: 10px 0;
+
+    p {
+      margin-bottom: 0;
+      font-size: 1.1em;
+      font-family: $font-title-base;
+      font-weight: 700;
+      line-height: 1.2;
+
+      &:before {
+        @include icon($icomoon-font-family);
+        display: inline-block;
+        float: left;
+        position: relative;
+        margin: 3px 15px 5px 0;
+        font-size: 36px;
+      }
+    
+      &.newsletter-text:before {
+        content: $icon-envelope;
+      }
+      &.whatsapp-text:before {
+        content: $icon-whatsapp;
+      }
+    }
+
+    form {
+      margin-bottom: 0;
+    }
+    .form-control {
+      background: $white;
+      border: 0;
+      display: table;
+      width: 100%;
+      position: relative;
+      input {
+        background: transparent;
+        padding: 10px 135px 10px 15px;
+        font-size: 1.1em;
+        float: left;
+        width: 100%;
+        border: none;
+        outline: none;
+        position: relative;
+        display: inline-block;
+      }
+      button {
+        float: right;
+        position: absolute;
+        right: 0;
+        padding: 11px 18px;
+        border: none;
+        outline: none;
+        background: $gray-800;
+        background: linear-gradient(to right, $gray-900 0%, $gray-700 100%);
+        color: $white;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: all 150ms ease-in-out;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.85;
+        }
+      }
+    }
+
+  }
+
+  .whatsapp-link {
+    text-decoration: none;
+    color: $white;
+  }
+
+  .footer-links {
+    padding: 45px 0;
+    h4 {
+      color: #db4e46;
+      text-transform: uppercase;
+      font-size: 1.175em;
+      margin-bottom: 10px;
+    }
+
+    .phone {
+      font-size: 1.5em;
+      small {
+        display: block;
+        font-size: 0.55em;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
+
+}

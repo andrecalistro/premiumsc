@@ -1,0 +1,30 @@
+{
+  "name": "shirts-club",
+  "version": "1.0.0",
+  "description": "Framework desenvolvido para sistema de E-commerce.",
+  "main": "index.js",
+  "scripts": {
+    "watch-main-css": "node-sass --include-path sass plugins/Theme/webroot/scss/style.scss plugins/Theme/webroot/css/main.min.css --watch",
+    "watch-checkout-css": "node-sass --include-path sass plugins/CheckoutV2/webroot/scss/styles.scss plugins/CheckoutV2/webroot/css/checkout.min.css --watch",
+    "build-main-css": "node-sass --include-path sass plugins/Theme/webroot/scss/style.scss plugins/Theme/webroot/css/main.min.css",
+    "build-checkout-css": "node-sass --include-path sass plugins/CheckoutV2/webroot/scss/styles.scss plugins/CheckoutV2/webroot/css/checkout.min.css",
+    "watch-all": "npm-run-all watch-main-css watch-checkout-css",
+    "build-all": "npm-run-all build-main-css build-checkout-css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.nerdweb.com.br:garrula/pure-4u-theme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.nerdweb.com.br/garrula/pure-4u-theme/issues"
+  },
+  "homepage": "https://gitlab.nerdweb.com.br/garrula/pure-4u-theme/blob/master/README.md",
+  "devDependencies": {
+    "node-sass": "^4.13.0",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5",
+    "watch": "^1.0.2"
+  }
+}

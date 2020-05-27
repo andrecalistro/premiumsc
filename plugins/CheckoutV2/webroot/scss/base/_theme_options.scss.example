@@ -1,0 +1,23 @@
+//header
+$header-background: #dbdbdb;
+
+//steps
+$step-text-color: #7b7b80;
+$step-background-color: #dbdbdb;
+$step-border-color: #525257;
+$step-color: #525257;
+$step-line-color: #525257;
+
+//titles
+$title-gradiente-color-1: #525257;
+$title-gradiente-color-2: #525257;
+
+//footer
+$footer-background-color: #525257;
+$footer-background-image: false;
+$footer-text-color: #ffffff;
+
+//colors
+$color-primary: #404040;
+$color-secondary: #525257;
+$color-success: #404040;

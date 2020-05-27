@@ -1,0 +1,24 @@
+@import '../../../Theme/webroot/scss/theme_options';
+@import 'base/variables';
+@import 'base/typography';
+@import 'base/reboot';
+@import 'base/mixins';
+
+@import 'grid/variables';
+@import 'grid/mixins';
+@import 'grid/helpers';
+@import 'grid/grid';
+
+@import 'base/swiper';
+@import 'base/forms';
+
+/* Magnific Popup */
+@import 'mfp/mfp';
+
+@import 'pages/global/header';
+@import 'pages/global/footer';
+
+@import 'pages/cart';
+@import 'pages/checkout';
+@import 'pages/profile';
+@import 'pages/contact';

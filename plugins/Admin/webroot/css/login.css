@@ -1,0 +1,20 @@
+#content-inner-right .page-title h2 {
+    padding: 0;
+}
+
+#content-inner-right {
+    margin-top: 80px;
+}
+
+.header .logo button {
+    cursor: default;
+}
+
+.page-title, .content {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.content {
+    padding: 20px;
+}
