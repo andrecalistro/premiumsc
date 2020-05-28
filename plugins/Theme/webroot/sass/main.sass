@@ -1,0 +1,6073 @@
+@charset "UTF-8"
+
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap")
+
+@font-face
+  font-family: "pure4u"
+  src: url("fonts/pure4u.eot?")
+  src: url("fonts/pure4u.eot?#iefix") format("embedded-opentype"), url("fonts/pure4u.ttf?") format("truetype"), url("fonts/pure4u.woff?") format("woff"), url("fonts/pure4u.svg?#pure4u") format("svg")
+  font-weight: normal
+  font-style: normal
+
+*
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+  &::before, &::after
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+
+html
+  font-family: sans-serif
+  line-height: 1.15
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
+  -ms-overflow-style: scrollbar
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+@-ms-viewport
+  width: device-width
+
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section
+  display: block
+
+body
+  margin: 0
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+  font-size: 14px
+  font-weight: 300
+  line-height: 1.5
+  color: #7c7c81
+  text-align: left
+  background-color: #fff
+
+[tabindex="-1"]:focus
+  outline: 0 !important
+
+hr
+  -webkit-box-sizing: content-box
+  box-sizing: content-box
+  height: 0
+  overflow: visible
+
+h1, h2, h3, h4, h5, h6, p
+  margin-top: 0
+  margin-bottom: 1.125rem
+
+abbr
+  &[title], &[data-original-title]
+    text-decoration: underline
+    -webkit-text-decoration: underline dotted
+    text-decoration: underline dotted
+    cursor: help
+    border-bottom: 0
+
+address
+  margin-bottom: 1rem
+  font-style: normal
+  line-height: inherit
+
+ol, ul, dl
+  margin-top: 0
+  margin-bottom: 1rem
+
+ol ol, ul ul, ol ul, ul ol
+  margin-bottom: 0
+
+dt
+  font-weight: 700
+
+dd
+  margin-bottom: .5rem
+  margin-left: 0
+
+blockquote
+  margin: 0 0 1rem
+
+dfn
+  font-style: italic
+
+b, strong
+  font-weight: bolder
+
+small
+  font-size: 80%
+
+sub, sup
+  position: relative
+  font-size: 75%
+  line-height: 0
+  vertical-align: baseline
+
+sub
+  bottom: -.25em
+
+sup
+  top: -.5em
+
+a
+  color: #7c7c81
+  text-decoration: none
+  background-color: transparent
+  -webkit-text-decoration-skip: objects
+
+  &:hover
+    color: #7c7c81
+    text-decoration: underline
+
+  &:not([href]):not([tabindex])
+    color: inherit
+    text-decoration: none
+
+    &:hover
+      color: inherit
+      text-decoration: none
+
+    &:focus
+      color: inherit
+      text-decoration: none
+      outline: 0
+
+pre, code, kbd, samp
+  font-family: monospace, monospace
+  font-size: 1em
+
+pre
+  margin-top: 0
+  margin-bottom: 1rem
+  overflow: auto
+  -ms-overflow-style: scrollbar
+
+figure
+  margin: 0 0 1rem
+
+img
+  vertical-align: middle
+  border-style: none
+
+svg:not(:root)
+  overflow: hidden
+
+table
+  border-collapse: collapse
+
+caption
+  padding-top: 0.75rem
+  padding-bottom: 0.75rem
+  color: #7c7c81
+  text-align: left
+  caption-side: bottom
+
+th
+  text-align: inherit
+
+label
+  display: inline-block
+  margin-bottom: 1.125rem
+
+button
+  border-radius: 0
+
+  &:focus
+    outline: 1px dotted
+    outline: 5px auto -webkit-focus-ring-color
+
+input, button, select, optgroup, textarea
+  margin: 0
+  font-family: inherit
+  font-size: inherit
+  line-height: inherit
+
+button, input
+  overflow: visible
+
+button, select
+  text-transform: none
+
+button, html [type="button"], [type="reset"], [type="submit"]
+  -webkit-appearance: button
+
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner
+  padding: 0
+  border-style: none
+
+input
+  &[type="radio"], &[type="checkbox"]
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+    padding: 0
+
+  &[type="date"], &[type="time"], &[type="datetime-local"], &[type="month"]
+    -webkit-appearance: listbox
+
+textarea
+  overflow: auto
+  resize: vertical
+
+fieldset
+  min-width: 0
+  padding: 0
+  margin: 0
+  border: 0
+
+legend
+  display: block
+  width: 100%
+  max-width: 100%
+  padding: 0
+  margin-bottom: .5rem
+  font-size: 1.5rem
+  line-height: inherit
+  color: inherit
+  white-space: normal
+
+progress
+  vertical-align: baseline
+
+[type="number"]
+  &::-webkit-inner-spin-button, &::-webkit-outer-spin-button
+    height: auto
+
+[type="search"]
+  outline-offset: -2px
+  -webkit-appearance: none
+
+  &::-webkit-search-cancel-button, &::-webkit-search-decoration
+    -webkit-appearance: none
+
+\::-webkit-file-upload-button
+  font: inherit
+  -webkit-appearance: button
+
+output
+  display: inline-block
+
+summary
+  display: list-item
+  cursor: pointer
+
+template
+  display: none
+
+[hidden]
+  display: none !important
+
+.ml-1
+  margin-left: .25em
+
+.ml-2
+  margin-left: .75em
+
+.ml-3
+  margin-left: 1.25em
+
+.mr-1
+  margin-right: .25em
+
+.mr-2
+  margin-right: .75em
+
+.mr-3
+  margin-right: 1.25em
+
+.mb-1
+  margin-bottom: .25em
+
+.mb-2
+  margin-bottom: .75em
+
+.mb-3
+  margin-bottom: 1.25em
+
+.mt-1
+  margin-top: .25em
+
+.mt-2
+  margin-top: .75em
+
+.mt-3
+  margin-top: 1.25em
+
+.wrap
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+
+.no-wrap
+  -ms-flex-wrap: nowrap
+  flex-wrap: nowrap
+
+  [class^="col-"]
+    -ms-flex-negative: 1
+    flex-shrink: 1
+
+.wrap-reverse
+  -ms-flex-wrap: wrap-reverse
+  flex-wrap: wrap-reverse
+
+.direction-row
+  -ms-flex-direction: row
+  -webkit-box-orient: horizontal
+  -webkit-box-direction: normal
+  flex-direction: row
+
+.direction-row-reverse
+  -ms-flex-direction: row-reverse
+  -webkit-box-orient: horizontal
+  -webkit-box-direction: reverse
+  flex-direction: row-reverse
+
+.direction-column
+  -ms-flex-direction: column
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  flex-direction: column
+
+.direction-column-reverse
+  -ms-flex-direction: column-reverse
+  -webkit-box-orient: vertical
+  -webkit-box-direction: reverse
+  flex-direction: column-reverse
+
+.align-start
+  -ms-flex-align: start
+  -webkit-box-align: start
+  align-items: flex-start
+
+.align-end
+  -ms-flex-align: end
+  -webkit-box-align: end
+  align-items: flex-end
+
+  [class^="col-"]
+    vertical-align: bottom
+
+.align-center
+  -ms-flex-align: center
+  -webkit-box-align: center
+  align-items: center
+
+  [class^="col-"]
+    vertical-align: middle
+
+.align-baseline
+  -ms-flex-align: baseline
+  -webkit-box-align: baseline
+  align-items: baseline
+
+.align-content-start
+  -ms-flex-line-pack: start
+  align-content: flex-start
+
+.align-content-end
+  -ms-flex-line-pack: end
+  align-content: flex-end
+
+  [class^="col-"]
+    vertical-align: bottom
+
+.align-content-center
+  -ms-flex-line-pack: center
+  align-content: center
+
+.align-content-space-between
+  -ms-flex-line-pack: justify
+  align-content: space-between
+
+.align-content-space-around
+  -ms-flex-line-pack: distribute
+  align-content: space-around
+
+.align-self-stretch
+  -ms-flex-item-align: stretch
+  -webkit-align-self: stretch
+  align-self: stretch
+
+.align-self-start
+  -ms-flex-item-align: start
+  -webkit-align-self: flex-start
+  align-self: flex-start
+
+.align-self-end
+  -ms-flex-item-align: end
+  -webkit-align-self: flex-end
+  align-self: flex-end
+  vertical-align: bottom
+
+.align-self-center
+  -ms-flex-item-align: center
+  -webkit-align-self: center
+  align-self: center
+  vertical-align: middle
+
+.align-self-baseline
+  -ms-flex-item-align: baseline
+  -webkit-align-self: baseline
+  align-self: baseline
+  vertical-align: baseline
+
+.justify-start
+  -ms-flex-pack: start
+  -webkit-box-pack: start
+  justify-content: flex-start
+
+  &.grid
+    text-align: left
+
+.justify-end
+  -ms-flex-pack: end
+  -webkit-box-pack: end
+  justify-content: flex-end
+
+  &.grid
+    text-align: right
+    -moz-text-align-last: right
+    text-align-last: right
+
+    [class^="col-"]
+      text-align: left
+      text-align: start
+      -moz-text-align-last: left
+      -moz-text-align-last: start
+      text-align-last: left
+      text-align-last: start
+
+.justify-center
+  -ms-flex-pack: center
+  -webkit-box-pack: center
+  justify-content: center
+
+  &.grid
+    text-align: center
+    -moz-text-align-last: center
+    text-align-last: center
+
+    [class^="col-"]
+      text-align: left
+      text-align: start
+      -moz-text-align-last: left
+      -moz-text-align-last: start
+      text-align-last: left
+      text-align-last: start
+
+.justify-space-between
+  -ms-flex-pack: justify
+  -webkit-box-pack: justify
+  justify-content: space-between
+
+  &.grid
+    text-align: justify
+    -moz-text-align-last: justify
+    text-align-last: justify
+
+    [class^="col-"]
+      text-align: left
+      text-align: start
+      -moz-text-align-last: left
+      -moz-text-align-last: start
+      text-align-last: left
+      text-align-last: start
+
+.justify-space-around
+  -ms-flex-pack: distribute
+  justify-content: space-around
+
+  &.grid
+    text-align: justify
+    -moz-text-align-last: justify
+    text-align-last: justify
+
+    [class^="col-"]
+      text-align: left
+      text-align: start
+      -moz-text-align-last: left
+      -moz-text-align-last: start
+      text-align-last: left
+      text-align-last: start
+
+.grid-bleed [class*="col-"]
+  padding: 0 !important
+
+.col-grid
+  display: -ms-flexbox
+  display: -webkit-box
+  display: flex
+  -ms-flex-direction: column
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  flex-direction: column
+
+  &.direction-row
+    -ms-flex-direction: row
+    -webkit-box-orient: horizontal
+    -webkit-box-direction: normal
+    flex-direction: row
+
+.col-bleed
+  padding: 0 !important
+
+.col-bleed-x
+  padding: 15px 0 !important
+
+.col-bleed-y
+  padding: 0 15px !important
+
+.flex-img
+  display: block
+  -ms-flex: 0 0 auto
+  -webkit-box-flex: 0
+  flex: 0 0 auto
+  max-width: 100%
+  height: auto
+  width: 100%
+  *width: auto
+
+.flex-footer
+  width: 100%
+  margin-top: auto
+  margin-bottom: 0
+
+  > :last-child
+    margin-bottom: 0
+
+@media (max-width: 575px)
+  .hidden-xxs
+    display: none !important
+
+@media (max-width: 767px)
+  .hidden-xs
+    display: none !important
+
+@media (max-width: 991px)
+  .hidden-sm
+    display: none !important
+
+@media (max-width: 1279px)
+  .hidden-md
+    display: none !important
+
+@media (min-width: 1280px)
+  .hidden-lg
+    display: none !important
+
+.container, .container-full
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  width: 100%
+  margin-right: auto
+  margin-left: auto
+  padding-right: 30px
+  padding-left: 30px
+
+.container .grid, .container-full .grid
+  margin-right: -15px
+  margin-left: -15px
+
+@media (min-width: 576px)
+  .container
+    max-width: 576px
+
+@media (min-width: 768px)
+  .container
+    max-width: 768px
+
+@media (min-width: 992px)
+  .container
+    max-width: 992px
+
+@media (min-width: 1280px)
+  .container
+    max-width: 1280px
+
+@media (min-width: 1440px)
+  .container
+    max-width: 1440px
+
+.grid
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  display: block
+  display: -ms-flexbox
+  display: -webkit-box
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  padding: 0
+  margin: 0 auto
+  position: relative
+  letter-spacing: -.31em
+  *letter-spacing: normal
+  word-spacing: -.43em
+  list-style-type: none
+
+  &::before, &::after
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+    letter-spacing: normal
+    word-spacing: normal
+    white-space: normal
+
+.col, [class^="col-"]
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  letter-spacing: normal
+  word-spacing: normal
+  white-space: normal
+  position: relative
+  width: 100%
+  vertical-align: top
+  padding: 15px
+  display: inline-block
+  *display: inline
+  zoom: 1
+
+.col
+  &::before, &::after
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+    letter-spacing: normal
+    word-spacing: normal
+    white-space: normal
+
+[class^="col-"]
+  &::before, &::after
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+    letter-spacing: normal
+    word-spacing: normal
+    white-space: normal
+
+.col .grid, [class^="col-"] .grid
+  -ms-flex: 1 1 auto
+  -webkit-box-flex: 1
+  flex: 1 1 auto
+  margin: -15px
+
+.col.hidden, [class^="col-"].hidden
+  display: none
+
+.col-12
+  width: 100%
+  *width: 99.9%
+
+.col-11
+  width: 91.66667%
+  *width: 91.56667%
+
+.col-10
+  width: 83.33333%
+  *width: 83.23333%
+
+.col-9
+  width: 75%
+  *width: 74.9%
+
+.col-8
+  width: 66.66667%
+  *width: 66.56667%
+
+.col-7
+  width: 58.33333%
+  *width: 58.23333%
+
+.col-6
+  width: 50%
+  *width: 49.9%
+
+.col-5
+  width: 41.66667%
+  *width: 41.56667%
+
+.col-4
+  width: 33.33333%
+  *width: 33.23333%
+
+.col-3
+  width: 25%
+  *width: 24.9%
+
+.col-2
+  width: 16.66667%
+  *width: 16.56667%
+
+.col-1
+  width: 8.33333%
+  *width: 8.23333%
+
+@media (min-width: 576px)
+  .col-xs-12
+    width: 100%
+    *width: 99.9%
+
+  .col-xs-11
+    width: 91.66667%
+    *width: 91.56667%
+
+  .col-xs-10
+    width: 83.33333%
+    *width: 83.23333%
+
+  .col-xs-9
+    width: 75%
+    *width: 74.9%
+
+  .col-xs-8
+    width: 66.66667%
+    *width: 66.56667%
+
+  .col-xs-7
+    width: 58.33333%
+    *width: 58.23333%
+
+  .col-xs-6
+    width: 50%
+    *width: 49.9%
+
+  .col-xs-5
+    width: 41.66667%
+    *width: 41.56667%
+
+  .col-xs-4
+    width: 33.33333%
+    *width: 33.23333%
+
+  .col-xs-3
+    width: 25%
+    *width: 24.9%
+
+  .col-xs-2
+    width: 16.66667%
+    *width: 16.56667%
+
+  .col-xs-1
+    width: 8.33333%
+    *width: 8.23333%
+
+@media (min-width: 768px)
+  .col-sm-12
+    width: 100%
+    *width: 99.9%
+
+  .col-sm-11
+    width: 91.66667%
+    *width: 91.56667%
+
+  .col-sm-10
+    width: 83.33333%
+    *width: 83.23333%
+
+  .col-sm-9
+    width: 75%
+    *width: 74.9%
+
+  .col-sm-8
+    width: 66.66667%
+    *width: 66.56667%
+
+  .col-sm-7
+    width: 58.33333%
+    *width: 58.23333%
+
+  .col-sm-6
+    width: 50%
+    *width: 49.9%
+
+  .col-sm-5
+    width: 41.66667%
+    *width: 41.56667%
+
+  .col-sm-4
+    width: 33.33333%
+    *width: 33.23333%
+
+  .col-sm-3
+    width: 25%
+    *width: 24.9%
+
+  .col-sm-2
+    width: 16.66667%
+    *width: 16.56667%
+
+  .col-sm-1
+    width: 8.33333%
+    *width: 8.23333%
+
+@media (min-width: 992px)
+  .col-md-12
+    width: 100%
+    *width: 99.9%
+
+  .col-md-11
+    width: 91.66667%
+    *width: 91.56667%
+
+  .col-md-10
+    width: 83.33333%
+    *width: 83.23333%
+
+  .col-md-9
+    width: 75%
+    *width: 74.9%
+
+  .col-md-8
+    width: 66.66667%
+    *width: 66.56667%
+
+  .col-md-7
+    width: 58.33333%
+    *width: 58.23333%
+
+  .col-md-6
+    width: 50%
+    *width: 49.9%
+
+  .col-md-5
+    width: 41.66667%
+    *width: 41.56667%
+
+  .col-md-4
+    width: 33.33333%
+    *width: 33.23333%
+
+  .col-md-3
+    width: 25%
+    *width: 24.9%
+
+  .col-md-2
+    width: 16.66667%
+    *width: 16.56667%
+
+  .col-md-1
+    width: 8.33333%
+    *width: 8.23333%
+
+@media (min-width: 1280px)
+  .col-lg-12
+    width: 100%
+    *width: 99.9%
+
+  .col-lg-11
+    width: 91.66667%
+    *width: 91.56667%
+
+  .col-lg-10
+    width: 83.33333%
+    *width: 83.23333%
+
+  .col-lg-9
+    width: 75%
+    *width: 74.9%
+
+  .col-lg-8
+    width: 66.66667%
+    *width: 66.56667%
+
+  .col-lg-7
+    width: 58.33333%
+    *width: 58.23333%
+
+  .col-lg-6
+    width: 50%
+    *width: 49.9%
+
+  .col-lg-5
+    width: 41.66667%
+    *width: 41.56667%
+
+  .col-lg-4
+    width: 33.33333%
+    *width: 33.23333%
+
+  .col-lg-3
+    width: 25%
+    *width: 24.9%
+
+  .col-lg-2
+    width: 16.66667%
+    *width: 16.56667%
+
+  .col-lg-1
+    width: 8.33333%
+    *width: 8.23333%
+
+@media (min-width: 1440px)
+  .col-xlg-12
+    width: 100%
+    *width: 99.9%
+
+  .col-xlg-11
+    width: 91.66667%
+    *width: 91.56667%
+
+  .col-xlg-10
+    width: 83.33333%
+    *width: 83.23333%
+
+  .col-xlg-9
+    width: 75%
+    *width: 74.9%
+
+  .col-xlg-8
+    width: 66.66667%
+    *width: 66.56667%
+
+  .col-xlg-7
+    width: 58.33333%
+    *width: 58.23333%
+
+  .col-xlg-6
+    width: 50%
+    *width: 49.9%
+
+  .col-xlg-5
+    width: 41.66667%
+    *width: 41.56667%
+
+  .col-xlg-4
+    width: 33.33333%
+    *width: 33.23333%
+
+  .col-xlg-3
+    width: 25%
+    *width: 24.9%
+
+  .col-xlg-2
+    width: 16.66667%
+    *width: 16.56667%
+
+  .col-xlg-1
+    width: 8.33333%
+    *width: 8.23333%
+
+.col-auto
+  -ms-flex: 1 0 auto
+  -webkit-box-flex: 1
+  flex: 1 0 0px
+  width: auto
+
+@media (min-width: 576px)
+  .col-xs-auto
+    -ms-flex: 1 0 auto
+    -webkit-box-flex: 1
+    flex: 1 0 0px
+    width: auto
+
+@media (min-width: 768px)
+  .col-sm-auto
+    -ms-flex: 1 0 auto
+    -webkit-box-flex: 1
+    flex: 1 0 0px
+    width: auto
+
+@media (min-width: 992px)
+  .col-md-auto
+    -ms-flex: 1 0 auto
+    -webkit-box-flex: 1
+    flex: 1 0 0px
+    width: auto
+
+@media (min-width: 1280px)
+  .col-lg-auto
+    -ms-flex: 1 0 auto
+    -webkit-box-flex: 1
+    flex: 1 0 0px
+    width: auto
+
+@media (min-width: 1440px)
+  .col-xlg-auto
+    -ms-flex: 1 0 auto
+    -webkit-box-flex: 1
+    flex: 1 0 0px
+    width: auto
+
+.order-12
+  -ms-flex-order: 12
+  -webkit-box-ordinal-group: 13
+  order: 12
+
+.order-11
+  -ms-flex-order: 11
+  -webkit-box-ordinal-group: 12
+  order: 11
+
+.order-10
+  -ms-flex-order: 10
+  -webkit-box-ordinal-group: 11
+  order: 10
+
+.order-9
+  -ms-flex-order: 9
+  -webkit-box-ordinal-group: 10
+  order: 9
+
+.order-8
+  -ms-flex-order: 8
+  -webkit-box-ordinal-group: 9
+  order: 8
+
+.order-7
+  -ms-flex-order: 7
+  -webkit-box-ordinal-group: 8
+  order: 7
+
+.order-6
+  -ms-flex-order: 6
+  -webkit-box-ordinal-group: 7
+  order: 6
+
+.order-5
+  -ms-flex-order: 5
+  -webkit-box-ordinal-group: 6
+  order: 5
+
+.order-4
+  -ms-flex-order: 4
+  -webkit-box-ordinal-group: 5
+  order: 4
+
+.order-3
+  -ms-flex-order: 3
+  -webkit-box-ordinal-group: 4
+  order: 3
+
+.order-2
+  -ms-flex-order: 2
+  -webkit-box-ordinal-group: 3
+  order: 2
+
+.order-1
+  -ms-flex-order: 1
+  -webkit-box-ordinal-group: 2
+  order: 1
+
+.order-0
+  -ms-flex-order: 0
+  -webkit-box-ordinal-group: 1
+  order: 0
+
+@media only screen and (min-width: 576px)
+  .order-xs-12
+    -ms-flex-order: 12
+    -webkit-box-ordinal-group: 13
+    order: 12
+
+  .order-xs-11
+    -ms-flex-order: 11
+    -webkit-box-ordinal-group: 12
+    order: 11
+
+  .order-xs-10
+    -ms-flex-order: 10
+    -webkit-box-ordinal-group: 11
+    order: 10
+
+  .order-xs-9
+    -ms-flex-order: 9
+    -webkit-box-ordinal-group: 10
+    order: 9
+
+  .order-xs-8
+    -ms-flex-order: 8
+    -webkit-box-ordinal-group: 9
+    order: 8
+
+  .order-xs-7
+    -ms-flex-order: 7
+    -webkit-box-ordinal-group: 8
+    order: 7
+
+  .order-xs-6
+    -ms-flex-order: 6
+    -webkit-box-ordinal-group: 7
+    order: 6
+
+  .order-xs-5
+    -ms-flex-order: 5
+    -webkit-box-ordinal-group: 6
+    order: 5
+
+  .order-xs-4
+    -ms-flex-order: 4
+    -webkit-box-ordinal-group: 5
+    order: 4
+
+  .order-xs-3
+    -ms-flex-order: 3
+    -webkit-box-ordinal-group: 4
+    order: 3
+
+  .order-xs-2
+    -ms-flex-order: 2
+    -webkit-box-ordinal-group: 3
+    order: 2
+
+  .order-xs-1
+    -ms-flex-order: 1
+    -webkit-box-ordinal-group: 2
+    order: 1
+
+  .order-xs-0
+    -ms-flex-order: 0
+    -webkit-box-ordinal-group: 1
+    order: 0
+
+@media only screen and (min-width: 768px)
+  .order-sm-12
+    -ms-flex-order: 12
+    -webkit-box-ordinal-group: 13
+    order: 12
+
+  .order-sm-11
+    -ms-flex-order: 11
+    -webkit-box-ordinal-group: 12
+    order: 11
+
+  .order-sm-10
+    -ms-flex-order: 10
+    -webkit-box-ordinal-group: 11
+    order: 10
+
+  .order-sm-9
+    -ms-flex-order: 9
+    -webkit-box-ordinal-group: 10
+    order: 9
+
+  .order-sm-8
+    -ms-flex-order: 8
+    -webkit-box-ordinal-group: 9
+    order: 8
+
+  .order-sm-7
+    -ms-flex-order: 7
+    -webkit-box-ordinal-group: 8
+    order: 7
+
+  .order-sm-6
+    -ms-flex-order: 6
+    -webkit-box-ordinal-group: 7
+    order: 6
+
+  .order-sm-5
+    -ms-flex-order: 5
+    -webkit-box-ordinal-group: 6
+    order: 5
+
+  .order-sm-4
+    -ms-flex-order: 4
+    -webkit-box-ordinal-group: 5
+    order: 4
+
+  .order-sm-3
+    -ms-flex-order: 3
+    -webkit-box-ordinal-group: 4
+    order: 3
+
+  .order-sm-2
+    -ms-flex-order: 2
+    -webkit-box-ordinal-group: 3
+    order: 2
+
+  .order-sm-1
+    -ms-flex-order: 1
+    -webkit-box-ordinal-group: 2
+    order: 1
+
+  .order-sm-0
+    -ms-flex-order: 0
+    -webkit-box-ordinal-group: 1
+    order: 0
+
+@media only screen and (min-width: 992px)
+  .order-md-12
+    -ms-flex-order: 12
+    -webkit-box-ordinal-group: 13
+    order: 12
+
+  .order-md-11
+    -ms-flex-order: 11
+    -webkit-box-ordinal-group: 12
+    order: 11
+
+  .order-md-10
+    -ms-flex-order: 10
+    -webkit-box-ordinal-group: 11
+    order: 10
+
+  .order-md-9
+    -ms-flex-order: 9
+    -webkit-box-ordinal-group: 10
+    order: 9
+
+  .order-md-8
+    -ms-flex-order: 8
+    -webkit-box-ordinal-group: 9
+    order: 8
+
+  .order-md-7
+    -ms-flex-order: 7
+    -webkit-box-ordinal-group: 8
+    order: 7
+
+  .order-md-6
+    -ms-flex-order: 6
+    -webkit-box-ordinal-group: 7
+    order: 6
+
+  .order-md-5
+    -ms-flex-order: 5
+    -webkit-box-ordinal-group: 6
+    order: 5
+
+  .order-md-4
+    -ms-flex-order: 4
+    -webkit-box-ordinal-group: 5
+    order: 4
+
+  .order-md-3
+    -ms-flex-order: 3
+    -webkit-box-ordinal-group: 4
+    order: 3
+
+  .order-md-2
+    -ms-flex-order: 2
+    -webkit-box-ordinal-group: 3
+    order: 2
+
+  .order-md-1
+    -ms-flex-order: 1
+    -webkit-box-ordinal-group: 2
+    order: 1
+
+  .order-md-0
+    -ms-flex-order: 0
+    -webkit-box-ordinal-group: 1
+    order: 0
+
+@media only screen and (min-width: 1280px)
+  .order-lg-12
+    -ms-flex-order: 12
+    -webkit-box-ordinal-group: 13
+    order: 12
+
+  .order-lg-11
+    -ms-flex-order: 11
+    -webkit-box-ordinal-group: 12
+    order: 11
+
+  .order-lg-10
+    -ms-flex-order: 10
+    -webkit-box-ordinal-group: 11
+    order: 10
+
+  .order-lg-9
+    -ms-flex-order: 9
+    -webkit-box-ordinal-group: 10
+    order: 9
+
+  .order-lg-8
+    -ms-flex-order: 8
+    -webkit-box-ordinal-group: 9
+    order: 8
+
+  .order-lg-7
+    -ms-flex-order: 7
+    -webkit-box-ordinal-group: 8
+    order: 7
+
+  .order-lg-6
+    -ms-flex-order: 6
+    -webkit-box-ordinal-group: 7
+    order: 6
+
+  .order-lg-5
+    -ms-flex-order: 5
+    -webkit-box-ordinal-group: 6
+    order: 5
+
+  .order-lg-4
+    -ms-flex-order: 4
+    -webkit-box-ordinal-group: 5
+    order: 4
+
+  .order-lg-3
+    -ms-flex-order: 3
+    -webkit-box-ordinal-group: 4
+    order: 3
+
+  .order-lg-2
+    -ms-flex-order: 2
+    -webkit-box-ordinal-group: 3
+    order: 2
+
+  .order-lg-1
+    -ms-flex-order: 1
+    -webkit-box-ordinal-group: 2
+    order: 1
+
+  .order-lg-0
+    -ms-flex-order: 0
+    -webkit-box-ordinal-group: 1
+    order: 0
+
+@media only screen and (min-width: 1440px)
+  .order-xlg-12
+    -ms-flex-order: 12
+    -webkit-box-ordinal-group: 13
+    order: 12
+
+  .order-xlg-11
+    -ms-flex-order: 11
+    -webkit-box-ordinal-group: 12
+    order: 11
+
+  .order-xlg-10
+    -ms-flex-order: 10
+    -webkit-box-ordinal-group: 11
+    order: 10
+
+  .order-xlg-9
+    -ms-flex-order: 9
+    -webkit-box-ordinal-group: 10
+    order: 9
+
+  .order-xlg-8
+    -ms-flex-order: 8
+    -webkit-box-ordinal-group: 9
+    order: 8
+
+  .order-xlg-7
+    -ms-flex-order: 7
+    -webkit-box-ordinal-group: 8
+    order: 7
+
+  .order-xlg-6
+    -ms-flex-order: 6
+    -webkit-box-ordinal-group: 7
+    order: 6
+
+  .order-xlg-5
+    -ms-flex-order: 5
+    -webkit-box-ordinal-group: 6
+    order: 5
+
+  .order-xlg-4
+    -ms-flex-order: 4
+    -webkit-box-ordinal-group: 5
+    order: 4
+
+  .order-xlg-3
+    -ms-flex-order: 3
+    -webkit-box-ordinal-group: 4
+    order: 3
+
+  .order-xlg-2
+    -ms-flex-order: 2
+    -webkit-box-ordinal-group: 3
+    order: 2
+
+  .order-xlg-1
+    -ms-flex-order: 1
+    -webkit-box-ordinal-group: 2
+    order: 1
+
+  .order-xlg-0
+    -ms-flex-order: 0
+    -webkit-box-ordinal-group: 1
+    order: 0
+
+.offset-11
+  margin-left: 91.66667%
+  *margin-left: 91.56667%
+
+.offset-10
+  margin-left: 83.33333%
+  *margin-left: 83.23333%
+
+.offset-9
+  margin-left: 75%
+  *margin-left: 74.9%
+
+.offset-8
+  margin-left: 66.66667%
+  *margin-left: 66.56667%
+
+.offset-7
+  margin-left: 58.33333%
+  *margin-left: 58.23333%
+
+.offset-6
+  margin-left: 50%
+  *margin-left: 49.9%
+
+.offset-5
+  margin-left: 41.66667%
+  *margin-left: 41.56667%
+
+.offset-4
+  margin-left: 33.33333%
+  *margin-left: 33.23333%
+
+.offset-3
+  margin-left: 25%
+  *margin-left: 24.9%
+
+.offset-2
+  margin-left: 16.66667%
+  *margin-left: 16.56667%
+
+.offset-1
+  margin-left: 8.33333%
+  *margin-left: 8.23333%
+
+@media only screen and (min-width: 576px)
+  .offset-xs-11
+    margin-left: 91.66667%
+    *margin-left: 91.56667%
+
+  .offset-xs-10
+    margin-left: 83.33333%
+    *margin-left: 83.23333%
+
+  .offset-xs-9
+    margin-left: 75%
+    *margin-left: 74.9%
+
+  .offset-xs-8
+    margin-left: 66.66667%
+    *margin-left: 66.56667%
+
+  .offset-xs-7
+    margin-left: 58.33333%
+    *margin-left: 58.23333%
+
+  .offset-xs-6
+    margin-left: 50%
+    *margin-left: 49.9%
+
+  .offset-xs-5
+    margin-left: 41.66667%
+    *margin-left: 41.56667%
+
+  .offset-xs-4
+    margin-left: 33.33333%
+    *margin-left: 33.23333%
+
+  .offset-xs-3
+    margin-left: 25%
+    *margin-left: 24.9%
+
+  .offset-xs-2
+    margin-left: 16.66667%
+    *margin-left: 16.56667%
+
+  .offset-xs-1
+    margin-left: 8.33333%
+    *margin-left: 8.23333%
+
+  .offset-xs-0
+    margin-left: 0
+    *margin-left: -0.1%
+
+@media only screen and (min-width: 768px)
+  .offset-sm-11
+    margin-left: 91.66667%
+    *margin-left: 91.56667%
+
+  .offset-sm-10
+    margin-left: 83.33333%
+    *margin-left: 83.23333%
+
+  .offset-sm-9
+    margin-left: 75%
+    *margin-left: 74.9%
+
+  .offset-sm-8
+    margin-left: 66.66667%
+    *margin-left: 66.56667%
+
+  .offset-sm-7
+    margin-left: 58.33333%
+    *margin-left: 58.23333%
+
+  .offset-sm-6
+    margin-left: 50%
+    *margin-left: 49.9%
+
+  .offset-sm-5
+    margin-left: 41.66667%
+    *margin-left: 41.56667%
+
+  .offset-sm-4
+    margin-left: 33.33333%
+    *margin-left: 33.23333%
+
+  .offset-sm-3
+    margin-left: 25%
+    *margin-left: 24.9%
+
+  .offset-sm-2
+    margin-left: 16.66667%
+    *margin-left: 16.56667%
+
+  .offset-sm-1
+    margin-left: 8.33333%
+    *margin-left: 8.23333%
+
+  .offset-sm-0
+    margin-left: 0
+    *margin-left: -0.1%
+
+@media only screen and (min-width: 992px)
+  .offset-md-11
+    margin-left: 91.66667%
+    *margin-left: 91.56667%
+
+  .offset-md-10
+    margin-left: 83.33333%
+    *margin-left: 83.23333%
+
+  .offset-md-9
+    margin-left: 75%
+    *margin-left: 74.9%
+
+  .offset-md-8
+    margin-left: 66.66667%
+    *margin-left: 66.56667%
+
+  .offset-md-7
+    margin-left: 58.33333%
+    *margin-left: 58.23333%
+
+  .offset-md-6
+    margin-left: 50%
+    *margin-left: 49.9%
+
+  .offset-md-5
+    margin-left: 41.66667%
+    *margin-left: 41.56667%
+
+  .offset-md-4
+    margin-left: 33.33333%
+    *margin-left: 33.23333%
+
+  .offset-md-3
+    margin-left: 25%
+    *margin-left: 24.9%
+
+  .offset-md-2
+    margin-left: 16.66667%
+    *margin-left: 16.56667%
+
+  .offset-md-1
+    margin-left: 8.33333%
+    *margin-left: 8.23333%
+
+  .offset-md-0
+    margin-left: 0
+    *margin-left: -0.1%
+
+@media only screen and (min-width: 1280px)
+  .offset-lg-11
+    margin-left: 91.66667%
+    *margin-left: 91.56667%
+
+  .offset-lg-10
+    margin-left: 83.33333%
+    *margin-left: 83.23333%
+
+  .offset-lg-9
+    margin-left: 75%
+    *margin-left: 74.9%
+
+  .offset-lg-8
+    margin-left: 66.66667%
+    *margin-left: 66.56667%
+
+  .offset-lg-7
+    margin-left: 58.33333%
+    *margin-left: 58.23333%
+
+  .offset-lg-6
+    margin-left: 50%
+    *margin-left: 49.9%
+
+  .offset-lg-5
+    margin-left: 41.66667%
+    *margin-left: 41.56667%
+
+  .offset-lg-4
+    margin-left: 33.33333%
+    *margin-left: 33.23333%
+
+  .offset-lg-3
+    margin-left: 25%
+    *margin-left: 24.9%
+
+  .offset-lg-2
+    margin-left: 16.66667%
+    *margin-left: 16.56667%
+
+  .offset-lg-1
+    margin-left: 8.33333%
+    *margin-left: 8.23333%
+
+  .offset-lg-0
+    margin-left: 0
+    *margin-left: -0.1%
+
+@media only screen and (min-width: 1440px)
+  .offset-xlg-11
+    margin-left: 91.66667%
+    *margin-left: 91.56667%
+
+  .offset-xlg-10
+    margin-left: 83.33333%
+    *margin-left: 83.23333%
+
+  .offset-xlg-9
+    margin-left: 75%
+    *margin-left: 74.9%
+
+  .offset-xlg-8
+    margin-left: 66.66667%
+    *margin-left: 66.56667%
+
+  .offset-xlg-7
+    margin-left: 58.33333%
+    *margin-left: 58.23333%
+
+  .offset-xlg-6
+    margin-left: 50%
+    *margin-left: 49.9%
+
+  .offset-xlg-5
+    margin-left: 41.66667%
+    *margin-left: 41.56667%
+
+  .offset-xlg-4
+    margin-left: 33.33333%
+    *margin-left: 33.23333%
+
+  .offset-xlg-3
+    margin-left: 25%
+    *margin-left: 24.9%
+
+  .offset-xlg-2
+    margin-left: 16.66667%
+    *margin-left: 16.56667%
+
+  .offset-xlg-1
+    margin-left: 8.33333%
+    *margin-left: 8.23333%
+
+  .offset-xlg-0
+    margin-left: 0
+    *margin-left: -0.1%
+
+.swiper-container
+  margin: 0 auto
+  position: relative
+  overflow: hidden
+  list-style: none
+  padding: 0
+
+  /* Fix of Webkit flickering
+  z-index: 1
+
+.swiper-container-no-flexbox .swiper-slide
+  float: left
+
+.swiper-container-vertical > .swiper-wrapper
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
+  flex-direction: column
+
+.swiper-wrapper
+  position: relative
+  width: 100%
+  height: 100%
+  z-index: 1
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-transition-property: -webkit-transform
+  transition-property: -webkit-transform
+  transition-property: transform
+  transition-property: transform, -webkit-transform
+  -webkit-box-sizing: content-box
+  box-sizing: content-box
+
+.swiper-container-android .swiper-slide, .swiper-wrapper
+  -webkit-transform: translate3d(0px, 0, 0)
+  transform: translate3d(0px, 0, 0)
+
+.swiper-container-multirow > .swiper-wrapper
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+
+.swiper-container-free-mode > .swiper-wrapper
+  -webkit-transition-timing-function: ease-out
+  transition-timing-function: ease-out
+  margin: 0 auto
+
+.swiper-slide
+  -ms-flex-negative: 0
+  flex-shrink: 0
+  width: 100%
+  height: 100%
+  position: relative
+  -webkit-transition-property: -webkit-transform
+  transition-property: -webkit-transform
+  transition-property: transform
+  transition-property: transform, -webkit-transform
+
+.swiper-slide-invisible-blank
+  visibility: hidden
+
+/* Auto Height
+
+.swiper-container-autoheight
+  height: auto
+
+  .swiper-slide
+    height: auto
+
+  .swiper-wrapper
+    -webkit-box-align: start
+    -ms-flex-align: start
+    align-items: flex-start
+    -webkit-transition-property: height, -webkit-transform
+    transition-property: height, -webkit-transform
+    transition-property: transform, height
+    transition-property: transform, height, -webkit-transform
+
+/* 3D Effects
+
+.swiper-container-3d
+  -webkit-perspective: 1200px
+  perspective: 1200px
+
+  .swiper-wrapper, .swiper-slide, .swiper-slide-shadow-left, .swiper-slide-shadow-right, .swiper-slide-shadow-top, .swiper-slide-shadow-bottom, .swiper-cube-shadow
+    -webkit-transform-style: preserve-3d
+    transform-style: preserve-3d
+
+  .swiper-slide-shadow-left, .swiper-slide-shadow-right, .swiper-slide-shadow-top, .swiper-slide-shadow-bottom
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    pointer-events: none
+    z-index: 10
+
+  .swiper-slide-shadow-left
+    background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)))
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0))
+
+  .swiper-slide-shadow-right
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)))
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0))
+
+  .swiper-slide-shadow-top
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)))
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0))
+
+  .swiper-slide-shadow-bottom
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)))
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0))
+
+/* IE10 Windows Phone 8 Fixes
+
+.swiper-container-wp8-horizontal
+  -ms-touch-action: pan-y
+  touch-action: pan-y
+
+  > .swiper-wrapper
+    -ms-touch-action: pan-y
+    touch-action: pan-y
+
+.swiper-container-wp8-vertical
+  -ms-touch-action: pan-x
+  touch-action: pan-x
+
+  > .swiper-wrapper
+    -ms-touch-action: pan-x
+    touch-action: pan-x
+
+.swiper-button-prev, .swiper-button-next
+  position: absolute
+  top: 50%
+  width: 27px
+  height: 44px
+  margin-top: -22px
+  z-index: 10
+  cursor: pointer
+  background-size: 27px 44px
+  background-position: center
+  background-repeat: no-repeat
+
+.swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled
+  opacity: 0.35
+  cursor: auto
+  pointer-events: none
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2221.194%22%20height%3D%2239.809%22%20viewBox%3D%220%200%2021.194%2039.809%22%3E%3Cpath%20d%3D%22M18.01%2C39.809l0%2C0L0%2C19.9%2C18.01%2C0l3.185%2C3.519L6.366%2C19.9%2C21.194%2C36.289l-3.182%2C3.517Z%22%20fill%3D%22%236ead40%22%2F%3E%3C%2Fsvg%3E")
+  left: -3px
+  right: auto
+
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2221.194%22%20height%3D%2239.809%22%20viewBox%3D%220%200%2021.194%2039.809%22%3E%3Cpath%20d%3D%22M18.01%2C39.809l0%2C0L0%2C19.9%2C18.01%2C0l3.185%2C3.519L6.366%2C19.9%2C21.194%2C36.289l-3.182%2C3.517Z%22%20transform%3D%22translate%2821.194%2039.809%29%20rotate%28180%29%22%20fill%3D%22%236ead40%22%2F%3E%3C%2Fsvg%3E")
+  right: -3px
+  left: auto
+
+.swiper-button-prev.swiper-button-white, .swiper-container-rtl .swiper-button-next.swiper-button-white
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2015%2034.6%22%3E%3Cpath%20d%3D%22M14.2%2034l-13-16.7L14.2.6%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222%22%2F%3E%3C%2Fsvg%3E")
+
+.swiper-button-next.swiper-button-white, .swiper-container-rtl .swiper-button-prev.swiper-button-white
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2015%2034.6%22%3E%3Cpath%20d%3D%22M1.3.6l13%2016.7L1.3%2034%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222%22%2F%3E%3C%2Fsvg%3E")
+
+.swiper-button-prev.swiper-button-black, .swiper-container-rtl .swiper-button-next.swiper-button-black
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2221.194%22%20height%3D%2239.809%22%20viewBox%3D%220%200%2021.194%2039.809%22%3E%3Cpath%20d%3D%22M18.01%2C39.809l0%2C0L0%2C19.9%2C18.01%2C0l3.185%2C3.519L6.366%2C19.9%2C21.194%2C36.289l-3.182%2C3.517Z%22%20fill%3D%22%236ead40%22%2F%3E%3C%2Fsvg%3E")
+
+.swiper-button-next.swiper-button-black, .swiper-container-rtl .swiper-button-prev.swiper-button-black
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2221.194%22%20height%3D%2239.809%22%20viewBox%3D%220%200%2021.194%2039.809%22%3E%3Cpath%20d%3D%22M18.01%2C39.809l0%2C0L0%2C19.9%2C18.01%2C0l3.185%2C3.519L6.366%2C19.9%2C21.194%2C36.289l-3.182%2C3.517Z%22%20transform%3D%22translate%2821.194%2039.809%29%20rotate%28180%29%22%20fill%3D%22%236ead40%22%2F%3E%3C%2Fsvg%3E")
+
+.swiper-button-lock
+  display: none
+
+.swiper-pagination
+  position: absolute
+  text-align: center
+  -webkit-transition: 300ms opacity
+  transition: 300ms opacity
+  -webkit-transform: translate3d(0, 0, 0)
+  transform: translate3d(0, 0, 0)
+  z-index: 10
+
+  &.swiper-pagination-hidden
+    opacity: 0
+
+/* Common Styles
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets
+  bottom: 10px
+  left: 0
+  width: 100%
+
+/* Bullets
+
+.swiper-pagination-bullets-dynamic
+  overflow: hidden
+  font-size: 0
+
+  .swiper-pagination-bullet
+    -webkit-transform: scale(0.33)
+    transform: scale(0.33)
+    position: relative
+
+  .swiper-pagination-bullet-active, .swiper-pagination-bullet-active-main
+    -webkit-transform: scale(1)
+    transform: scale(1)
+
+  .swiper-pagination-bullet-active-prev
+    -webkit-transform: scale(0.66)
+    transform: scale(0.66)
+
+  .swiper-pagination-bullet-active-prev-prev
+    -webkit-transform: scale(0.33)
+    transform: scale(0.33)
+
+  .swiper-pagination-bullet-active-next
+    -webkit-transform: scale(0.66)
+    transform: scale(0.66)
+
+  .swiper-pagination-bullet-active-next-next
+    -webkit-transform: scale(0.33)
+    transform: scale(0.33)
+
+.swiper-pagination-bullet
+  width: 8px
+  height: 8px
+  display: inline-block
+  border-radius: 100%
+  background: #000
+  opacity: 0.2
+
+button.swiper-pagination-bullet
+  border: none
+  margin: 0
+  padding: 0
+  -webkit-box-shadow: none
+  box-shadow: none
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+
+.swiper-pagination-clickable .swiper-pagination-bullet
+  cursor: pointer
+
+.swiper-pagination-bullet-active
+  opacity: 1
+  background: #007aff
+
+.swiper-container-vertical > .swiper-pagination-bullets
+  right: 10px
+  top: 50%
+  -webkit-transform: translate3d(0px, -50%, 0)
+  transform: translate3d(0px, -50%, 0)
+
+  .swiper-pagination-bullet
+    margin: 6px 0
+    display: block
+
+  &.swiper-pagination-bullets-dynamic
+    top: 50%
+    -webkit-transform: translateY(-50%)
+    transform: translateY(-50%)
+    width: 8px
+
+    .swiper-pagination-bullet
+      display: inline-block
+      -webkit-transition: 200ms top, 200ms -webkit-transform
+      transition: 200ms top, 200ms -webkit-transform
+      transition: 200ms transform, 200ms top
+      transition: 200ms transform, 200ms top, 200ms -webkit-transform
+
+.swiper-container-horizontal
+  > .swiper-pagination-bullets
+    .swiper-pagination-bullet
+      margin: 0 4px
+
+    &.swiper-pagination-bullets-dynamic
+      left: 50%
+      -webkit-transform: translateX(-50%)
+      transform: translateX(-50%)
+      white-space: nowrap
+
+      .swiper-pagination-bullet
+        -webkit-transition: 200ms left, 200ms -webkit-transform
+        transition: 200ms left, 200ms -webkit-transform
+        transition: 200ms transform, 200ms left
+        transition: 200ms transform, 200ms left, 200ms -webkit-transform
+
+  &.swiper-container-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet
+    -webkit-transition: 200ms right, 200ms -webkit-transform
+    transition: 200ms right, 200ms -webkit-transform
+    transition: 200ms transform, 200ms right
+    transition: 200ms transform, 200ms right, 200ms -webkit-transform
+
+/* Progress
+
+.swiper-pagination-progressbar
+  background: rgba(0, 0, 0, 0.25)
+  position: absolute
+
+  .swiper-pagination-progressbar-fill
+    background: #007aff
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    -webkit-transform: scale(0)
+    transform: scale(0)
+    -webkit-transform-origin: left top
+    transform-origin: left top
+
+.swiper-container-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill
+  -webkit-transform-origin: right top
+  transform-origin: right top
+
+.swiper-container-horizontal > .swiper-pagination-progressbar
+  width: 100%
+  height: 4px
+  left: 0
+  top: 0
+
+.swiper-container-vertical > .swiper-pagination-progressbar
+  &.swiper-pagination-progressbar-opposite
+    width: 100%
+    height: 4px
+    left: 0
+    top: 0
+
+  width: 4px
+  height: 100%
+  left: 0
+  top: 0
+
+.swiper-container-horizontal > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite
+  width: 4px
+  height: 100%
+  left: 0
+  top: 0
+
+.swiper-pagination-white .swiper-pagination-bullet-active
+  background: #ffffff
+
+.swiper-pagination-progressbar.swiper-pagination-white
+  background: rgba(255, 255, 255, 0.25)
+
+  .swiper-pagination-progressbar-fill
+    background: #ffffff
+
+.swiper-pagination-black .swiper-pagination-bullet-active
+  background: #000000
+
+.swiper-pagination-progressbar.swiper-pagination-black
+  background: rgba(0, 0, 0, 0.25)
+
+  .swiper-pagination-progressbar-fill
+    background: #000000
+
+.swiper-pagination-lock
+  display: none
+
+/* Scrollbar
+
+.swiper-scrollbar
+  border-radius: 10px
+  position: relative
+  -ms-touch-action: none
+  background: rgba(0, 0, 0, 0.1)
+
+.swiper-container-horizontal > .swiper-scrollbar
+  position: absolute
+  left: 1%
+  bottom: 3px
+  z-index: 50
+  height: 5px
+  width: 98%
+
+.swiper-container-vertical > .swiper-scrollbar
+  position: absolute
+  right: 3px
+  top: 1%
+  z-index: 50
+  width: 5px
+  height: 98%
+
+.swiper-scrollbar-drag
+  height: 100%
+  width: 100%
+  position: relative
+  background: rgba(0, 0, 0, 0.5)
+  border-radius: 10px
+  left: 0
+  top: 0
+
+.swiper-scrollbar-cursor-drag
+  cursor: move
+
+.swiper-scrollbar-lock
+  display: none
+
+.swiper-zoom-container
+  width: 100%
+  height: 100%
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  text-align: center
+
+  >
+  img, svg, canvas
+    max-width: 100%
+    max-height: 100%
+    -o-object-fit: contain
+    object-fit: contain
+
+.swiper-slide-zoomed
+  cursor: move
+
+/* Preloader
+
+.swiper-lazy-preloader
+  width: 42px
+  height: 42px
+  position: absolute
+  left: 50%
+  top: 50%
+  margin-left: -21px
+  margin-top: -21px
+  z-index: 10
+  -webkit-transform-origin: 50%
+  transform-origin: 50%
+  -webkit-animation: swiper-preloader-spin 1s steps(12, end) infinite
+  animation: swiper-preloader-spin 1s steps(12, end) infinite
+
+  &:after
+    display: block
+    content: ''
+    width: 100%
+    height: 100%
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%236c6c6c'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")
+    background-position: 50%
+    background-size: 100%
+    background-repeat: no-repeat
+
+.swiper-lazy-preloader-white:after
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%23fff'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")
+
+@-webkit-keyframes swiper-preloader-spin
+  100%
+    -webkit-transform: rotate(360deg)
+    transform: rotate(360deg)
+
+@keyframes swiper-preloader-spin
+  100%
+    -webkit-transform: rotate(360deg)
+    transform: rotate(360deg)
+
+/* a11y
+
+.swiper-container .swiper-notification
+  position: absolute
+  left: 0
+  top: 0
+  pointer-events: none
+  opacity: 0
+  z-index: -1000
+
+.swiper-container-fade
+  &.swiper-container-free-mode .swiper-slide
+    -webkit-transition-timing-function: ease-out
+    transition-timing-function: ease-out
+
+  .swiper-slide
+    pointer-events: none
+    -webkit-transition-property: opacity
+    transition-property: opacity
+
+    .swiper-slide
+      pointer-events: none
+
+  .swiper-slide-active
+    pointer-events: auto
+
+    .swiper-slide-active
+      pointer-events: auto
+
+.swiper-container-cube
+  overflow: visible
+
+  .swiper-slide
+    pointer-events: none
+    -webkit-backface-visibility: hidden
+    backface-visibility: hidden
+    z-index: 1
+    visibility: hidden
+    -webkit-transform-origin: 0 0
+    transform-origin: 0 0
+    width: 100%
+    height: 100%
+
+    .swiper-slide
+      pointer-events: none
+
+  &.swiper-container-rtl .swiper-slide
+    -webkit-transform-origin: 100% 0
+    transform-origin: 100% 0
+
+  .swiper-slide-active
+    pointer-events: auto
+
+    .swiper-slide-active
+      pointer-events: auto
+
+    pointer-events: auto
+    visibility: visible
+
+  .swiper-slide-next, .swiper-slide-prev, .swiper-slide-next + .swiper-slide
+    pointer-events: auto
+    visibility: visible
+
+  .swiper-slide-shadow-top, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left, .swiper-slide-shadow-right
+    z-index: 0
+    -webkit-backface-visibility: hidden
+    backface-visibility: hidden
+
+  .swiper-cube-shadow
+    position: absolute
+    left: 0
+    bottom: 0px
+    width: 100%
+    height: 100%
+    background: #000
+    opacity: 0.6
+    -webkit-filter: blur(50px)
+    filter: blur(50px)
+    z-index: 0
+
+.swiper-container-flip
+  overflow: visible
+
+  .swiper-slide
+    pointer-events: none
+    -webkit-backface-visibility: hidden
+    backface-visibility: hidden
+    z-index: 1
+
+    .swiper-slide
+      pointer-events: none
+
+  .swiper-slide-active
+    pointer-events: auto
+
+    .swiper-slide-active
+      pointer-events: auto
+
+  .swiper-slide-shadow-top, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left, .swiper-slide-shadow-right
+    z-index: 0
+    -webkit-backface-visibility: hidden
+    backface-visibility: hidden
+
+.swiper-container-coverflow .swiper-wrapper
+  /* Windows 8 IE 10 fix
+  -ms-perspective: 1200px
+
+.form-group
+  position: relative
+  display: inline-block
+  -webkit-transition: all .15s ease-in
+  transition: all .15s ease-in
+  border-radius: 0
+  background: #fff
+
+  [type="radio"]
+    &:checked, &:not(:checked)
+      position: absolute
+      left: -9999px
+
+    &:checked + label, &:not(:checked) + label
+      position: relative
+      padding-left: 20px
+      cursor: pointer
+      line-height: 13px
+      display: inline-block
+      color: #7c7c81
+      padding-right: 15px
+      width: auto
+      font-weight: 400
+      font-family: inherit
+      text-transform: none
+      font-size: 0.90em
+      margin: 2px 0
+
+    &:checked + label strong, &:not(:checked) + label strong
+      font-weight: 500
+
+    &:checked + label:before, &:not(:checked) + label:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      width: 12px
+      height: 12px
+      border: 1px solid rgba(64, 64, 64, 0.5)
+      border-radius: 100%
+      background: #fff
+
+    &:checked + label:after
+      content: ''
+      width: 12px
+      height: 12px
+      background: #404040
+      position: absolute
+      top: 0
+      left: 0
+      border-radius: 100%
+      -webkit-transition: all 0.2s ease
+      transition: all 0.2s ease
+
+    &:not(:checked) + label:after
+      content: ''
+      width: 12px
+      height: 12px
+      background: #404040
+      position: absolute
+      top: 0
+      left: 0
+      border-radius: 100%
+      -webkit-transition: all 0.2s ease
+      transition: all 0.2s ease
+      opacity: 0
+      -webkit-transform: scale(0)
+      transform: scale(0)
+
+    &:checked + label
+      color: #404040
+      font-weight: 400
+
+      &:before
+        border: 1px solid #7c7c81
+
+      &:after
+        opacity: 1
+        -webkit-transform: scale(1)
+        transform: scale(1)
+
+      &.dark
+        &:before
+          border: 1px solid #404040
+
+        &:after
+          background: #404040
+
+  [type="checkbox"]
+    &:checked, &:not(:checked)
+      position: absolute
+      left: -9999px
+
+    &:checked + label, &:not(:checked) + label
+      cursor: pointer
+
+    &:checked + label:before, &:not(:checked) + label:before
+      content: ''
+      width: 20px
+      height: 20px
+      position: relative
+      display: table
+      float: left
+      cursor: pointer
+      background: #dbdbdb
+      border: 1px solid #7c7c81
+      border-radius: 4px
+      margin-right: 10px
+
+    &:checked + label:after, &:not(:checked) + label:after
+      content: ''
+      width: 12px
+      height: 7px
+      position: absolute
+      top: 4px
+      left: 4px
+      border: 3px solid #7c7c81
+      border-top: none
+      border-right: none
+      background: transparent
+      opacity: 0
+      -webkit-transform: rotate(-45deg)
+      transform: rotate(-45deg)
+      -webkit-transition: opacity 250ms, -webkit-transform 60ms
+      transition: opacity 250ms, -webkit-transform 60ms
+      transition: opacity 250ms, transform 60ms
+      transition: opacity 250ms, transform 60ms, -webkit-transform 60ms
+
+    &:checked + label:after
+      opacity: 1
+
+  p.checkbox-group
+    display: inline-block
+    text-align: unset
+    font-size: 13px
+    color: #404040
+    margin-bottom: 10px
+    margin-top: 5px
+    padding: 0
+    position: relative
+    width: 100%
+
+    label
+      float: left
+      margin-right: 10px
+      margin-top: -2px
+
+  input
+    display: block
+    padding: 12.5px 23px
+    border: 1px solid #dbdbdb
+    color: #7c7c81
+    outline: none
+    font-size: 1em
+    border-radius: 0
+    -webkit-transition: all .15s ease-in
+    transition: all .15s ease-in
+
+    &:invalid
+      border-color: red
+
+    &:required
+      border-color: #7c7c81
+
+    &:disabled
+      background: #fff
+      color: #7c7c81
+      border-color: #dbdbdb !important
+
+    &:focus
+      border-color: #7c7c81
+
+      + i::before
+        color: #7c7c81
+
+    &.block
+      width: 100%
+
+  select, textarea
+    display: block
+    padding: 12.5px 23px
+    border: 1px solid #dbdbdb
+    color: #7c7c81
+    outline: none
+    font-size: 1em
+    border-radius: 0
+    -webkit-transition: all .15s ease-in
+    transition: all .15s ease-in
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+
+  select.block, textarea.block
+    width: 100%
+
+  select:focus, textarea:focus
+    border-color: #7c7c81
+
+  select:focus + i::before, textarea:focus + i::before
+    color: #7c7c81
+
+  select::-ms-expand
+    display: none
+
+  &.inline-button
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -ms-flex-wrap: wrap
+    flex-wrap: wrap
+    -webkit-box-align: stretch
+    -ms-flex-align: stretch
+    align-items: stretch
+
+    > label
+      -webkit-box-flex: 0
+      -ms-flex: 0 0 100%
+      flex: 0 0 100%
+
+      &.inline
+        -webkit-box-flex: 0
+        -ms-flex: none
+        flex: none
+        -ms-flex-item-align: center
+        align-self: center
+        color: #7c7c81
+        text-transform: none
+        margin-right: 10px
+
+    input
+      -webkit-box-flex: 1
+      -ms-flex: 1 1 auto
+      flex: 1 1 auto
+      width: 1%
+
+  &.select
+    position: relative
+
+    select
+      padding-right: 35px
+
+    &:after
+      width: 8px
+      height: 5px
+      border-top: solid 5px #7c7c81
+      border-left: solid 5px transparent
+      border-right: solid 5px transparent
+      display: inline-block
+      content: ''
+      position: absolute
+      right: 13px
+      top: 21px
+
+  &.file input[type="file"]
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0
+
+  &.search
+    input
+      width: 100%
+      padding-right: 45px
+
+    &:before
+      font-family: "pure4u" !important
+      speak: none
+      font-style: normal
+      font-weight: normal
+      font-variant: normal
+      text-transform: none
+      line-height: 1
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+      content: ""
+      display: inline-block
+      position: absolute
+      right: 12px
+      top: 12px
+      font-size: 21px
+
+  &.radio-as-block [type="radio"]
+    &:checked + label, &:not(:checked) + label
+      display: block
+
+  span.error
+    font-size: 0.8em
+    color: #7c7c81
+    font-weight: 500
+    display: block
+    padding: 5px 0 0
+
+@media (max-width: 576px)
+  .form-group.inline-button > label.inline
+    -webkit-box-flex: 0
+    -ms-flex: 0 0 100%
+    flex: 0 0 100%
+
+.btn
+  background: #404040
+  padding: 12.5px 23px
+  display: inline-block
+  color: #fff
+  text-align: center
+  text-transform: uppercase
+  border: 1px solid #404040
+  font-size: 1.1em
+  font-weight: 700
+  outline: none
+  -webkit-transition: all 200ms ease
+  transition: all 200ms ease
+  cursor: pointer
+
+  &:hover
+    text-decoration: none
+    opacity: 0.75
+    color: #fff
+
+  &.btn-lg
+    font-size: 1.25em
+    padding: 12px 19px
+
+  &.btn-block
+    display: block
+    width: 100%
+
+  &.btn-white
+    background: #fff
+    border-color: #fff
+    color: #404040
+
+  &.btn-outline-white
+    background: transparent
+    border-color: #fff
+    color: #fff
+
+  &.btn-outline
+    background: transparent
+    border-color: #404040
+    color: #404040
+
+.embed-container
+  position: relative
+  padding-bottom: 56.25%
+  height: 0
+  overflow: hidden
+  max-width: 100%
+
+  iframe, object, embed
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+/* Magnific Popup
+/* Magnific Popup CSS
+
+.mfp-bg
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 1042
+  overflow: hidden
+  position: fixed
+  background: #0b0b0b
+  opacity: 0.8
+
+.mfp-wrap
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 1043
+  position: fixed
+  outline: none !important
+  -webkit-backface-visibility: hidden
+
+.mfp-container
+  text-align: center
+  position: absolute
+  width: 100%
+  height: 100%
+  left: 0
+  top: 0
+  padding: 0 8px
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+  &:before
+    content: ''
+    display: inline-block
+    height: 100%
+    vertical-align: middle
+
+.mfp-align-top .mfp-container:before
+  display: none
+
+.mfp-content
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  margin: 0 auto
+  text-align: left
+  z-index: 1045
+
+.mfp-inline-holder .mfp-content, .mfp-ajax-holder .mfp-content
+  width: 100%
+  cursor: auto
+
+.mfp-ajax-cur
+  cursor: progress
+
+.mfp-zoom-out-cur
+  cursor: -webkit-zoom-out
+  cursor: zoom-out
+
+  .mfp-image-holder .mfp-close
+    cursor: -webkit-zoom-out
+    cursor: zoom-out
+
+.mfp-zoom
+  cursor: pointer
+  cursor: -webkit-zoom-in
+  cursor: zoom-in
+
+.mfp-auto-cursor .mfp-content
+  cursor: auto
+
+.mfp-close, .mfp-arrow, .mfp-preloader, .mfp-counter
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+.mfp-loading.mfp-figure
+  display: none
+
+.mfp-hide
+  display: none !important
+
+.mfp-preloader
+  color: #CCC
+  position: absolute
+  top: 50%
+  width: auto
+  text-align: center
+  margin-top: -0.8em
+  left: 8px
+  right: 8px
+  z-index: 1044
+
+  a
+    color: #CCC
+
+    &:hover
+      color: #FFF
+
+.mfp-s-ready .mfp-preloader, .mfp-s-error .mfp-content
+  display: none
+
+button
+  &.mfp-close, &.mfp-arrow
+    overflow: visible
+    cursor: pointer
+    background: transparent
+    border: 0
+    -webkit-appearance: none
+    display: block
+    outline: none
+    padding: 0
+    z-index: 1046
+    -webkit-box-shadow: none
+    box-shadow: none
+    -ms-touch-action: manipulation
+    touch-action: manipulation
+
+  &::-moz-focus-inner
+    padding: 0
+    border: 0
+
+.mfp-close
+  width: 44px
+  height: 44px
+  line-height: 44px
+  position: absolute
+  right: 0
+  top: 0
+  text-decoration: none
+  text-align: center
+  opacity: 0.65
+  padding: 0 0 18px 10px
+  color: #FFF
+  font-style: normal
+  font-size: 28px
+  font-family: Arial, Baskerville, monospace
+
+  &:hover, &:focus
+    opacity: 1
+
+  &:active
+    top: 1px
+
+.mfp-close-btn-in .mfp-close
+  color: #333
+
+.mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close
+  color: #FFF
+  right: -6px
+  text-align: right
+  padding-right: 6px
+  width: 100%
+
+.mfp-counter
+  position: absolute
+  top: 0
+  right: 0
+  color: #CCC
+  font-size: 12px
+  line-height: 18px
+  white-space: nowrap
+
+.mfp-arrow
+  position: absolute
+  opacity: 0.65
+  margin: 0
+  top: 50%
+  margin-top: -55px
+  padding: 0
+  width: 90px
+  height: 110px
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+  &:active
+    margin-top: -54px
+
+  &:hover, &:focus
+    opacity: 1
+
+  &:before
+    content: ''
+    display: block
+    width: 0
+    height: 0
+    position: absolute
+    left: 0
+    top: 0
+    margin-top: 35px
+    margin-left: 35px
+    border: medium inset transparent
+
+  &:after
+    content: ''
+    display: block
+    width: 0
+    height: 0
+    position: absolute
+    left: 0
+    top: 0
+    margin-top: 35px
+    margin-left: 35px
+    border: medium inset transparent
+    border-top-width: 13px
+    border-bottom-width: 13px
+    top: 8px
+
+  &:before
+    border-top-width: 21px
+    border-bottom-width: 21px
+    opacity: 0.7
+
+.mfp-arrow-left
+  left: 0
+
+  &:after
+    border-right: 17px solid #FFF
+    margin-left: 31px
+
+  &:before
+    margin-left: 25px
+    border-right: 27px solid #3F3F3F
+
+.mfp-arrow-right
+  right: 0
+
+  &:after
+    border-left: 17px solid #FFF
+    margin-left: 39px
+
+  &:before
+    border-left: 27px solid #3F3F3F
+
+.mfp-iframe-holder
+  padding-top: 40px
+  padding-bottom: 40px
+
+  .mfp-content
+    line-height: 0
+    width: 100%
+    max-width: 900px
+
+  .mfp-close
+    top: -40px
+
+.mfp-iframe-scaler
+  width: 100%
+  height: 0
+  overflow: hidden
+  padding-top: 56.25%
+
+  iframe
+    position: absolute
+    display: block
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6)
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6)
+    background: #000
+
+/* Main image in popup
+
+img.mfp-img
+  width: auto
+  max-width: 100%
+  height: auto
+  display: block
+  line-height: 0
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  padding: 40px 0 40px
+  margin: 0 auto
+
+/* The shadow behind the image
+
+.mfp-figure
+  line-height: 0
+
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    top: 40px
+    bottom: 40px
+    display: block
+    right: 0
+    width: auto
+    height: auto
+    z-index: -1
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6)
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6)
+    background: #444
+
+  small
+    color: #BDBDBD
+    display: block
+    font-size: 12px
+    line-height: 14px
+
+  figure
+    margin: 0
+
+.mfp-bottom-bar
+  margin-top: -36px
+  position: absolute
+  top: 100%
+  left: 0
+  width: 100%
+  cursor: auto
+
+.mfp-title
+  text-align: left
+  line-height: 18px
+  color: #F3F3F3
+  word-wrap: break-word
+  padding-right: 36px
+
+.mfp-image-holder .mfp-content
+  max-width: 100%
+
+.mfp-gallery .mfp-image-holder .mfp-figure
+  cursor: pointer
+
+@media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px)
+  /**
+   *   * Remove all paddings around the image on small screen
+
+  .mfp-img-mobile
+    .mfp-image-holder
+      padding-left: 0
+      padding-right: 0
+
+    img.mfp-img
+      padding: 0
+
+    .mfp-figure
+      &:after
+        top: 0
+        bottom: 0
+
+      small
+        display: inline
+        margin-left: 5px
+
+    .mfp-bottom-bar
+      background: rgba(0, 0, 0, 0.6)
+      bottom: 0
+      margin: 0
+      top: auto
+      padding: 3px 5px
+      position: fixed
+      -webkit-box-sizing: border-box
+      box-sizing: border-box
+
+      &:empty
+        padding: 0
+
+    .mfp-counter
+      right: 5px
+      top: 3px
+
+    .mfp-close
+      top: 0
+      right: 0
+      width: 35px
+      height: 35px
+      line-height: 35px
+      background: rgba(0, 0, 0, 0.6)
+      position: fixed
+      text-align: center
+      padding: 0
+
+@media all and (max-width: 900px)
+  .mfp-arrow
+    -webkit-transform: scale(0.75)
+    transform: scale(0.75)
+
+  .mfp-arrow-left
+    -webkit-transform-origin: 0
+    transform-origin: 0
+
+  .mfp-arrow-right
+    -webkit-transform-origin: 100%
+    transform-origin: 100%
+
+  .mfp-container
+    padding-left: 6px
+    padding-right: 6px
+
+.mfp-slide-bottom
+  .zoom-anim-dialog
+    opacity: 0
+    -webkit-transition: all 0.2s ease-out
+    transition: all 0.2s ease-out
+    -webkit-transform: translateY(-20px) perspective(600px) rotateX(10deg)
+    transform: translateY(-20px) perspective(600px) rotateX(10deg)
+
+  &.mfp-ready .zoom-anim-dialog
+    opacity: 1
+    -webkit-transform: translateY(0) perspective(600px) rotateX(0)
+    transform: translateY(0) perspective(600px) rotateX(0)
+
+  &.mfp-removing .zoom-anim-dialog
+    opacity: 0
+    -webkit-transform: translateY(-10px) perspective(600px) rotateX(10deg)
+    transform: translateY(-10px) perspective(600px) rotateX(10deg)
+
+  &.mfp-bg
+    opacity: 0
+    -webkit-transition: opacity 0.15s ease-out
+    transition: opacity 0.15s ease-out
+
+  &.mfp-ready.mfp-bg
+    opacity: 0.8
+
+/* animate in
+
+/* animate out
+
+/* Dark overlay, start state
+
+/* animate in
+
+/* animate out
+
+.my-mfp-slide-bottom.mfp-removing.mfp-bg
+  opacity: 0
+
+body
+  .drawer-overlay
+    background: rgba(0, 0, 0, 0.76)
+    position: fixed
+    width: 100%
+    height: 100%
+    display: table
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: -1
+    opacity: 0
+    -webkit-transition: all .2s ease-in-out
+    transition: all .2s ease-in-out
+
+  .drawer-mobile-menu
+    position: fixed
+    width: 300px
+    right: 0
+    top: 0
+    height: 100%
+    z-index: 1010
+    background: #fff
+    padding: 20px
+    display: block
+    overflow-y: auto
+    -webkit-transform: translateX(100%)
+    transform: translateX(100%)
+    -webkit-transition: all .2s ease-in-out
+    transition: all .2s ease-in-out
+    .submenu
+      ul
+        display: none
+        padding-left: 10px
+
+    .toggle-button
+      position: relative
+      top: 0
+      right: 0
+
+    ul
+      &.header-menu
+        position: relative
+        float: none
+        margin: 0
+        display: none
+        top: 0
+
+        li
+          padding: 0
+
+          a
+            margin-top: 0
+
+      &:not(.header-menu)
+        list-style: none
+        padding: 0
+        clear: both
+        margin-top: 35px
+
+        li
+          margin-bottom: 20px
+
+          a
+            font-size: 1.25em
+
+  &.drawer-open
+    overflow: hidden
+
+    .drawer-overlay
+      z-index: 1001
+      opacity: 1
+      cursor: pointer
+
+    .drawer-mobile-menu
+      -webkit-transform: translateX(0)
+      transform: translateX(0)
+
+    .toggle-button
+      display: inline-block
+
+      i:before
+        content: ""
+
+  .toggle-button
+    width: 35px
+    height: 35px
+    background: transparent
+    border: none
+    position: absolute
+    top: 24px
+    right: 13px
+    padding: 0
+    line-height: inherit
+    color: #7c7c81
+    display: block
+    text-align: center
+    overflow: hidden
+    float: right
+    display: none
+    -webkit-transition: all .15s ease-in
+    transition: all .15s ease-in
+    cursor: pointer
+
+    i:before
+      font-family: "pure4u" !important
+      speak: none
+      font-style: normal
+      font-weight: normal
+      font-variant: normal
+      text-transform: none
+      line-height: 1
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+      content: ""
+      color: #7c7c81
+      font-size: 30px
+      display: block
+      -webkit-transition: all .15s ease-in
+      transition: all .15s ease-in
+
+    &:focus
+      outline: none
+
+    &:hover i:before
+      color: #404040
+
+  header
+    background-color: #fff
+    max-height: 141px
+    position: fixed
+    top: 0
+    width: 100%
+    -webkit-transition: all .2s ease-in
+    transition: all .2s ease-in
+    z-index: 101
+    border-bottom: 1px solid #dbdbdb
+
+    &.scrollUp
+      -webkit-transform: translateY(-45px)
+      transform: translateY(-45px)
+
+    .brand
+      display: block
+      float: none
+      margin: 0 auto
+      background: url(../img/logo.svg) no-repeat center center
+      background-size: cover
+      width: 210px
+      height: 59px
+      position: relative
+      left: -20px
+
+      h1
+        visibility: hidden
+        text-indent: -9999px
+
+    nav
+      top: 0
+      background: #7c7c81
+      width: 100%
+      height: 45px
+      display: table
+      z-index: 101
+      text-align: center
+      line-height: 45px
+
+      a.topbrand
+        color: #fff
+        float: none
+        font-weight: 400
+        margin: 0 auto
+        text-transform: uppercase
+
+        &:hover
+          text-decoration: none
+
+      ul.topheader-social
+        padding: 0
+        margin: 0
+        float: right
+        list-style: none
+
+        li
+          float: left
+          margin-left: 15px
+
+          a
+            color: #fff
+            text-decoration: none
+
+            i:before
+              font-family: "pure4u" !important
+              speak: none
+              font-style: normal
+              font-weight: normal
+              font-variant: normal
+              text-transform: none
+              line-height: 1
+              -webkit-font-smoothing: antialiased
+              -moz-osx-font-smoothing: grayscale
+              -webkit-transition: all .15s ease-in
+              transition: all .15s ease-in
+
+            &.facebook i:before
+              content: ""
+
+            &.instagram i:before
+              content: ""
+
+            &:hover i:before
+              opacity: 0.65
+
+      &.main
+        background: #dbdbdb
+        text-align: center
+
+        ul.main-menu
+          list-style: none
+          padding: 0
+          margin: 0 auto
+          display: table
+          height: 50px
+
+          li
+            float: left
+            height: 50px
+            margin: 0 20px
+
+            a
+              color: #7c7c81
+              display: block
+              height: 50px
+              line-height: 50px
+              font-size: 1.175em
+              text-decoration: none
+
+              &.active
+                font-weight: 400
+                color: #404040
+
+              &:hover
+                color: #404040
+
+            &.submenu
+              position: relative
+
+              > a::after
+                font-family: "pure4u" !important
+                speak: none
+                font-style: normal
+                font-weight: normal
+                font-variant: normal
+                text-transform: none
+                line-height: 1
+                -webkit-font-smoothing: antialiased
+                -moz-osx-font-smoothing: grayscale
+                content: ""
+                -webkit-transform: rotate(90deg)
+                transform: rotate(90deg)
+                position: relative
+                display: inline-block
+                font-size: 12px
+                margin-left: 7px
+
+              ul
+                display: none
+                position: absolute
+                background: #fff
+                padding: 0
+                width: 220px
+                right: -113px
+                -webkit-transition: all .2s ease-in
+                transition: all .2s ease-in
+                list-style: none
+                z-index: 99999
+                padding: 15px 0 0
+                -webkit-box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.25)
+                box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.25)
+
+                li
+                  display: block
+                  float: none
+                  margin: 0
+                  position: relative
+
+                  a
+                    color: #404040
+                    display: block
+                    text-align: left
+                    line-height: normal
+                    height: auto
+                    padding: 10px 25px
+
+                    &:hover
+                      color: #000000
+                      text-decoration: underline
+
+@media (max-width: 768px)
+  body .drawer-mobile-menu ul.header-menu
+    display: table
+
+@media (max-width: 1280px)
+  body .toggle-button
+    display: inline-block
+
+@media (max-width: 576px)
+  body .toggle-button
+    top: 18px
+
+@media (max-width: 1280px)
+  body header.scrollUp
+    -webkit-transform: translateY(-96px)
+    transform: translateY(-96px)
+
+@media (max-width: 1280px)
+  body header .brand
+    left: 0
+
+@media (max-width: 992px)
+  body header .brand
+    margin: 0
+
+@media (max-width: 576px)
+  body header .brand
+    height: auto
+    background-size: contain
+    background-position: left center
+
+    h1
+      margin-bottom: 0
+
+@media (max-width: 1280px)
+  body header nav
+    display: none
+
+@media (min-width: 768px)
+  body header nav.main ul.main-menu li.submenu:hover ul
+    display: block
+
+ul.header-menu
+  list-style: none
+  position: absolute
+  padding: 0
+  margin: 0
+  float: right
+  top: 15px
+  right: 0
+
+  li
+    float: left
+    background: #fff
+    padding: 7px 0 9px
+
+    .search-wrapper
+      overflow: hidden
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      height: 49px
+      width: 0
+      float: left
+      -webkit-transition: width .5s ease,right .5s ease
+      transition: width .5s ease,right .5s ease
+
+      form
+        opacity: 0
+        -webkit-transition: opacity .5s ease-in-out
+        transition: opacity .5s ease-in-out
+
+      &.expanded
+        width: 198px
+
+        form
+          opacity: 1
+
+    a
+      margin: 4px 18px 0
+      display: block
+      color: #7c7c81
+      text-decoration: none
+      -webkit-transition: all .125s ease-in-out
+      transition: all .125s ease-in-out
+      font-size: 1.175em
+
+      &:hover, &.active
+        color: #404040
+
+      i::before
+        font-family: "pure4u" !important
+        speak: none
+        font-style: normal
+        font-weight: normal
+        font-variant: normal
+        text-transform: none
+        line-height: 1
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+        content: ""
+        display: inline-block
+        position: relative
+        margin-right: 15px
+        font-size: 25px
+        top: 5px
+
+      &.acesso i::before
+        content: ""
+
+      &.carrinho i::before
+        content: ""
+
+      &.busca
+        display: inline-block
+
+        i::before
+          content: ""
+          margin-right: 0
+
+    &:first-child a
+      margin-left: 0
+
+@media (max-width: 1280px)
+  ul.header-menu li a
+    span
+      display: none
+
+    i:before
+      margin-right: 0
+
+@media (max-width: 1280px)
+  ul.header-menu
+    margin-right: 55px
+
+@media (max-width: 768px)
+  ul.header-menu
+    display: none
+
+section.main
+  background: #fff
+  position: relative
+  margin-top: 184px
+
+@media (max-width: 1280px)
+  section.main
+    margin-top: 90px
+
+@media (max-width: 576px)
+  section.main
+    margin-top: 70px
+
+h1, h2, h3, h4, h5, h6
+  font-family: "Lato"
+  font-weight: 700
+
+.text-right
+  text-align: right
+
+.float-left
+  float: left
+
+.float-right
+  float: right
+
+.text-center
+  float: none
+  margin: 0 auto
+  text-align: center
+  position: relative
+  clear: both
+
+.modal
+  background: #fff
+  max-width: 560px
+  width: auto
+  margin: 0 auto
+  padding: 35px
+
+/** pure css star rating with radio *
+
+.star-rating
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-orient: horizontal
+  -webkit-box-direction: reverse
+  -ms-flex-direction: row-reverse
+  flex-direction: row-reverse
+  font-size: 1.5em
+  -ms-flex-pack: distribute
+  justify-content: space-around
+  text-align: center
+  width: 5.25em
+  font-size: 27px
+
+  label
+    color: #7c7c81
+    cursor: pointer
+    margin-bottom: 0
+
+    &:before
+      content: '\2606'
+
+  [type="radio"]
+    display: none
+
+    &:checked ~ label
+      color: #404040
+
+      &:before
+        content: '\2605'
+        color: #404040
+
+    &:not(:disabled) + label:hover
+      color: #000000
+
+      ~ label
+        color: #000000
+
+      &:before, ~ label:before
+        content: '\2605'
+
+/** product list *
+
+.product-list-block
+  padding: 70px 0
+
+  a
+    text-decoration: none
+
+  h2
+    margin-bottom: 35px
+
+    &:after
+      font-family: "pure4u" !important
+      speak: none
+      font-style: normal
+      font-weight: normal
+      font-variant: normal
+      text-transform: none
+      line-height: 1
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+      content: ""
+      font-size: 16px
+      display: inline-block
+      top: 1px
+      margin-left: 7px
+      position: relative
+
+  hr
+    display: table
+    width: 100%
+    margin: 60px 0
+    border-top: 1px solid rgba(219, 219, 219, 0.7)
+
+.product-list
+  list-style: none
+  padding: 0
+  margin: 0
+  display: table
+  width: 100%
+
+  li
+    float: left
+    position: relative
+    width: 25%
+
+    a.product
+      text-decoration: none
+      text-align: center
+      background: #fff
+      line-height: 1.2
+      -webkit-transition: all .175s ease-in
+      transition: all .175s ease-in
+      display: block
+      position: relative
+      min-height: 575px
+      border: 1px solid transparent
+
+      .product-cover
+        margin: 0 auto
+        position: relative
+        display: block
+        width: 100%
+        height: 298px
+        img
+          -webkit-transition: all .175s ease-in-out
+          transition: all .175s ease-in-out
+          width: 100%
+          max-height: 298px
+
+      .product-title
+        color: #404040
+        display: block
+        font-size: 1.175em
+        letter-spacing: .125em
+        text-transform: uppercase
+        margin-bottom: 5px
+        min-height: 40px
+
+      .product-subtitle
+        margin-bottom: 95px
+        display: block
+        position: relative
+        font-weight: 300
+        font-size: 1.25em
+        text-transform: lowercase
+
+      .product-price-actions
+        margin-bottom: 0
+        position: absolute
+        bottom: 0
+        text-align: center
+        padding: 0
+        width: 100%
+        left: 0
+
+        .product-offer-price
+          font-weight: 900
+          color: #404040
+          font-size: 1.6em
+          margin: 0
+
+          sup
+            font-size: 0.6em
+
+          span
+            font-weight: 400
+            display: block
+            font-size: 0.7em
+            margin-top: 0
+
+        .btn
+          width: 100%
+          opacity: 0
+          -webkit-transition: opacity 200ms
+          transition: opacity 200ms
+
+        .star-rating
+          float: none
+          margin: 2px auto 15px
+
+      &:hover
+        border-color: rgba(219, 219, 219, 0.5)
+        z-index: 10
+
+        .product-price-actions .btn
+          opacity: 1
+
+        .product-cover img
+          opacity: 0.7
+
+      &.soon
+        .product-cover
+          display: block
+          position: relative
+
+          span
+            text-transform: uppercase
+            font-weight: 400
+            background: rgba(64, 64, 64, 0.5)
+            display: block
+            width: 100%
+            color: #fff
+            padding: 25px
+            position: absolute
+            top: 45%
+            font-size: 1.175em
+
+          img
+            -webkit-filter: blur(5px)
+            filter: blur(5px)
+
+        &:hover
+          border-color: transparent
+
+          .product-cover img
+            opacity: 1
+
+          .btn
+            opacity: 0
+
+@media (max-width: 1280px)
+  .product-list li
+    width: 33.333%
+
+    a.product
+      min-height: 550px
+
+@media (max-width: 992px)
+  .product-list li a.product
+    min-height: 470px
+
+@media (max-width: 768px)
+  .product-list li
+    width: 50%
+
+    a.product
+      min-height: 495px
+
+@media (max-width: 576px)
+  .product-list li a.product
+    min-height: 440px
+
+    .product-cover
+      padding: 0
+
+      img
+        max-width: 160px
+
+@media (max-width: 480px)
+  .product-list li
+    width: 100%
+
+    a.product
+      height: auto
+
+      p.product-price-actions span.product-author
+        padding-top: 0
+
+.section-header
+  background: #404040
+  color: #fff
+  padding: 60px 0
+  position: relative
+  display: table
+  width: 100%
+
+  ul.breadcrumb
+    padding: 0
+    margin: 0 auto 27px
+    list-style: none
+    position: relative
+    display: table
+    float: left
+
+    li
+      float: left
+
+      a
+        color: #dbdbdb
+
+      &:not(:last-child):after
+        font-family: "pure4u" !important
+        speak: none
+        font-style: normal
+        font-weight: normal
+        font-variant: normal
+        text-transform: none
+        line-height: 1
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+        content: ""
+        font-size: 8px
+        display: inline-block
+        margin: 0 7px
+
+  .separator
+    position: relative
+    display: block
+    clear: both
+    width: 50px
+    border-top: 1px solid #c6c6c6
+    margin-bottom: 20px
+
+  h2
+    font-weight: 900
+    font-size: 50px
+    margin-bottom: 0
+    line-height: 1.1
+    clear: both
+
+.cta-spa-capilar
+  background: #fbf6f2
+  color: #707070
+  padding: 80px 0
+  display: table
+  width: 100%
+  text-align: center
+
+  h3
+    margin-left: 100px
+    font-weight: 700
+    font-size: 28px
+    padding-right: 70px
+    color: #404040
+    line-height: 1.25
+    text-align: center
+
+    &:after
+      width: 50px
+      border-top: 1px solid #404040
+      content: ''
+      display: table
+      position: relative
+      float: none
+      margin: 25px auto
+
+  p
+    width: 33%
+    margin: 0 auto 55px
+    font-weight: 400
+    font-size: 16px
+    line-height: 1.8
+    color: #707070
+
+  img
+    max-width: 100%
+
+  .img-antes
+    float: left
+
+  .img-depois
+    float: right
+
+@media (max-width: 1280px)
+  .cta-spa-capilar p
+    width: 50%
+
+@media (max-width: 992px)
+  .cta-spa-capilar
+    p
+      width: 65%
+
+    .img-antes, .img-depois
+      float: none
+
+/* selos icones
+
+ul.selos
+  padding: 0
+  margin: 0
+  list-style: none
+
+  li
+    float: left
+    margin: 0 7px 7px 0
+
+    a
+      width: 60px
+      height: 60px
+      display: block
+      text-decoration: none
+
+      i:before
+        font-family: "pure4u" !important
+        speak: none
+        font-style: normal
+        font-weight: normal
+        font-variant: normal
+        text-transform: none
+        line-height: 1
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+        content: ""
+        font-size: 60px
+
+      &.cruelty-free i:before
+        content: ""
+
+      &.sulfate-parabens-free i:before
+        content: ""
+
+      &.botanical-ingredients i:before
+        content: ""
+
+      &.planet-friendly i:before
+        content: ""
+
+footer
+  background: #dbdbdb
+  color: #808080
+  padding-top: 25px
+
+  img
+    display: block
+    max-width: 100%
+
+  form[name="newsletter-form"]
+    max-width: 380px
+
+    input
+      background: #dbdbdb
+      border-color: #7c7c81
+
+      &:focus
+        border-color: #bdbdc0
+
+    button
+      background: #7c7c81
+      border-color: #7c7c81
+
+  ul
+    list-style: none
+    padding: 0
+    margin: 0
+
+    li
+      margin-bottom: 20px
+
+    &.footer-social li
+      float: left
+      margin-left: 15px
+
+      a
+        color: #808080
+        text-decoration: none
+
+        i:before
+          font-family: "pure4u" !important
+          speak: none
+          font-style: normal
+          font-weight: normal
+          font-variant: normal
+          text-transform: none
+          line-height: 1
+          -webkit-font-smoothing: antialiased
+          -moz-osx-font-smoothing: grayscale
+          -webkit-transition: all .15s ease-in
+          transition: all .15s ease-in
+
+        &.facebook i:before
+          content: ""
+
+        &.instagram i:before
+          content: ""
+
+        &:hover i:before
+          opacity: 0.65
+
+      &:first-child
+        margin-left: 0
+
+  h4
+    margin-bottom: 20px
+    font-weight: 700
+    text-transform: uppercase
+
+  .copyright
+    background: #7c7c81
+    color: #dbdbdb
+    text-align: center
+    padding: 9px 15px
+    font-size: 0.95em
+    margin-top: 25px
+
+    p
+      margin-bottom: 0
+
+    a
+      color: #dbdbdb
+      display: table
+      margin: 0 auto
+
+@media (max-width: 1440px)
+  footer ul.selos li a
+    width: 50px
+    height: 50px
+
+    i:before
+      font-size: 50px
+
+@media (max-width: 1280px)
+  footer ul.selos li a
+    width: 60px
+    height: 60px
+
+    i:before
+      font-size: 60px
+
+#home-slider
+  height: 600px
+  background: #fff
+
+  .home-slider-content-box
+    background: rgba(255, 255, 255, 0.75)
+    text-align: center
+    padding: 40px
+
+    p
+      font-size: 1.85em
+      text-transform: uppercase
+      font-weight: 400
+      color: #404040
+      text-align: center
+      -moz-text-align-last: center
+      text-align-last: center
+      line-height: 2
+
+    a.btn
+      float: none
+      margin: 0 auto
+      display: table
+      padding-left: 50px
+      padding-right: 50px
+      -moz-text-align-last: auto
+      text-align-last: auto
+
+  .swiper-pagination-bullets
+    bottom: 20px
+
+    .swiper-pagination-bullet
+      width: 14px
+      height: 14px
+      margin: 0 6px
+
+      &.swiper-pagination-bullet-active
+        background: #404040
+
+  .swiper-slide
+    background-size: cover !important
+    background-position: center center !important
+
+    .container .grid
+      height: 100%
+
+.cta-conceito
+  background: #404040 url(../img/home-cta-conceito-bg.png) no-repeat center center
+  padding: 75px 0
+  color: #fff
+
+  h2
+    text-transform: uppercase
+    font-weight: 700
+    font-size: 45px
+    margin-bottom: 0
+    line-height: 1.45
+
+    span
+      text-transform: none
+      font-weight: 300
+      font-size: 43px
+      display: block
+
+  p
+    font-size: 1.2em
+    line-height: 2.2
+
+  .btn
+    padding-left: 50px
+    padding-right: 50px
+
+@media (max-width: 768px)
+  .cta-conceito h2
+    font-size: 36px
+
+    span
+      font-size: 32px
+
+@media (max-width: 768px)
+  .cta-conceito
+    padding: 45px 0
+
+.cta-tratamento-capilar
+  background: #faf9f7
+  padding: 25px 0
+  position: relative
+  display: table
+  width: 100%
+
+  img
+    width: 100%
+    position: relative
+
+  .cta-text-border
+    border: 2px solid #dbdbdb
+    position: relative
+    left: -80px
+    top: 17px
+
+    .cta-text-body
+      position: relative
+      background: #fff
+      display: table
+      width: 100%
+      left: -35px
+      top: -35px
+      padding: 25px 40px 25px 83px
+
+      p
+        font-size: 1.125em
+        margin-right: 45px
+        line-height: 1.75
+
+      .btn
+        padding-left: 50px
+        padding-right: 50px
+        margin-bottom: 10px
+
+      h2
+        font-weight: 900
+        color: #404040
+        text-transform: uppercase
+        font-size: 30px
+        margin-bottom: 35px
+
+        &:after
+          content: ''
+          width: 50px
+          border-bottom: 1px solid #404040
+          display: block
+          position: relative
+          margin-top: 35px
+
+@media (max-width: 576px)
+  .cta-tratamento-capilar .cta-text-border .cta-text-body
+    h2
+      font-size: 27px
+
+    p
+      margin-right: 0
+
+@media (max-width: 992px)
+  .cta-tratamento-capilar .cta-text-border
+    left: 0
+    top: 15px
+
+.cta-linha-profissional
+  margin-top: 65px
+  background: #76787b
+
+  /* Old browsers
+  /* FF3.6-15
+  /* Chrome10-25,Safari5.1-6
+  background: -webkit-gradient(linear, left top, left bottom, from(#76787b), color-stop(53%, #76787b), color-stop(55%, #555658), to(#555658))
+  background: linear-gradient(to bottom, #76787b 0%, #76787b 53%, #555658 55%, #555658 100%)
+
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#76787b', endColorstr='#555658',GradientType=0 )
+
+  /* IE6-9
+  position: relative
+  display: table
+  width: 100%
+  padding: 75px 0
+  color: #fff
+
+  img
+    max-width: 100%
+    float: right
+
+  p
+    font-weight: 700
+    font-size: 1.25em
+    line-height: 1.75
+    margin-right: 125px
+
+  h2
+    font-weight: 900
+    color: #fff
+    text-transform: uppercase
+    font-size: 30px
+    margin-bottom: 35px
+
+    &:after
+      content: ''
+      width: 50px
+      border-bottom: 1px solid #fff
+      display: block
+      position: relative
+      margin-top: 30px
+
+.cta-parceria
+  color: #fff
+
+  p
+    font-weight: 700
+    font-size: 1.25em
+    line-height: 1.75
+    margin-right: 125px
+
+  h2
+    font-weight: 900
+    color: #fff
+    text-transform: uppercase
+    font-size: 30px
+    margin-bottom: 35px
+
+    &:after
+      content: ''
+      width: 50px
+      border-bottom: 1px solid #fff
+      display: block
+      position: relative
+      margin-top: 30px
+
+  > .container > .grid
+    background: #fff url(../img/cta-home-parceria-bg.jpg) no-repeat center center
+    background-size: 100% auto
+    min-height: 600px
+
+@media (max-width: 1280px)
+  .cta-parceria p
+    margin-right: 65px
+    font-size: 1.1em
+
+@media (max-width: 992px)
+  .cta-parceria > .container > .grid
+    background-size: auto 100%
+    min-height: 450px
+
+@media (max-width: 768px)
+  .cta-parceria
+    text-align: center
+
+    h2
+      margin-bottom: 25px
+
+      &:after
+        display: table
+        margin: 25px auto 0
+
+    p
+      margin-right: 0
+
+    a.btn
+      margin-bottom: 35px
+
+    > .container > .grid
+      min-height: auto
+
+.cta-instagram-footer
+  padding: 70px 0
+  background: #fff url(../img/footer-instagram-followus-bg.jpg) no-repeat center center
+  background-size: cover
+  color: #404040
+  text-align: center
+
+  h2
+    font-size: 30px
+    text-transform: uppercase
+    font-weight: 900
+
+    &:after
+      font-family: "pure4u" !important
+      speak: none
+      font-style: normal
+      font-weight: normal
+      font-variant: normal
+      text-transform: none
+      line-height: 1
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+      content: ""
+      display: block
+      font-size: 35px
+      margin-top: 15px
+
+  a.divisor
+    font-weight: 900
+    font-size: 30px
+    color: #404040
+    text-decoration: none
+
+    &:before
+      display: block
+      margin: 25px auto 15px
+      width: 2px
+      height: 100px
+      background: #404040
+      content: ''
+
+  .instagram-block
+    padding-top: 35px
+    display: table
+    width: 70%
+    margin: 0 auto
+
+  ul
+    list-style: none
+
+    li a
+      display: block
+      text-align: center
+
+      img
+        width: 100%
+
+@media (max-width: 1280px)
+  .cta-instagram-footer .instagram-block
+    width: 100%
+
+@media (max-width: 992px)
+  .cta-instagram-footer .instagram-block
+    width: 75%
+
+@media (max-width: 768px)
+  .cta-instagram-footer .instagram-block
+    width: 100%
+
+body
+  &.produtos
+    .section-header
+      background: #ede4dd url(../img/product-home-header-bg.jpg) no-repeat center center
+      background-size: cover
+      color: #404040
+
+      h2
+        margin-bottom: 45px
+
+      ul.breadcrumb
+        margin-bottom: 45px
+
+        a
+          color: #808080
+
+      .separator
+        border-top-color: #404040
+        margin-bottom: 35px
+
+      p
+        font-size: 22px
+        font-weight: 400
+        width: 45%
+
+    .wrapper
+      background: #fff url(../img/product-home-bg.jpg) no-repeat top center
+      background-size: 100% auto
+
+    &.style-2
+      .section-header
+        padding-top: 25px
+        text-align: center
+
+        ul.breadcrumb
+          float: none
+
+        p
+          width: auto
+          max-width: 33%
+          float: none
+          margin: 0 auto
+
+      .wrapper
+        background: #fff
+
+    &.limpeza .section-header
+      background: #fff2f1 url(../img/category-limpeza-bg.jpg) no-repeat center center
+      background-size: cover
+
+    &.mascara .section-header
+      background: #fbf8f0 url(../img/category-mascaras-bg.jpg) no-repeat center center
+
+    &.cuidados-diarios .section-header
+      background: #fffcec url(../img/category-cuidados-diarios-bg.jpg) no-repeat center center
+      padding-bottom: 130px
+
+    &.linha-profissional
+      .section-header
+        background: #ecd9d2 url(../img/category-linha-profissional-bg.jpg) no-repeat center center
+        text-align: left
+        padding-bottom: 120px
+
+        p
+          margin: 0
+
+      .swiper-container .swiper-slide
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-pack: center
+        -ms-flex-pack: center
+        justify-content: center
+        -webkit-box-align: center
+        -ms-flex-align: center
+        align-items: center
+
+        img
+          max-width: 100%
+
+      .product-information
+        h3
+          color: #404040
+          display: block
+          font-size: 20px
+          text-transform: uppercase
+          margin-bottom: 0
+          font-weight: 900
+          line-height: 1.2
+
+          span
+            margin: 4px 0 12px
+            display: block
+            position: relative
+            font-weight: 300
+            font-size: 1em
+            text-transform: lowercase
+
+        p
+          font-size: 16px
+          text-align: justify
+          line-height: 1.8
+          color: #404040
+          width: 65%
+
+        .product-offer-price
+          font-weight: 900
+          color: #404040
+          font-size: 1.6em
+          margin: 0
+          margin-bottom: 5px
+          clear: both
+          display: block
+
+          sup
+            font-size: 0.6em
+
+          span
+            font-weight: 400
+            display: block
+            font-size: 0.7em
+            margin-top: 0
+            line-height: 1
+
+        .star-rating
+          margin-bottom: 15px
+
+        .btn
+          max-width: 300px
+          width: 100%
+
+      .cta-seja-parceiro
+        padding: 190px 0
+        background: #9fa1a6 url(../img/cta-seja-parceiro-bg.jpg) no-repeat center center
+        color: #fff
+
+        p
+          font-weight: 700
+          font-size: 1.25em
+          line-height: 1.75
+          margin-right: 125px
+
+        h3
+          font-weight: 900
+          color: #fff
+          text-transform: uppercase
+          font-size: 30px
+          margin-bottom: 35px
+
+          &:after
+            content: ''
+            width: 50px
+            border-bottom: 1px solid #fff
+            display: block
+            position: relative
+            margin-top: 30px
+
+  &.produto-interna
+    .section-header
+      background: #f5f5f5
+      padding-top: 25px
+      color: #404040
+
+      /** estilos cabeçalho interna produto *
+
+      ul.breadcrumb
+        float: none
+        margin-bottom: 45px
+
+        a
+          color: #808080
+
+      .description
+        h3
+          color: #404040
+          display: block
+          font-size: 20px
+          text-transform: uppercase
+          margin-bottom: 0
+          font-weight: 900
+          line-height: 1.2
+
+          span
+            margin: 4px 0 12px
+            display: block
+            position: relative
+            font-weight: 300
+            font-size: 1em
+            text-transform: lowercase
+
+        .product-quantity-amount
+          display: block
+          position: relative
+          font-weight: 400
+          font-size: 20px
+          margin-bottom: 20px
+
+        p
+          font-size: 16px
+          text-align: justify
+          line-height: 1.8
+
+      .price
+        .star-rating
+          float: left
+
+        .reviews
+          float: left
+          margin-left: 10px
+          position: relative
+          top: 10px
+
+        .frete-links
+          text-align: right
+          margin-top: 3px
+
+          a
+            margin-right: 15px
+            padding-right: 15px
+            border-right: 1px solid #dbdbdb
+
+            &:last-child
+              padding-right: 0
+              margin-right: 0
+              border-right: none
+
+        .product-offer-price
+          font-weight: 900
+          color: #404040
+          font-size: 1.6em
+          margin: 0
+          padding-top: 12px
+          margin-bottom: 20px
+          clear: both
+          display: block
+
+          sup
+            font-size: 0.6em
+
+          span
+            font-weight: 400
+            display: block
+            font-size: 0.7em
+            margin-top: 0
+
+        .btn.mt
+          margin-top: 35px
+
+        .form-group.quantity
+          background: #f5f5f5
+
+          label
+            -webkit-box-flex: 0
+            -ms-flex: none
+            flex: none
+            margin-bottom: 0
+            margin-right: 10px
+            -ms-flex-item-align: center
+            align-self: center
+            font-weight: 400
+            font-size: 16px
+
+          .btn
+            background: #fff
+            border-color: #dbdbdb
+            color: #404040
+            font-family: Arial
+
+            &.minus
+              border-right-color: #fff
+
+            &.plus
+              border-left-color: #fff
+
+          input
+            border-left-color: #fff
+            border-right-color: #fff
+            font-weight: 700
+            -webkit-box-flex: 0
+            -ms-flex: none
+            flex: none
+            padding-left: 0
+            padding-right: 0
+            width: 30px
+            text-align: center
+
+            &:focus
+              border-top-color: #dbdbdb
+              border-bottom-color: #dbdbdb
+
+        .frete-block
+          border-top: 1px solid #dbdbdb
+          margin-top: 35px
+          padding-top: 35px
+          display: table
+          position: relative
+          width: 100%
+
+          .form-group
+            background: #f5f5f5
+
+            label
+              -webkit-box-flex: 0
+              -ms-flex: none
+              flex: none
+              margin-bottom: 0
+              margin-right: 10px
+              -ms-flex-item-align: center
+              align-self: center
+              font-weight: 400
+              font-size: 16px
+
+      #product-slider
+        text-align: center
+        position: relative
+
+        /** workaround do bug com o cálculo da largura máxima do slider *
+
+        img
+          max-width: 100%
+          float: none
+
+        .swiper-pagination-bullets
+          bottom: 0
+          position: relative
+          padding-top: 15px
+
+          .swiper-pagination-bullet
+            width: 11px
+            height: 11px
+            margin: 0 6px
+            border: 1px solid #404040
+            background: transparent
+            opacity: 0.4
+
+            &.swiper-pagination-bullet-active
+              background: #404040
+              opacity: 1
+
+    .cta-dicas-uso
+      background: #404040
+      color: #fff
+      padding: 70px 0
+      text-align: center
+
+      p
+        margin: 0 auto
+        width: 50%
+        float: none
+        font-weight: 400
+        font-size: 22px
+
+    .instrucoes
+      background: #fbf6f2
+      padding: 50px 0
+      display: table
+      width: 100%
+
+      img
+        width: 100%
+
+      h3
+        margin-left: 100px
+        font-weight: 700
+        font-size: 28px
+        padding-right: 70px
+        color: #606060
+        line-height: 1.25
+
+        &:after
+          width: 50px
+          border-top: 1px solid #606060
+          content: ''
+          display: block
+          position: relative
+          margin-bottom: 25px
+          margin-top: 23px
+
+      p
+        margin-left: 100px
+        font-weight: 400
+        font-size: 16px
+        text-align: justify
+        line-height: 1.8
+
+    .ingredientes
+      padding: 75px 0 35px
+      background: #fff
+
+      h3
+        margin-left: 0
+        font-weight: 700
+        font-size: 28px
+        color: #606060
+        text-align: center
+        line-height: 1.25
+
+        &:after
+          width: 50px
+          border-top: 1px solid #606060
+          content: ''
+          display: table
+          position: relative
+          float: none
+          margin: 25px auto
+
+      p
+        margin: 0 60px 25px
+        font-weight: 400
+        font-size: 16px
+        text-align: center
+        line-height: 1.8
+
+      #ingredients-slider
+        ul
+          padding: 0
+          list-style: none
+
+          li
+            text-align: center
+            float: left
+            width: 33%
+
+            img
+              max-width: 100%
+
+            h4
+              text-transform: uppercase
+              color: #404040
+              margin-bottom: 5px
+
+            p
+              color: #404040
+              font-size: 14px
+              line-height: 1
+              margin: 0
+
+        .swiper-pagination-bullets
+          bottom: 0
+          position: relative
+          padding-top: 35px
+
+          .swiper-pagination-bullet
+            width: 11px
+            height: 11px
+            margin: 0 6px
+            border: 1px solid #404040
+            background: transparent
+            opacity: 0.4
+
+            &.swiper-pagination-bullet-active
+              background: #404040
+              opacity: 1
+
+      .ingrediente-bg
+        width: 100%
+
+  &.conceito
+    .section-header
+      background: #ebecee url(../img/conceito-header-bg.jpg) no-repeat center bottom
+      padding: 70px 0 140px
+      color: #7c7c81
+
+      h2
+        color: #404040
+
+      ul.breadcrumb li a
+        color: #808080
+
+      .separator
+        border-color: #404040
+
+      ul.selos
+        margin-top: 115px
+
+    .intro
+      padding: 120px 0
+      background: #7b7d81 url(../img/conceito-intro-content-bg.jpg) no-repeat center center
+      color: #fff
+
+      h3
+        text-align: center
+        font-size: 26px
+        font-weight: 700
+        line-height: 1.4
+        width: 30%
+        margin: 0 auto 35px
+
+      p
+        text-align: center
+        width: 30%
+        float: none
+        margin: 0 auto 35px
+        font-weight: 400
+        font-size: 18px
+        line-height: 1.75
+
+    .cta-spa-capilar
+      background: #404040
+
+      h3, p
+        color: #fff
+
+      h3:after
+        border-top-color: #fff
+
+    .cta-saude
+      background: #fff url(../img/conceito-saude-content-bg.jpg) no-repeat left bottom
+      padding: 120px 0
+
+      h3
+        padding-left: 40px
+        font-weight: 700
+        font-size: 28px
+        color: #606060
+        line-height: 1.25
+
+        &:after
+          width: 50px
+          border-top: 1px solid #606060
+          content: ''
+          display: block
+          position: relative
+          margin-bottom: 25px
+          margin-top: 23px
+
+      p
+        font-weight: 400
+        font-size: 16px
+        padding-left: 40px
+        line-height: 1.8
+        text-align: justify
+
+      .white
+        background: rgba(255, 255, 255, 0.9)
+
+    .cta-conceito
+      background: #fff url(../img/img-conceito.png) no-repeat center center
+      background-size: cover
+      padding: 250px 0
+
+  &.onde-encontrar
+    .section-header
+      background: #404040 url(../img/onde-encontrar-header-bg.jpg) no-repeat center bottom
+      padding: 100px 0
+
+    p.lead
+      font-weight: 400
+      color: #606060
+      font-size: 28px
+      width: 35%
+      display: table
+      margin: 0 auto 25px
+      text-align: center
+
+@media (max-width: 992px)
+  body.produtos .section-header p
+    width: 60%
+
+@media (max-width: 768px)
+  body.produtos .section-header p
+    font-size: 17px
+
+@media (max-width: 576px)
+  body.produtos .section-header p
+    width: 66%
+
+@media (max-width: 992px)
+  body.produtos.style-2 .section-header p
+    max-width: 50%
+
+@media (max-width: 992px)
+  body.produtos.linha-profissional .cta-seja-parceiro
+    text-align: right
+
+    p
+      margin-right: 0
+      margin-left: 125px
+
+    h3
+      text-align: right
+      position: relative
+
+      &:after
+        position: absolute
+        right: 1px
+        top: 30px
+
+@media (max-width: 992px)
+  body.produto-interna .section-header #product-slider
+    max-width: calc(100vw - 90px)
+
+@media (max-width: 768px)
+  body.produto-interna .cta-dicas-uso p
+    font-size: 18px
+    width: 90%
+
+@media (max-width: 1280px)
+  body.produto-interna .instrucoes
+    h3
+      padding-right: 0
+      margin-left: 60px
+
+    p
+      margin-left: 60px
+
+@media (max-width: 992px)
+  body.produto-interna .instrucoes
+    h3, p
+      margin-left: 0
+
+@media (max-width: 768px)
+  body.produto-interna .ingredientes p
+    margin: 0 0 25px
+
+@media (max-width: 576px)
+  body.produto-interna .ingredientes #ingredients-slider ul li
+    width: 50%
+
+@media (max-width: 1280px)
+  body.conceito .intro
+    p, h3
+      width: 45%
+
+@media (max-width: 992px)
+  body.conceito .intro
+    p, h3
+      width: 65%
+
+@media (max-width: 768px)
+  body.conceito .intro
+    padding: 80px 0
+
+    p, h3
+      width: 95%
+
+    p
+      font-size: 16px
+
+@media (max-width: 1280px)
+  body.conceito .cta-saude
+    padding: 50px 0 90px
+
+    .white
+      padding: 45px
+
+    h3, p
+      padding-left: 0
+
+@media (max-width: 992px)
+  body.conceito .cta-saude
+    padding: 25px 0 70px
+
+@media (max-width: 1280px)
+  body.onde-encontrar p.lead
+    width: 45%
+
+@media (max-width: 992px)
+  body.onde-encontrar p.lead
+    width: 60%
+
+@media (max-width: 768px)
+  body.onde-encontrar p.lead
+    font-size: 23px
+
+.clinicas-list-block
+  padding: 60px 0
+
+  ul.grid li
+    border-right: 1px solid transparent
+    margin: 30px 0
+
+    .clinica-block
+      margin-left: 100px
+
+      h3
+        font-weight: 700
+        font-size: 22px
+        color: #404040
+        margin-bottom: 8px
+
+      p, a
+        color: #707070
+        font-size: 16px
+        line-height: 1
+        margin-bottom: 10px
+        font-weight: 400
+
+      p:before, a:before
+        font-family: "pure4u" !important
+        speak: none
+        font-style: normal
+        font-weight: normal
+        font-variant: normal
+        text-transform: none
+        line-height: 1
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+        content: ""
+        font-size: 13px
+        display: inline-block
+        position: relative
+        margin-right: 7px
+        top: 1px
+
+      p.endereco:before, a.endereco:before
+        content: ""
+
+      p.telefone:before, a.telefone:before
+        content: ""
+
+      p.email:before, a.email:before
+        content: ""
+
+    &:nth-child(2n+1)
+      border-right-color: #dbdbdb
+
+@media (max-width: 992px)
+  .clinicas-list-block ul.grid li .clinica-block
+    margin-left: 0
+
+@media (max-width: 992px)
+  .clinicas-list-block ul.grid li:nth-child(2n+1)
+    border-right-color: transparent
+
+body
+  &.seja-um-parceiro
+    .section-header
+      background: #404040 url(../img/seja-um-parceiro-header-bg.jpg) no-repeat center bottom
+      padding: 100px 0
+
+    .intro
+      padding: 60px 0
+      display: table
+      width: 100%
+
+      img
+        width: 100%
+
+      h3
+        margin-left: 100px
+        font-weight: 700
+        font-size: 28px
+        padding-right: 70px
+        color: #606060
+        line-height: 1.25
+
+        &:after
+          width: 50px
+          border-top: 1px solid #606060
+          content: ''
+          display: block
+          position: relative
+          margin-bottom: 25px
+          margin-top: 23px
+
+      p
+        margin-left: 100px
+        font-weight: 400
+        font-size: 16px
+        text-align: justify
+        line-height: 1.8
+
+    .call-to-action
+      background: #b3b1ac url(../img/seja-um-parceiro-cta-bg.jpg) no-repeat center center
+      background-size: cover
+      color: #fff
+      padding: 440px 0 140px
+
+      p
+        font-weight: 700
+        font-size: 40px
+        line-height: 1.1
+        margin-bottom: 0
+        padding-right: 20px
+
+    .cta-linha-profissional
+      margin-top: 0
+
+    .formulario-parceiro
+      background: #fff
+      padding: 60px 0 120px
+
+      p.lead
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.5
+        padding-right: 60px
+
+        &:after
+          width: 50px
+          border-top: 1px solid #404040
+          content: ''
+          display: table
+          position: relative
+          float: none
+          margin: 25px auto
+
+      img
+        max-width: 100%
+        float: right
+
+      form
+        padding-right: 80px
+
+        .form-group
+          width: 100%
+
+          &.mb
+            margin-bottom: 20px
+
+  &.fale-conosco
+    .section-header
+      background: #404040 url(../img/fale-conosco-header-bg.jpg) no-repeat center bottom
+      padding: 100px 0
+
+    .wrapper
+      background: #fff url(../img/fale-conosco-content-bg.jpg) no-repeat center right
+      padding: 70px 0
+
+    .contact-info
+      background: #fff
+      padding: 34px 97px 57px 0
+      width: 100%
+      display: table
+      height: 500px
+      position: relative
+
+      h3
+        font-size: 18px
+        font-weight: 700
+        color: #606060
+        margin-bottom: 10px
+
+      form .form-group
+        width: 100%
+
+        &.mb
+          margin-bottom: 20px
+
+      ul.social
+        clear: both
+        list-style: none
+        margin: 0
+        display: table
+        padding: 20px 0
+
+        li
+          float: left
+          margin-left: 15px
+
+          a
+            color: #808080
+            text-decoration: none
+
+            &:before
+              content: none
+
+            i:before
+              font-family: "pure4u" !important
+              speak: none
+              font-style: normal
+              font-weight: normal
+              font-variant: normal
+              text-transform: none
+              line-height: 1
+              -webkit-font-smoothing: antialiased
+              -moz-osx-font-smoothing: grayscale
+              -webkit-transition: all .15s ease-in
+              transition: all .15s ease-in
+
+            &.facebook i:before
+              content: ""
+
+            &.instagram i:before
+              content: ""
+
+            &:hover i:before
+              opacity: 0.65
+
+          &:first-child
+            margin-left: 0
+
+      p, a
+        color: #707070
+        font-size: 16px
+        line-height: 1
+        margin-bottom: 15px
+        font-weight: 400
+
+      p:before, a:before
+        font-family: "pure4u" !important
+        speak: none
+        font-style: normal
+        font-weight: normal
+        font-variant: normal
+        text-transform: none
+        line-height: 1
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+        content: ""
+        font-size: 13px
+        display: inline-block
+        position: relative
+        margin-right: 7px
+        top: 1px
+
+      p.endereco:before, a.endereco:before
+        content: ""
+
+      p.telefone:before, a.telefone:before
+        content: ""
+
+      p.email:before, a.email:before
+        content: ""
+
+      p.text, a.text
+        font-weight: 300
+
+      p.text:before, a.text:before
+        content: none
+
+.content-pagination
+  width: 100%
+  display: flex
+  flex: 1
+  justify-content: center
+  .pagination
+    list-style: none
+    li
+      float: left
+      padding: 5px 10px
+      border: solid 1px rgba(219, 219, 219, 0.5)
+
+@media (max-width: 1280px)
+  body.seja-um-parceiro .intro
+    h3
+      padding-right: 0
+      margin-left: 60px
+
+    p
+      margin-left: 60px
+
+@media (max-width: 992px)
+  body.seja-um-parceiro .intro
+    h3, p
+      margin-left: 0
+
+@media (max-width: 992px)
+  body.seja-um-parceiro .call-to-action
+    padding-top: 240px
+
+@media (max-width: 992px)
+  body.seja-um-parceiro .formulario-parceiro
+    img
+      float: none
+      margin: 0 auto
+      display: table
+
+    form, p.lead
+      padding-right: 0
+
+@media (max-width: 1280px)
+  body.fale-conosco .contact-info
+    padding: 35px
+
+.cart-overview, .order-overview
+  background: #f0f0f0
+  padding: 20px 30px
+
+.cart-overview h4, .order-overview h4
+  font-size: 1.1em
+  text-transform: uppercase
+  color: #adb5bd
+  margin-bottom: 7px
+
+.cart-overview .btn, .order-overview .btn
+  margin: 0 auto 15px
+  float: none
+  display: table
+
+.cart-overview p, .order-overview p
+  text-align: center
+
+.cart-overview p a, .order-overview p a
+  text-decoration: underline
+  color: #343a40
+
+.cart-overview p a:hover, .order-overview p a:hover
+  color: #212529
+
+.cart-overview ul, .order-overview ul
+  padding: 0
+  list-style: none
+  margin: 15px 0 35px
+
+.cart-overview ul li, .order-overview ul li
+  width: 100%
+  color: #6c757d
+  font-size: 0.8em
+  padding: 10px 0
+  border-bottom: 1px solid #ced4da
+
+.cart-overview ul li
+  span, a
+    float: right
+    font-weight: 600
+    font-size: 1.3em
+    line-height: 1.3
+    display: inline-block
+
+.order-overview ul li
+  span, a
+    float: right
+    font-weight: 600
+    font-size: 1.3em
+    line-height: 1.3
+    display: inline-block
+
+.cart-overview ul li a, .order-overview ul li a
+  text-decoration: underline
+
+.cart-overview ul li span, .order-overview ul li span
+  color: #212529
+
+.cart-overview ul li span.muted, .order-overview ul li span.muted
+  color: #adb5bd
+
+.cart-overview ul li.frete, .order-overview ul li.frete
+  border-bottom-color: #212529
+
+.cart-overview ul li.subtotal, .order-overview ul li.subtotal
+  border-bottom: none
+  display: table
+
+.cart-overview ul li.subtotal span, .order-overview ul li.subtotal span
+  font-size: 1.9em
+  display: block
+  text-align: right
+  clear: both
+
+.cart-overview ul li.subtotal span.parcelamento, .order-overview ul li.subtotal span.parcelamento
+  font-size: 13px
+  font-weight: 400
+  text-align: right
+  float: none
+
+.cart-overview ul li.subtotal span.parcelamento strong, .order-overview ul li.subtotal span.parcelamento strong
+  font-weight: 700
+
+.shopping-cart
+  padding-bottom: 45px
+
+table.cart-table
+  font-size: 0.9em
+  width: 100%
+  display: table
+  margin-bottom: 25px
+
+  thead
+    border-bottom: 1px solid #e6e6e6
+
+    tr th
+      padding: 0 10px 15px
+      font-weight: 600
+      color: #6c757d
+      font-size: 12px
+      text-align: center
+
+      &.total_price
+        text-align: right
+
+  tbody tr
+    border-bottom: 1px solid #e6e6e6
+
+    td
+      padding: 10px
+
+      &.product
+        width: 56px
+
+        a
+          display: block
+          text-align: center
+          width: 56px
+
+          img
+            width: 100%
+
+      &.description p
+        padding: 0 20px
+        margin-bottom: 0
+        font-size: 1.5em
+        line-height: 1.2
+        font-weight: 700
+        font-family: "Lato"
+
+        span
+          color: #adb5bd
+          display: block
+          font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+          font-weight: 400
+          font-size: 0.65em
+          position: relative
+          line-height: 1.0
+
+      &.qtd
+        text-align: center
+
+        div.counter-group
+          button[type="button"]
+            border: none
+            outline: none
+            background: #fff
+            color: #7c7c81
+            cursor: pointer
+            font-weight: 700
+            font-size: 20px
+
+            &.remove
+              font-size: 12px
+              font-weight: 400
+              display: block
+              float: none
+              margin: 5px auto 0
+              text-decoration: underline
+
+            &:focus
+              outline: none
+
+          span.number
+            background: #f0f0f0
+            width: 45px
+            line-height: 45px
+            text-align: center
+            cursor: default
+            font-size: 1.1em
+            display: inline-block
+
+      &.unit_price
+        font-weight: 700
+        text-align: center
+
+      &.total_price
+        font-weight: 700
+        text-align: right
+
+.shipping .form-group.radio-as-block [type="radio"] + label
+  margin-bottom: 8px
+
+@media (max-width: 768px)
+  .cart-wrapper
+    max-width: 768px
+    width: 100%
+    display: block
+
+  table.cart-table
+    display: block
+    overflow-x: auto
+    white-space: nowrap
+
+body.checkout
+  padding: 0
+
+  header
+    background: #000
+
+    > .container
+      padding-top: 7px
+      padding-bottom: 0
+
+    .brand
+      background: none
+      width: auto
+      height: auto
+      top: 0
+
+      h1
+        visibility: visible
+        margin: 0
+        background: url(../img/loja-ufo-logo.svg) no-repeat center center
+        background-size: contain
+
+    .progress-steps
+      padding: 0
+
+      ul li
+        padding: 3px 5px
+        color: rgba(255, 255, 255, 0.35)
+        font-weight: 400
+
+        &:before
+          background: #000
+          border-color: #db4e46
+          position: relative
+          color: #db4e46
+
+        &:after
+          top: 18px
+          background: #db4e46
+
+        &.complete, &.active, a
+          color: #fff
+
+    &:after
+      background: url(../img/header-bg.jpg) no-repeat center center
+      background-size: cover
+      content: ''
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      z-index: -1
+      opacity: 0.2
+
+  section.main
+    margin-top: 120px
+    min-height: calc(100vh - 170px)
+    display: table
+    width: 100%
+
+  &.complete section.main
+    display: block
+
+.checkout-block
+  max-width: 575px
+  margin: 45px auto
+  padding: 0 30px
+
+  h4
+    line-height: 1
+    margin-bottom: 15px
+    text-transform: uppercase
+    font-size: 1.3em
+
+    &.divide-block
+      clear: both
+      margin: 45px 0 5px
+
+  p
+    text-align: center
+    margin-top: 35px
+    padding: 0 35px
+
+  form
+    padding: 45px 0
+
+    .form-grid
+      margin-left: -15px
+      margin-right: -15px
+
+.checkout-full-block
+  padding: 65px 0
+
+h3.checkout-title
+  line-height: 1
+  font-size: 1.845em
+
+  span.secure
+    color: #2a8c4d
+    font-size: 18.5px
+    text-transform: uppercase
+    display: inline-block
+    margin: 5px
+
+    &:before
+      font-family: "pure4u" !important
+      speak: none
+      font-style: normal
+      font-weight: normal
+      font-variant: normal
+      text-transform: none
+      line-height: 1
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+      content: ""
+      color: #6c757d
+      display: inline-block
+      margin-right: 7px
+      font-size: 21.5px
+
+@media (max-width: 576px)
+  h3.checkout-title span.secure
+    display: block
+    margin: 10px 10px 10px 0
+
+.order-info-block
+  background: #f0f0f0
+  padding: 20px 30px
+  position: relative
+  margin-bottom: 30px
+
+  h4
+    font-size: 1.1em
+    text-transform: uppercase
+    color: #adb5bd
+    margin-bottom: 7px
+
+  a.change-link
+    color: #7c7c81
+    text-decoration: underline
+    font-size: 12.5px
+    display: inline-block
+    text-transform: none
+    font-weight: 600
+    float: right
+
+  p
+    margin-bottom: 0
+
+    strong
+      display: block
+      font-weight: 500
+
+  &.order-shipping-method p strong
+    display: inline-block
+
+.login_helper_buttons
+  display: block
+  margin: 14px 0
+
+  a
+    margin-left: 13px
+    color: #666666
+    font-size: 0.9em
+    text-decoration: underline
+
+    &:first-child
+      font-weight: 500
+      margin-left: 0
+
+ul.selectable-options
+  padding: 0
+  margin: 0
+  list-style: none
+  clear: both
+  position: relative
+  width: 100%
+  display: table
+  margin-bottom: 45px
+
+  li
+    float: left
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    width: 100%
+    -ms-flex-wrap: wrap
+    flex-wrap: wrap
+    -webkit-box-align: stretch
+    -ms-flex-align: stretch
+    align-items: stretch
+    padding: 15px
+    border: 1px solid #dee2e6
+    margin-bottom: 10px
+    cursor: pointer
+
+    &:hover
+      border-color: rgba(54, 178, 99, 0.5)
+
+    &.active
+      border-color: #36b263
+      background: #f5fbf7
+
+    div:not([class])
+      -webkit-box-flex: 1
+      -ms-flex: 1 1 auto
+      flex: 1 1 auto
+      color: #212529
+      width: 1%
+      line-height: 1.1
+      -ms-flex-item-align: center
+      align-self: center
+      -ms-flex-line-pack: center
+      align-content: center
+
+      &:nth-child(1)
+        -webkit-box-flex: 0
+        -ms-flex: 0 0 45px
+        flex: 0 0 45px
+
+        .form-group label
+          margin-top: -10px
+
+  &.shipping-options li div
+    &:nth-child(2)
+      font-size: 1.125em
+
+    &:nth-child(3)
+      font-size: 1.125em
+      font-weight: 500
+
+  &.addresses-options
+    margin: 35px 0 20px
+
+    li div
+      &:nth-child(2)
+        -webkit-box-flex: 0
+        -ms-flex: 0 0 75%
+        flex: 0 0 75%
+
+        p
+          margin-bottom: 0
+          line-height: 1.3
+          font-size: 0.95em
+
+          strong
+            display: block
+            font-weight: 500
+
+      &:nth-child(3)
+        font-size: 0.8em
+        font-weight: 500
+
+        a
+          text-decoration: underline
+
+  &.payment-options li
+    > div:not([class])
+      &:nth-child(2)
+        -webkit-box-flex: 0
+        -ms-flex: 0 0 140px
+        flex: 0 0 140px
+
+        img
+          max-width: 110px
+
+      &:nth-child(3)
+        font-size: 1.2em
+        line-height: 1.1
+
+        strong
+          font-size: 0.8em
+          display: block
+          margin-top: 2px
+
+        small
+          font-size: 0.6em
+          display: block
+          margin-top: 5px
+
+    &.payment
+      padding: 0
+      border: 1px solid #36b263
+      border-top: none
+      background: #fff
+      cursor: initial
+      padding: 45px 65px
+      color: #212529
+
+    &.no-margin
+      margin-bottom: 0
+      border-bottom: none
+
+.hr
+  border-bottom: 1px solid #dee2e6
+
+p.continue
+  text-align: center
+  margin-top: 10px
+
+  a
+    text-decoration: underline
+    color: #343a40
+
+    &:hover
+      color: #212529
+
+ul.checkout-overview
+  padding: 0
+  list-style: none
+  margin: 15px 0 35px
+
+  li
+    width: 100%
+    color: #6c757d
+    font-size: 0.8em
+    padding: 10px 0
+    border-bottom: 1px solid #ced4da
+
+    span
+      float: right
+      font-weight: 600
+      font-size: 1.3em
+      line-height: 1.3
+      display: inline-block
+
+    a
+      float: right
+      font-weight: 600
+      font-size: 1.3em
+      line-height: 1.3
+      display: inline-block
+      text-decoration: underline
+
+      &.toggle-order-items
+        text-decoration: none
+        float: none
+        font-weight: inherit
+        font-size: 1em
+        width: 100%
+        color: #6c757d
+
+        strong
+          font-weight: 600
+          text-decoration: underline
+
+          &:after
+            font-family: "pure4u" !important
+            speak: none
+            font-style: normal
+            font-weight: normal
+            font-variant: normal
+            text-transform: none
+            line-height: 1
+            -webkit-font-smoothing: antialiased
+            -moz-osx-font-smoothing: grayscale
+            content: ""
+            -webkit-transform: rotate(-90deg)
+            transform: rotate(-90deg)
+            display: inline-block
+            -webkit-transition: all 150ms ease-in
+            transition: all 150ms ease-in
+            margin-left: 4px
+
+        span
+          float: right
+
+    span
+      color: #212529
+
+      &.muted
+        color: #adb5bd
+
+    &.frete
+      border-bottom-color: #212529
+
+    &.subtotal
+      border-bottom: none
+      display: table
+
+      span
+        font-size: 1.9em
+        display: block
+        text-align: right
+        clear: both
+
+        &.parcelamento
+          font-size: 13px
+          font-weight: 400
+          text-align: right
+          float: none
+
+          strong
+            font-weight: 700
+
+    > ul
+      padding: 0
+      list-style: none
+      width: 100%
+      display: none
+
+      li
+        border: none
+        float: left
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        width: 100%
+        -ms-flex-wrap: wrap
+        flex-wrap: wrap
+        -webkit-box-align: stretch
+        -ms-flex-align: stretch
+        align-items: stretch
+
+        span
+          -webkit-box-flex: 1
+          -ms-flex: 1 1 auto
+          flex: 1 1 auto
+          color: #212529
+          width: 1%
+          -ms-flex-item-align: center
+          align-self: center
+          font-weight: 400
+
+          &:nth-child(2), &:nth-child(3)
+            text-align: center
+
+          &:last-child
+            text-align: right
+
+    &.active
+      a.toggle-order-items strong:after
+        -webkit-transform: rotate(-270deg)
+        transform: rotate(-270deg)
+
+      ul
+        display: table
+
+.order-confirmation
+  padding: 45px 0
+
+p.order-number
+  text-align: center
+  display: block
+  padding: 55px 0
+  font-weight: 500
+  font-size: 1.4em
+
+  a
+    display: table
+    margin: 15px auto
+
+.profile-navigation
+  background: #f0f0f0
+  padding: 30px
+
+  ul
+    padding: 0
+    margin: 0
+    list-style: none
+    display: block
+
+    li
+      width: 100%
+
+      a
+        padding: 10px 17px
+        color: #7c7c81
+        display: block
+        font-size: 1.3em
+        font-weight: 500
+        text-align: right
+
+        &.active
+          text-decoration: none
+          color: #fff
+          background: #7c7c81
+          background: -webkit-gradient(linear, left top, right top, from(#7c7c81), to(#404040))
+          background: linear-gradient(to right, #7c7c81 0%, #404040 100%)
+
+@media (max-width: 992px)
+  .profile-navigation ul li a
+    text-align: center
+
+  .user-profile
+    padding: 0 0 75px
+
+  h2.profile-section-title
+    line-height: 1
+    text-transform: uppercase
+    font-size: 2em
+
+    small
+      color: #adb5bd
+      display: block
+      font-weight: 500
+      text-transform: none
+      font-size: 0.6em
+      margin-top: 10px
+
+  ul
+    &.pedidos, &.enderecos
+      padding: 0
+      margin: 0
+      list-style: none
+
+    &.pedidos li, &.enderecos li
+      border: 1px solid #f0f0f0
+      padding: 15px
+      margin-bottom: 10px
+      display: table
+      width: 100%
+
+    &.pedidos li p, &.enderecos li p
+      display: table-cell
+      vertical-align: middle
+      width: 1%
+      font-size: 1.2em
+      line-height: 1.2
+      margin: 0
+
+    &.pedidos li p small, &.enderecos li p small
+      display: block
+      color: #6c757d
+      font-weight: 600
+      font-size: 11px
+
+    &.pedidos li p
+      &:nth-child(1)
+        font-weight: 500
+        font-size: 1.5em
+        text-align: center
+        padding: 0 20px 0 0
+
+      &:nth-child(4), &:nth-child(5)
+        font-size: 0.9em
+        text-align: center
+
+    &.enderecos li
+      padding: 25px
+
+      p
+        line-height: 1.5
+        font-size: 1em
+
+        &:nth-child(1)
+          width: 60%
+
+        &:nth-child(2)
+          width: 40%
+          text-align: right
+
+          a
+            margin-left: 25px
+            font-weight: 400
+            text-decoration: underline
+
+  .product-list
+    li
+      a.product
+        .product-cover
+          height: 208px
+
+@media (max-width: 576px)
+  .user-profile ul
+    &.pedidos li p, &.enderecos li p
+      display: block
+      width: 100%
+      padding: 5px 0
+      text-align: center
+
+@media (max-width: 768px)
+  .user-profile ul.enderecos li p
+    display: block
+    width: 100% !important
+    padding: 5px 0
+    text-align: center !important
+
+.help
+  padding: 15px 0 0
+
+  a
+    text-decoration: underline
+    font-weight: 500
+
+.order-complete-details
+  padding: 45px 0 0
+
+  .link
+    color: #343a40
+    text-decoration: underline
+    display: block
+    margin: 15px auto
+
+.order-info-block.order-payment
+  margin-bottom: 0

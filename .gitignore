@@ -9,14 +9,6 @@
 tests
 .editorconfig
 phpunit.xml.dist
-/plugins/*
-!/plugins/Admin
-!/plugins/Integrators
-!/plugins/Api
-!/plugins/Email
-!/plugins/Checkout
-!/plugins/Subscriptions
-!/plugins/CheckoutV2
 .DS_Store
 .zshrc
 /config/Migrations/schema-dump-default.lock

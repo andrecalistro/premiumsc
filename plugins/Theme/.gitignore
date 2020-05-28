@@ -1,0 +1,6 @@
+/.idea
+.htaccess
+tests
+phpunit.xml.dist
+.DS_Store
+node_modules
