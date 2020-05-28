@@ -16,5 +16,4 @@ composer.lock
 /webroot/tickets/*
 !/webroot/tickets/index.html
 .gitmodules
-/plugins/CheckoutV2/webroot/css/checkout.min.css
 /node_modules
