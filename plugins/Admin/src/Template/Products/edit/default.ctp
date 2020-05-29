@@ -12,7 +12,6 @@ $this->Html->script(['Admin.catalog/product.functions.js', 'Admin.product/defaul
         <div class="container-fluid pad-bottom-30">
             <?= $this->Form->create($product, ['type' => 'file']) ?>
             <?= $this->Form->hidden('stay', ['value' => false]) ?>
-            <?php  echo "<input type='hidden' name='urlRetorno' value='".$retornoComPagina."'>"; ?>
             <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active"><a href="#data" aria-controls="home" role="tab"
                                                           data-toggle="tab">Dados</a>
@@ -216,20 +215,6 @@ $this->Html->script(['Admin.catalog/product.functions.js', 'Admin.product/defaul
                 </div>
 
                 <div role="tabpanel" class="tab-pane fade" id="images">
-
-                    <div class="row">
-                        <div class="col-md-12 form-group btn-file">
-                            <label>Imagem de fundo do produto</label>
-                            <p class="icon-upload-file <?= !empty($product->image_background) ? 'hidden-element' : '' ?>">
-                                <?= $this->Html->image('Admin.icon-upload.png', ['class' => 'img-thumbnail']) ?>
-                            </p>
-                            <?= $this->Form->control('image_background', ['class' => 'img-upload-input', 'type' => 'file', 'label' => false, 'div' => false, 'disabled' => !empty($product->image_background) ? true : false]) ?>
-                            <?= $this->Html->image(!empty($product->image_background) ? $product->thumb_image_background_link : 'Admin.icon-upload.png', ['class' => empty($product->image_background) ? 'hidden-element img-thumbnail img-upload' : 'img-thumbnail img-upload']) ?>
-                            <p class="btn-del-file <?= empty($product->image_background) ? 'hidden-element' : '' ?>">
-                                <?= $this->Form->button('Excluir', ['type' => 'button', 'class' => 'btn btn-danger btn-sm']) ?>
-                            </p>
-                        </div>
-                    </div>
 
                     <label>Imagens do Produto</label>
 

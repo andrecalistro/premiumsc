@@ -20,56 +20,56 @@ class PaymentsController extends AppController
     public function index()
     {
         $payments = [
-            [
-                'name' => 'PagSeguro',
-                'status' => $this->Payments->getConfig('pagseguro_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
-                'action' => 'pagseguro'
-            ],
-            [
-                'name' => 'Cielo Cartão de Crédito',
-                'status' => $this->Payments->getConfig('cielo_credit_card_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
-                'action' => 'cielo_credit_card'
-            ],
-            [
-                'name' => 'Moip (sem checkout padrao)',
-                'status' => $this->Payments->getConfig('moip_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
-                'action' => 'moip'
-            ],
-            [
-                'name' => 'Moip Boleto',
-                'status' => $this->Payments->getConfig('moip_ticket_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
-                'action' => 'moip-ticket'
-            ],
-            [
-                'name' => 'Moip Cartão de Crédito',
-                'status' => $this->Payments->getConfig('moip_credit_card_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
-                'action' => 'moip-credit-card'
-            ],
-            [
-                'name' => 'Depósito bancário',
-                'status' => $this->Payments->getConfig('deposit_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
-                'action' => 'deposit'
-            ],
-            [
-                'name' => 'PayPal Express Checkout',
-                'status' => $this->Payments->getConfig('paypal_express_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
-                'action' => 'paypal-express'
-            ],
-            [
-                'name' => 'PayPal Plus',
-                'status' => $this->Payments->getConfig('paypal_plus_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
-                'action' => 'paypal-plus'
-            ],
-            [
-                'name' => 'Mercado Pago Cartão de Crédito',
-                'status' => $this->Payments->getConfig('mp_credit_card_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
-                'action' => 'mp-credit-card'
-            ],
-            [
-                'name' => 'Mercado Pago Boleto',
-                'status' => $this->Payments->getConfig('mp_ticket_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
-                'action' => 'mp-ticket'
-            ],
+//            [
+//                'name' => 'PagSeguro',
+//                'status' => $this->Payments->getConfig('pagseguro_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
+//                'action' => 'pagseguro'
+//            ],
+//            [
+//                'name' => 'Cielo Cartão de Crédito',
+//                'status' => $this->Payments->getConfig('cielo_credit_card_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
+//                'action' => 'cielo_credit_card'
+//            ],
+//            [
+//                'name' => 'Moip (sem checkout padrao)',
+//                'status' => $this->Payments->getConfig('moip_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
+//                'action' => 'moip'
+//            ],
+//            [
+//                'name' => 'Moip Boleto',
+//                'status' => $this->Payments->getConfig('moip_ticket_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
+//                'action' => 'moip-ticket'
+//            ],
+//            [
+//                'name' => 'Moip Cartão de Crédito',
+//                'status' => $this->Payments->getConfig('moip_credit_card_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
+//                'action' => 'moip-credit-card'
+//            ],
+//            [
+//                'name' => 'Depósito bancário',
+//                'status' => $this->Payments->getConfig('deposit_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
+//                'action' => 'deposit'
+//            ],
+//            [
+//                'name' => 'PayPal Express Checkout',
+//                'status' => $this->Payments->getConfig('paypal_express_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
+//                'action' => 'paypal-express'
+//            ],
+//            [
+//                'name' => 'PayPal Plus',
+//                'status' => $this->Payments->getConfig('paypal_plus_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
+//                'action' => 'paypal-plus'
+//            ],
+//            [
+//                'name' => 'Mercado Pago Cartão de Crédito',
+//                'status' => $this->Payments->getConfig('mp_credit_card_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
+//                'action' => 'mp-credit-card'
+//            ],
+//            [
+//                'name' => 'Mercado Pago Boleto',
+//                'status' => $this->Payments->getConfig('mp_ticket_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
+//                'action' => 'mp-ticket'
+//            ],
             [
                 'name' => 'PagSeguro Cartão de Crédito',
                 'status' => $this->Payments->getConfig('pagseguro_credit_card_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
@@ -80,16 +80,16 @@ class PaymentsController extends AppController
                 'status' => $this->Payments->getConfig('pagseguro_ticket_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
                 'action' => 'pagseguro_ticket'
             ],
-            [
-                'name' => 'Boleto Bradesco',
-                'status' => $this->Payments->getConfig('bradesco_ticket_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
-                'action' => 'bradesco_ticket'
-            ],
-            [
-                'name' => 'Cielo Cartão de débito',
-                'status' => $this->Payments->getConfig('cielo_debit_card_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
-                'action' => 'cielo_debit_card'
-            ],
+//            [
+//                'name' => 'Boleto Bradesco',
+//                'status' => $this->Payments->getConfig('bradesco_ticket_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
+//                'action' => 'bradesco_ticket'
+//            ],
+//            [
+//                'name' => 'Cielo Cartão de débito',
+//                'status' => $this->Payments->getConfig('cielo_debit_card_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
+//                'action' => 'cielo_debit_card'
+//            ],
         ];
 
         array_multisort(array_column($payments, 'name'), SORT_ASC, $payments);

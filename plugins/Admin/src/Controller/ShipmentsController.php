@@ -32,31 +32,31 @@ class ShipmentsController extends AppController
                 'status' => $this->Shipments->getConfig('removal_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
                 'action' => 'removal'
             ],
-            [
-                'name' => 'Rodonaves',
-                'status' => $this->Shipments->getConfig('rodonaves_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
-                'action' => 'rodonaves'
-            ],
-            [
-                'name' => 'Braspress',
-                'status' => $this->Shipments->getConfig('braspress_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
-                'action' => 'braspress'
-            ],
-            [
-                'name' => 'Frenet',
-                'status' => $this->Shipments->getConfig('frenet_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
-                'action' => 'frenet'
-            ],
-            [
-                'name' => 'Melhor Envio',
-                'status' => $this->Shipments->getConfig('melhor_envio_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
-                'action' => 'best-shipping'
-            ],
-            [
-                'name' => 'Impresso',
-                'status' => $this->Shipments->getConfig('printed_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
-                'action' => 'printed'
-            ]
+//            [
+//                'name' => 'Rodonaves',
+//                'status' => $this->Shipments->getConfig('rodonaves_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
+//                'action' => 'rodonaves'
+//            ],
+//            [
+//                'name' => 'Braspress',
+//                'status' => $this->Shipments->getConfig('braspress_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
+//                'action' => 'braspress'
+//            ],
+//            [
+//                'name' => 'Frenet',
+//                'status' => $this->Shipments->getConfig('frenet_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
+//                'action' => 'frenet'
+//            ],
+//            [
+//                'name' => 'Melhor Envio',
+//                'status' => $this->Shipments->getConfig('melhor_envio_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
+//                'action' => 'best-shipping'
+//            ],
+//            [
+//                'name' => 'Impresso',
+//                'status' => $this->Shipments->getConfig('printed_status') ? '<span class="label label-success">Habilitado</span>' : '<span class="label label-danger">Desabilitado</span>',
+//                'action' => 'printed'
+//            ]
         ];
         $this->set(compact('shipments'));
     }
