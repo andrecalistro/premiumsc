@@ -204,17 +204,18 @@ class ProductsController extends AppController
         $this->viewBuilder()->setTemplate('Products/add/' . $this->garrula->template_product_form);
         $product = $this->Products->newEntity();
         if ($this->request->is('post')) {
-            $retorno = $this->request->getData('urlRetorno');
 
             $product = $this->Products->patchEntity($product, $this->request->getData(), ['associated' => ['Categories', 'ProductsImages', 'Filters', 'ProductsAttributes', 'ProductsChilds', 'ProductsTabs', 'ProductsVariations']]);
             if ($this->Products->save($product)) {
                 $this->Flash->success(__('O produto foi salvo.'));
                 $this->Bling->synchronizeProductCrud($product->id);
                 if (!$this->request->getData('stay')) {
-                        return $this->redirect($retorno);
-                } else {
-                    return $this->redirect(['controller' => 'products', 'action' => 'edit', $product->id]);
+                    return $this->redirect([
+                        'controller' => 'products',
+                        'action' => 'index'
+                    ]);
                 }
+                return $this->redirect(['controller' => 'products', 'action' => 'edit', $product->id]);
             }
             $this->Flash->error(__('O produto não foi salvo. Por favor, revise o formulário e tente novamente.'));
         } else {
@@ -252,7 +253,7 @@ class ProductsController extends AppController
         $VariationsGroups = TableRegistry::getTableLocator()->get('Admin.VariationsGroups');
         $variationsGroups = $VariationsGroups->find('list')->order(['VariationsGroups.name' => 'ASC']);
 
-        $this->set(compact('product', 'categories', 'stock_controls', 'show_prices', 'shipping_frees', 'filters', 'attributes', 'products', 'statuses', 'providers', 'products_conditions', 'filters_groups', 'products_id', 'productsStatuses', 'variationsGroups', 'shipping_control', 'attributesList','refer_url'));
+        $this->set(compact('product', 'categories', 'stock_controls', 'show_prices', 'shipping_frees', 'filters', 'attributes', 'products', 'statuses', 'providers', 'products_conditions', 'filters_groups', 'products_id', 'productsStatuses', 'variationsGroups', 'shipping_control', 'attributesList', 'refer_url'));
         $this->set('_serialize', ['product']);
     }
 
@@ -265,7 +266,7 @@ class ProductsController extends AppController
      */
     public function edit($id = null)
     {
-        
+
 
         $this->viewBuilder()->setTemplate('Products/edit/' . $this->garrula->template_product_form);
         $product = $this->Products->get($id, [
@@ -296,15 +297,16 @@ class ProductsController extends AppController
         $product->variations_groups = Hash::combine(Hash::extract($product, 'products_variations.{n}.variations_group'), '{n}.id', '{n}');
 
         if ($this->request->is(['patch', 'post', 'put'])) {
-            $retorno = $this->request->getData('urlRetorno');
             $product = $this->Products->patchEntity($product, $this->request->getData(), ['associated' => ['Categories', 'ProductsImages', 'Filters', 'ProductsAttributes', 'ProductsChilds', 'ProductsTabs', 'ProductsVariations']]);
             if ($this->Products->save($product)) {
                 $this->Flash->success(__('O produto foi salvo.'));
                 if (!$this->request->getData('stay')) {
-                        return $this->redirect($retorno);
-                } else {
-                    return $this->redirect(['controller' => 'products', 'action' => 'edit', $product->id]);
+                    return $this->redirect([
+                        'controller' => 'products',
+                        'action' => 'index'
+                    ]);
                 }
+                return $this->redirect(['controller' => 'products', 'action' => 'edit', $product->id]);
             }
             $this->Flash->error(__('O produto não foi salvo. Por favor, revise o formulário e tente novamente.'));
         } else {
@@ -335,7 +337,7 @@ class ProductsController extends AppController
         $VariationsGroups = TableRegistry::getTableLocator()->get('Admin.VariationsGroups');
         $variationsGroupsContent = $VariationsGroups->find('list')->order(['VariationsGroups.name' => 'ASC']);
 
-        $this->set(compact('product', 'categories', 'stock_controls', 'show_prices', 'shipping_frees', 'count_images', 'filters', 'attributes', 'products', 'statuses', 'providers', 'products_conditions', 'filters_groups', 'productsStatuses', 'variationsGroupsContent', 'shipping_control', 'attributesList','refer_url'));
+        $this->set(compact('product', 'categories', 'stock_controls', 'show_prices', 'shipping_frees', 'count_images', 'filters', 'attributes', 'products', 'statuses', 'providers', 'products_conditions', 'filters_groups', 'productsStatuses', 'variationsGroupsContent', 'shipping_control', 'attributesList', 'refer_url'));
         $this->set('_serialize', ['product']);
     }
 
