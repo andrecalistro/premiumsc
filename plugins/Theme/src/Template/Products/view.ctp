@@ -42,7 +42,7 @@ $this->Html->script([
                         </div>
                         <div class="shop-details-tab nav">
                             <?php foreach ($product->products_images as $image): ?>
-                                <a class="shop-details-overly" href="#image=<?= $image->id ?>" data-toggle="tab">
+                                <a class="shop-details-overly" href="#image-<?= $image->id ?>" data-toggle="tab">
                                     <img src="<?= $image->thumb_image_link ?>" alt="">
                                 </a>
                             <?php endforeach; ?>
