@@ -8820,6 +8820,10 @@ a.default-btn {
 .product-details-img .large-img-style .img-popup-wrap:hover {
   color: #03563e; }
 
+.product-details-img .tab-content img, .product-details-img .shop-details-tab img {
+  border: 1px solid #d7d7d7;
+}
+
 .product-details-img .shop-details-tab {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8829,7 +8833,8 @@ a.default-btn {
   justify-content: center;
   margin-top: -72px;
   z-index: 9;
-  position: relative; }
+  position: relative;
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .product-details-img .shop-details-tab {
     margin-top: -50px; } }

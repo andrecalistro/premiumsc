@@ -30,10 +30,9 @@ $this->Html->script([
                 <div class="product-details">
                     <div class="product-details-img">
                         <div class="tab-content jump">
-                            <?php foreach ($product->products_images as $image): ?>
-                                <div id="image-<?= $image->id ?>" class="tab-pane large-img-style">
+                            <?php foreach ($product->products_images as $key => $image): ?>
+                                <div id="image-<?= $image->id ?>" class="tab-pane <?= $key === 0 ? 'active' : '' ?> large-img-style">
                                     <img src="<?= $image->image_link ?>" alt="">
-                                    <span class="dec-price">-10%</span>
                                     <div class="img-popup-wrap">
                                         <a class="img-popup" href="<?= $image->image_link ?>"><i
                                                     class="pe-7s-expand1"></i></a>
