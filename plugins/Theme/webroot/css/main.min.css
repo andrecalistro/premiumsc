@@ -1293,7 +1293,8 @@ textarea:focus {
 .mobile-menu .mean-nav ul.menu-overflow {
   height: 215px;
   margin-top: 10;
-  overflow-y: auto; }
+  /*overflow-y: auto;*/
+}
 
 .mobile-menu.mean-container .mean-nav ul {
   margin: 14px 0 0; }
