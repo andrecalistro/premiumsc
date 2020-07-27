@@ -2,6 +2,9 @@
 
 namespace Admin\Controller;
 
+use Admin\Model\Entity\Rule;
+use Admin\Model\Table\SellersTable;
+use Admin\Model\Table\StoresTable;
 use Cake\Collection\CollectionInterface;
 use Cake\Core\Exception\Exception;
 use Cake\I18n\Date;
@@ -30,10 +33,27 @@ class ProductsController extends AppController
     public function initialize()
     {
         parent::initialize();
+        /** @var StoresTable $Garrula */
         $Garrula = TableRegistry::getTableLocator()->get("Admin.Stores");
         $this->garrula = $Garrula->findConfig('garrula');
         $this->loadComponent('Integrators.Bling');
-        $this->import_fields = ['null' => 'Não usar', 'code' => 'Código', 'name' => 'Nome', 'price' => 'Preço', 'price_special' => 'Preço Promocional', 'stock' => 'Estoque'];
+        $this->import_fields = [
+            'null' => 'Não usar',
+            'code' => 'Código',
+            'ean' => 'EAN',
+            'name' => 'Nome',
+            'price' => 'Preço',
+            'price_special' => 'Preço Promocional',
+            'stock' => 'Estoque',
+            'description' => 'Descrição',
+            'weight' => 'Peso',
+            'length' => 'Comprimento',
+            'width' => 'Largura',
+            'height' => 'Altura',
+            'video' => 'URL video',
+            'additional_delivery_time' => 'Prazo adicional de entrega',
+            'tags' => 'Tags'
+        ];
     }
 
     /**
@@ -537,10 +557,11 @@ class ProductsController extends AppController
                 return $this->redirect(['controller' => 'products', 'action' => 'update']);
             }
 
-            $header = explode(";", $data[0]);
-            $file_name = WWW_ROOT . 'csv' . DS . 'importacao_csv_' . Date::now('America/Sao_Paulo')->getTimestamp() . '.csv';
-            if (!is_dir(WWW_ROOT . 'csv')) {
-                mkdir(WWW_ROOT . 'csv');
+            $header = explode(",", $data[0]);
+            $dir = WWW_ROOT . 'csv';
+            $file_name = $dir . DS . 'importacao_csv_' . Date::now('America/Sao_Paulo')->getTimestamp() . '.csv';
+            if (!is_dir($dir)) {
+                mkdir($dir);
             }
 
             $this->removeAllCsvs();
@@ -553,8 +574,8 @@ class ProductsController extends AppController
             $this->request->getSession()->write('update_csv_header', $header);
             return $this->redirect(['controller' => 'products', 'action' => 'update-map-columns']);
         }
+
         $this->set(compact('file'));
-        $this->set('_serialize', ['file']);
     }
 
     /**
@@ -569,56 +590,48 @@ class ProductsController extends AppController
 
         if ($this->request->is(['post', 'put'])) {
             $maps = $this->request->getData('map');
-            $data = str_getcsv(file_get_contents($this->request->getSession()->read('update_csv_file')), '
-            ');
-            $fields = [];
-            $products_not_found = $products_found = $products_updated = 0;
-            unset($data[0]);
             //verifying that the code column has been selected
             if (!in_array('code', $maps)) {
                 $this->Flash->error(__('Você deve selecionar o campo Código em alguma coluna para identificação do produto no sistema'));
                 return $this->redirect(['controller' => 'products', 'action' => 'update-map-columns']);
             }
+            $handle = fopen($this->request->getSession()->read('update_csv_file'), 'r');
 
-            foreach ($data as $line_csv) {
-                $item = explode(';', $line_csv);
+            $fields = [];
+            $total_products = $products_new = $products_updated = $products_error = 0;
+            $firstRow = true;
+
+            while ($data = fgetcsv($handle, 1000, ",", "\"")) {
+                if($firstRow) {
+                    $firstRow = false;
+                    continue;
+                }
+
                 foreach ($maps as $key => $map) {
-                    if ($map != 'null') {
-                        $fields[$map] = $item[trim($key)];
-                    }
+                    $fields[$map] = $data[trim($key)];
                 }
-                $product = $this->Products->find()
-                    ->where(['code' => trim($fields['code'])])
-                    ->first();
 
-                if ($product) {
-                    $products_found++;
-                    unset($fields['code']);
-                    foreach ($fields as $key => $value) {
-                        if (!empty(trim($value))) {
-                            switch ($key) {
-                                case 'price':
-                                    $product->$key = number_format(trim(str_replace(",", ".", str_replace(".", "", $value))), 2, ".", "");
-                                    break;
-                                case 'stock':
-                                    $product->$key = number_format(trim($value), 0);
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-                    if ($this->Products->save($product)) {
-                        $products_updated++;
-                    }
-                } else {
-                    $products_not_found++;
+                $total_products++;
+
+                $result = $this->Products->importProduct($fields);
+
+                if (!$result['status']) {
+                    $products_error++;
+                    continue;
                 }
+
+                if ($result['new']) {
+                    $products_updated++;
+                    continue;
+                }
+
+                $products_new++;
             }
 
-            $message = 'Produtos não encontrados: ' . $products_not_found . '<br>';
-            $message .= 'Produtos encontrados: ' . $products_found . '<br>';
+            $message = 'Total de produtos no arquivo: ' . $total_products . '<br>';
+            $message .= 'Produtos novos: ' . $products_new . '<br>';
             $message .= 'Produtos atualizados: ' . $products_updated . '<br>';
+            $message .= 'Produtos com erro: ' . $products_error . '<br>';
 
             $this->Flash->success($message);
             return $this->redirect(['controller' => 'products', 'action' => 'update']);

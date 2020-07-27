@@ -502,4 +502,67 @@ class ProductsTable extends AppTable
             ->limit(5)
             ->toArray();
     }
+
+    /**
+     * @param array $fields
+     * @param $sellersId
+     * @return array
+     */
+    public function importProduct(array $fields, $sellersId) {
+        $result = [
+            'new' => true,
+            'product' => null,
+            'status' => true
+        ];
+
+        $product = $this->find()
+            ->where(['code' => trim($fields['code'])])
+            ->first();
+
+        if (!$product) {
+            $product = $this->newEntity();
+            $result['new'] = false;
+        }
+
+        foreach ($fields as $key => $value) {
+            if (!empty(trim($value))) {
+                switch ($key) {
+                    case 'price_special':
+                    case 'price':
+                        $product->$key = number_format(
+                            trim(str_replace(",", ".", str_replace(".", "", $value))),
+                            2, ".", ""
+                        );
+                        break;
+                    case 'length':
+                    case 'width':
+                    case 'height':
+                        $product->$key = number_format(
+                            trim(str_replace(",", ".", str_replace(".", "", $value))),
+                            3, ".", ""
+                        );
+                        break;
+                    case 'weight':
+                        $product->$key = number_format(
+                            trim(str_replace(",", ".", str_replace(".", "", $value))),
+                            4, ".", ""
+                        );
+                        break;
+                    case 'stock':
+                    case 'additional_delivery_time':
+                        $product->$key = number_format(trim($value), 0);
+                        break;
+                    default:
+                        $product->$key = trim($value);
+                        break;
+                }
+            }
+        }
+
+        if (!$this->save($product)) {
+            $result['status'] = false;
+        }
+
+        return $result;
+    }
 }
