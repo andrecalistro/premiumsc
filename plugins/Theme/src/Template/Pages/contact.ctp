@@ -3,57 +3,70 @@
  * @var \App\View\AppView $this
  */
 ?>
-<section class="main">
-    <div class="section-header">
-        <div class="container">
-            <ul class="breadcrumb">
-                <li><a href="<?= $this->Url->build('/', ['fullBase' => true]) ?>">Home</a></li>
-                <li>Fale Conosco</li>
+<div class="breadcrumb-area pt-35 pb-35 bg-gray-3">
+    <div class="container">
+        <div class="breadcrumb-content text-center">
+            <ul>
+                <li>
+                    <a href="<?= $this->Url->build('/', ['fullBase' => true]) ?>">Home</a>
+                </li>
+                <li class="active">Fale Conosco</li>
             </ul>
-            <div class="separator"></div>
-            <h2>Fale Conosco</h2>
         </div>
     </div>
-
-    <div class="wrapper">
-        <div class="container">
-            <div class="col-lg-6 align-self-center">
-                <div class="contact-info">
-                    <h3>SAC</h3>
-                    <p class="telefone">0800 591 1583</p>
-                    <h3>E-mail</h3>
-                    <a href="mailto:<?= $_store->email_contact ?>" class="email"><?= $_store->email_contact ?></a>
-                    <ul class="social">
-                        <li><a href="<?= $_store->facebook ?>" class="facebook"
-                               title="curta nossa página no facebook"><i></i></a></li>
-                        <li><a href="<?= $_store->instagram ?>" class="instagram" title="siga-nos no instagram"><i></i></a>
-                        </li>
-                    </ul>
-                    <span>Ou favor preencher o formulário a seguir que entraremos em contato (para consumidor ou interessado no licenciamento):</span>
-                    <?= $this->Form->create('contact', ['class' => 'form-contato']) ?>
-                    <div class="form-group mb">
-                        <?= $this->Form->control('name', ['label' => false, 'class' => 'block', 'placeholder' => 'Nome']) ?>
+</div>
+<div class="contact-area pt-100 pb-100">
+    <div class="container">
+        <div class="custom-row-2">
+            <div class="col-lg-4 col-md-5">
+                <div class="contact-info-wrap">
+                    <div class="single-contact-info">
+                        <div class="contact-icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="contact-info-dec">
+                            <p><?= $_store->telephone ?></p>
+                            <p><?= $_store->cellphone ?></p>
+                        </div>
                     </div>
-                    <div class="form-group mb">
-                        <?= $this->Form->control('email', ['label' => false, 'class' => 'block', 'placeholder' => 'E-mail']) ?>
+                    <div class="single-contact-info">
+                        <div class="contact-icon">
+                            <i class="fa fa-globe"></i>
+                        </div>
+                        <div class="contact-info-dec">
+                            <p><a href="mailto:<?= $_store->email_contact ?>"><?= $_store->email_contact ?></a></p>
+                        </div>
                     </div>
-                    <div class="form-group mb">
-                        <?= $this->Form->control('telephone', ['label' => false, 'class' => 'block mask-telephone', 'placeholder' => 'telefone, ex: (xx) xxxx-xxxx']) ?>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-7">
+                <div class="contact-form">
+                    <div class="contact-title mb-30">
+                        <h2>Envie sua mensagem</h2>
                     </div>
-                    <div class="form-group mb">
-                        <?= $this->Form->control('subject', ['label' => false, 'class' => 'block', 'placeholder' => 'Assunto']) ?>
-                    </div>
-                    <div class="form-group mb">
-                        <?= $this->Form->control('message', ['label' => false, 'class' => 'block', 'placeholder' => 'Mensagem', 'type' => 'textarea']) ?>
-                    </div>
-                    <div class="form-group mb">
-                        <?= $this->Recaptcha->display() ?>
-                    </div>
-                    <button type="submit" name="envia" class="btn btn-block">Enviar contato</button>
+                    <?= $this->Form->create('contact', ['class' => 'contact-form-style']) ?>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <?= $this->Form->control('name', ['label' => false, 'placeholder' => 'Nome']) ?>
+                            </div>
+                            <div class="col-lg-6">
+                                <?= $this->Form->control('email', ['label' => false, 'placeholder' => 'E-mail']) ?>
+                            </div>
+                            <div class="col-lg-6">
+                                <?= $this->Form->control('telephone', ['label' => false, 'class' => 'mask-telephone', 'placeholder' => 'telefone, ex: (xx) xxxx-xxxx']) ?>
+                            </div>
+                            <div class="col-lg-6">
+                                <?= $this->Form->control('subject', ['label' => false, 'placeholder' => 'Assunto']) ?>
+                            </div>
+                            <div class="col-lg-12">
+                                <?= $this->Form->control('message', ['label' => false, 'placeholder' => 'Mensagem', 'type' => 'textarea']) ?>
+                                <?= $this->Recaptcha->display() ?>
+                                <button class="submit" type="submit">Enviar</button>
+                            </div>
+                        </div>
                     <?= $this->Form->end() ?>
                 </div>
             </div>
         </div>
     </div>
-
-</section>
+</div>

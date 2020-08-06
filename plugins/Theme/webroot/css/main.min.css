@@ -9840,7 +9840,7 @@ h3.cart-page-title {
 
 .contact-info-wrap {
   background-color: #f3f3f3;
-  padding: 120px 70px 116px 90px; }
+  padding: 60px 20px; }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .contact-info-wrap {
     padding: 120px 20px 116px 40px; } }

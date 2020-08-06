@@ -3,23 +3,20 @@
  * @var \App\View\AppView $this
  */
 ?>
-<section class="main">
-    <div class="section-header">
-        <div class="container">
-            <ul class="breadcrumb">
-                <li><a href="<?= $this->Url->build('/', ['fullBase' => true]) ?>">Home</a></li>
-                <li><?= $page->name ?></li>
+<div class="breadcrumb-area pt-35 pb-35 bg-gray-3">
+    <div class="container">
+        <div class="breadcrumb-content text-center">
+            <ul>
+                <li>
+                    <a href="<?= $this->Url->build('/', ['fullBase' => true]) ?>">Home</a>
+                </li>
+                <li class="active"><?= $page->name ?></li>
             </ul>
-            <h2><?= $page->name ?></h2>
         </div>
     </div>
-
-    <div class="wrapper">
-        <div class="product-list-block">
-            <div class="container">
-                <?= $page->content ?>
-            </div>
-        </div>
+</div>
+<div class="welcome-area pt-100 pb-95">
+    <div class="container">
+        <?= $page->content ?>
     </div>
-
-</section>
+</div>
