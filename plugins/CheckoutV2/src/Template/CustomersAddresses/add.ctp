@@ -75,7 +75,7 @@ $this->Html->script([
                         <div class="col col-xs-6">
                             <div class="form-group select">
                                 <label for="state">Estado</label>
-                                <?= $this->Form->control('state', ['label' => false, 'class' => 'block input-state']) ?>
+                                <?= $this->Form->control('state', ['label' => false, 'class' => 'block input-state', 'maxlength' => 2]) ?>
                             </div>
                         </div>
                         <div class="col text-center">

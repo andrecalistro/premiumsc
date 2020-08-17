@@ -85,7 +85,7 @@ $this->Html->script([
                         'label' => false,
                         'placeholder' => 'Estado',
                         'class' => 'block input-state',
-                        'max-length' => 2
+                        'maxlength' => 2
                     ]) ?>
                 </div>
             </div>
