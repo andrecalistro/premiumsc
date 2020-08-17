@@ -295,8 +295,8 @@ class CheckoutController extends AppController
 
         $addresses = $this->Customers->CustomersAddresses->find()
             ->where([
-                'customers_id' => $this->Auth->user('id'),
-                'id <>' => $addresses_id
+                'customers_id' => $this->Auth->user('id')
+//                'id <>' => $addresses_id
             ])
             ->toArray();
 

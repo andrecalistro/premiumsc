@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.nerdweb.com.br:garrula/pure-4u-theme.git"
+    "url": "git@github.com:andrecalistro/premiumsc.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.nerdweb.com.br/garrula/pure-4u-theme/issues"
+    "url": "https://github.com/andrecalistro/premiumsc/issues"
   },
-  "homepage": "https://gitlab.nerdweb.com.br/garrula/pure-4u-theme/blob/master/README.md",
+  "homepage": "https://github.com/andrecalistro/premiumsc/blob/master/README.md",
   "devDependencies": {
     "node-sass": "^4.13.0",
     "nodemon": "^2.0.2",

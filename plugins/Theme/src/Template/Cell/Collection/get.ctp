@@ -8,7 +8,7 @@
 <div class="collections-area pt-50 pb-70">
     <div class="container">
         <div class="section-title-3 mb-40">
-            <h4>Coleçoes</h4>
+            <h4>Coleções</h4>
         </div>
         <div class="collection-wrap">
             <div class="collection-active owl-carousel">

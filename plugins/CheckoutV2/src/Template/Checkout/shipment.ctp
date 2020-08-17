@@ -4,7 +4,6 @@
  * @var \CheckoutV2\Model\Entity\CustomersAddress $address
  * @var \CheckoutV2\Model\Entity\Order $order
  */
-$this->Html->css(['Theme.loja.min.css'], ['fullBase' => true, 'block' => 'cssTop']);
 $this->Html->script([
     'CheckoutV2.sweetalert2.all.min.js',
     'CheckoutV2.alert.functions.js',
@@ -18,7 +17,7 @@ $this->Html->script([
                 <div class="grid">
                     <div class="col-md-6 col-lg-4 offset-lg-1">
                         <div class="order-info-block order-shipping-address">
-                            <h4>Endereço de Entrega<a href="#" data-mfp-src="#modal-addresses"
+                            <h4>Endereço de Entrega<a href="#modal-addresses"
                                                       class="change-link popup-with-zoom-anim">Alterar</a></h4>
                             <p>
                                 <strong><?= $address->address ?>, <?= $address->number ?> - <?= $address->come
@@ -78,40 +77,40 @@ $this->Html->script([
 
     </section>
 
-    <div id="modal-addresses" class="zoom-anim-dialog mfp-hide modal">
-        <h3 class="checkout-title">Selecione o Endereço de Entrega</h3>
-        <ul class="selectable-options addresses-options">
-            <?php foreach ($addresses as $address): ?>
-                <li class="selectable-option">
-                    <div>
-                        <div class="form-group">
-                            <input name="address_choose" value="<?= $address->id ?>" id="id_address_<?= $address->id ?>"
-                                   class="address_choose"
-                                   type="radio">
-                            <label for="id_address_<?= $address->id ?>" class="dark"></label>
-                        </div>
-                    </div>
-                    <div>
-                        <p>
-                            <strong><?= $address->address ?>, <?= $address->number ?> - <?= $address->come
-                                ?></strong>
-                            <?= $address->neighborhood ?> - <?= $address->city ?> - <?= $address->state ?><br>
-                            CEP: <?= $address->zipcode ?>
-                        </p>
-                    </div>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-        <div class="text-right">
-            <?= $this->Html->link('Adicionar novo Endereço', [
-                'controller' => 'checkout',
-                'action' => 'add-address'
-            ], [
-                'class' => 'btn btn-success'
-            ]) ?>
-        </div>
-    </div>
-
 <?= $this->Form->create('', ['id' => 'form-shipment']) ?>
 <?= $this->Form->control('data', ['type' => 'hidden']) ?>
 <?= $this->Form->end() ?>
+
+<div id="modal-addresses" class="zoom-anim-dialog modal mfp-hide">
+    <h3 class="checkout-title">Selecione o Endereço de Entrega</h3>
+    <ul class="selectable-options addresses-options">
+        <?php foreach ($addresses as $address): ?>
+            <li class="selectable-option">
+                <div>
+                    <div class="form-group">
+                        <input name="address_choose" value="<?= $address->id ?>" id="id_address_<?= $address->id ?>"
+                               class="address_choose"
+                               type="radio">
+                        <label for="id_address_<?= $address->id ?>" class="dark"></label>
+                    </div>
+                </div>
+                <div>
+                    <p>
+                        <strong><?= $address->address ?>, <?= $address->number ?> - <?= $address->come
+                            ?></strong>
+                        <?= $address->neighborhood ?> - <?= $address->city ?> - <?= $address->state ?><br>
+                        CEP: <?= $address->zipcode ?>
+                    </p>
+                </div>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+    <div class="text-right">
+        <?= $this->Html->link('Adicionar novo Endereço', [
+            'controller' => 'checkout',
+            'action' => 'add-address'
+        ], [
+            'class' => 'btn btn-success'
+        ]) ?>
+    </div>
+</div>

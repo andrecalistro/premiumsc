@@ -2,7 +2,6 @@
 /**
  * @var App\View\AppView $this
  */
-$this->Html->css(['Theme.loja.min.css'], ['fullBase' => true, 'block' => 'cssTop']);
 $this->Html->script([
     'CheckoutV2.sweetalert2.all.min.js',
     'CheckoutV2.jquery.mask.js',
@@ -85,7 +84,8 @@ $this->Html->script([
                     <?= $this->Form->control('state', [
                         'label' => false,
                         'placeholder' => 'Estado',
-                        'class' => 'block input-state'
+                        'class' => 'block input-state',
+                        'max-length' => 2
                     ]) ?>
                 </div>
             </div>
