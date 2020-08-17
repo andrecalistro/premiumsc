@@ -56,6 +56,12 @@ class CategoriesController extends AppController
 					return $q->contain(['FiltersGroups']);
 				}
 			])
+            ->where([
+                'OR' => [
+                    'Products.stock >' => 0,
+                    'Products.stock_control' => 0
+                ]
+            ])
 			->matching('Categories', function ($q) use ($categories) {
 				return $q->where(['Categories.id IN' => $categories]);
 			});

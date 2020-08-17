@@ -149,10 +149,18 @@ class ProductsController extends AppController
 
         $query = $this->Products->find()
             ->where([
-                'OR' => [
-                    'Products.name LIKE' => '%' . $param . '%',
-                    'Products.description' => '%' . $param . '%',
-                    'Products.tags' => '%' . $param . '%'
+                [
+                    'OR' => [
+                        'Products.name LIKE' => '%' . $param . '%',
+                        'Products.description' => '%' . $param . '%',
+                        'Products.tags' => '%' . $param . '%'
+                    ]
+                ],
+                [
+                    'OR' => [
+                        'Products.stock >' => 0,
+                        'Products.stock_control' => 0
+                    ]
                 ]
             ])
             ->contain([
