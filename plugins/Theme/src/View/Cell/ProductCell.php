@@ -74,6 +74,12 @@ class ProductCell extends Cell
                     ]);
                 }
             ])
+            ->where([
+                'OR' => [
+                    'Products.stock >' => 0,
+                    'Products.stock_control' => 0
+                ]
+            ])
             ->order([
                 'ProductsPositions.order_show' => 'ASC'
             ])
