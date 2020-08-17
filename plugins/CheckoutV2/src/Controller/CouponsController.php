@@ -6,9 +6,9 @@ use Cake\Datasource\Exception\RecordNotFoundException;
 use Cake\Http\Response;
 use Cake\Network\Exception\MethodNotAllowedException;
 use Cake\Network\Exception\NotFoundException;
-use Checkout\Controller\Component\CartComponent;
-use Checkout\Controller\Component\CouponComponent;
-use Checkout\Model\Table\CouponsTable;
+use CheckoutV2\Controller\Component\CartComponent;
+use CheckoutV2\Controller\Component\CouponComponent;
+use CheckoutV2\Model\Table\CouponsTable;
 
 /**
  * Class CouponsController
@@ -23,7 +23,7 @@ class CouponsController extends AppController
     public function initialize()
     {
         parent::initialize();
-        $this->loadComponent('Checkout.Coupon');
+        $this->loadComponent('CheckoutV2.Coupon');
         $this->Auth->allow(['validateCart', 'getDiscount']);
     }
 

@@ -206,7 +206,7 @@ class CartComponent extends Component
     public function changeQuantity($id, $quantity)
     {
         try {
-            if ($quantity === 0) {
+            if ((int)$quantity <= 0) {
                 $this->delete($id);
                 return [
                     'status' => true,
