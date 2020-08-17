@@ -201,14 +201,30 @@ class CartComponent extends Component
     /**
      * @param $id
      * @param $quantity
-     * @return bool|\Cake\Http\Response|null
-     * @throws \Exception
+     * @return array
      */
     public function changeQuantity($id, $quantity)
     {
-        if ($quantity >= 1) {
+        try {
+            if ($quantity === 0) {
+                $this->delete($id);
+                return [
+                    'status' => true,
+                    'message' => 'Produto removido do carrinho'
+                ];
+            }
 
-            $cart = $this->Carts->get($id);
+            $cart = $this->Carts->get($id, [
+                'contain' => [
+                    'Products'
+                ]
+            ]);
+
+            if ($cart->product->stock_control) {
+                if ($cart->product->stock < (int)$quantity) {
+                    throw new \Exception('Você não pode comprar mais que a quantidade disponível desse produto');
+                }
+            }
 
             $total_price = $cart->unit_price * $quantity;
 
@@ -217,10 +233,16 @@ class CartComponent extends Component
             $this->Carts->save($cart);
             $this->setTotalCart();
             $this->recalculateValues();
-            return true;
+            return [
+                'status' => false,
+                'message' => 'Quantidade alterada'
+            ];
+        } catch (\Throwable $e) {
+            return [
+                'status' => false,
+                'message' => $e->getMessage()
+            ];
         }
-
-        return $this->delete($id);
     }
 
     /**

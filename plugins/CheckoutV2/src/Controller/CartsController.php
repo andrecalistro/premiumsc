@@ -9,16 +9,19 @@ use Cake\I18n\Time;
 use Cake\ORM\TableRegistry;
 use Cake\Utility\Inflector;
 use Cake\View\CellTrait;
+use CheckoutV2\Controller\Component\CartComponent;
 
 /**
  * Carts Controller
  *
  * @property \CheckoutV2\Model\Table\CartsTable $Carts
  * @property \CheckoutV2\Model\Table\ShipmentsTable $Shipments
+ * @property CartComponent $Cart
  */
 class CartsController extends AppController
 {
     use CellTrait;
+
     public $Shipments;
 
     public function initialize()
@@ -154,7 +157,14 @@ class CartsController extends AppController
      */
     public function changeQuantity($id, $quantity)
     {
-        $this->Cart->changeQuantity($id, $quantity);
+        $result = $this->Cart->changeQuantity($id, $quantity);
+
+        if (!$result['status']) {
+            $this->Flash->error($result['message']);
+        } else {
+            $this->Flash->success($result['message']);
+        }
+
         return $this->redirect(['action' => 'index']);
     }
 
