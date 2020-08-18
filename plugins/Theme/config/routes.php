@@ -50,10 +50,6 @@ Router::plugin(
 		$routes->connect('/pagina/:slug', ['controller' => 'pages', 'action' => 'view'], ['slug' => '[^\/]+', '_name' => 'pages', 'pass' => ['slug']]);
 		$routes->connect('/atendimento', ['controller' => 'pages', 'action' => 'contact']);
         $routes->connect('/fale-conosco', ['controller' => 'pages', 'action' => 'contact']);
-		$routes->connect('/conceito', ['controller' => 'pages', 'action' => 'concept']);
-		$routes->connect('/onde-encontrar', ['controller' => 'pages', 'action' => 'where-find']);
-		$routes->connect('/seja-um-licenciado', ['controller' => 'pages', 'action' => 'partner']);
-		$routes->connect('/linha-profissional', ['controller' => 'pages', 'action' => 'professionalLine']);
 
         /**
          * ...and connect the rest of 'Pages' controller's URLs.
