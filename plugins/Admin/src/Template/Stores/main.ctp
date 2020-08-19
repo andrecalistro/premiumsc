@@ -6,11 +6,11 @@
 $this->Html->script('store.functions.js', ['fullBase' => true, 'block' => 'scriptBottom']);
 ?>
 <div class="page-title">
-    <h2>Configurar Garrula</h2>
+    <h2>Configurar Loja</h2>
 </div>
 <div class="content mar-bottom-30">
     <div class="container-fluid pad-bottom-30">
-        <?= $this->Form->create($garrula, ['type' => 'file']) ?>
+        <?= $this->Form->create($main, ['type' => 'file']) ?>
 
         <ul class="nav nav-tabs" role="tablist">
             <li role="presentation" class="active"><a href="#general" aria-controls="general" role="tab"
@@ -29,7 +29,7 @@ $this->Html->script('store.functions.js', ['fullBase' => true, 'block' => 'scrip
                         <div class="form-group">
                             <label>API Token</label>
                             <div class="input-group">
-                                <?= $this->Form->control('api_token', ['class' => 'form-control', 'label' => false, 'value' => $garrula->api_token, 'readonly' => true]) ?>
+                                <?= $this->Form->control('api_token', ['class' => 'form-control', 'label' => false, 'value' => $main->api_token, 'readonly' => true]) ?>
                                 <span class="input-group-btn">
                                     <button class="btn btn-default" type="button" data-toggle="tooltip" data-placement="top" title="Gerar Token" onclick="generateApiToken()">
                                         <i class="fa fa-refresh" aria-hidden="false"></i>
@@ -45,7 +45,7 @@ $this->Html->script('store.functions.js', ['fullBase' => true, 'block' => 'scrip
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <?= $this->Form->control('template_product_form', ['class' => 'form-control', 'label' => 'Template do formulário do produto', 'value' => $garrula->template_product_form]) ?>
+                            <?= $this->Form->control('template_product_form', ['class' => 'form-control', 'label' => 'Template do formulário do produto', 'value' => $main->template_product_form]) ?>
                         </div>
                     </div>
                 </div>
@@ -53,24 +53,8 @@ $this->Html->script('store.functions.js', ['fullBase' => true, 'block' => 'scrip
 
             <div role="tabpanel" class="tab-pane fade in" id="customer">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <?= $this->Form->control('nerdpress_synchronize_customers', ['class' => 'form-control', 'label' => 'Sincronizar clientes com o Nerdpress', 'value' => $garrula->nerdpress_synchronize_customers, 'options' => $statuses]) ?>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <?= $this->Form->control('nerdpress_api_url', ['class' => 'form-control', 'label' => 'URL da api do Nerdpress', 'value' => $garrula->nerdpress_api_url]) ?>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
                     <div class="col-md-6 form-group">
-                        <?= $this->Form->control('company_register', ['class' => 'form-control', 'label' => 'Habilitar cadastro de dados de pessoa jurídica', 'options' => $statuses, 'value' => $garrula->company_register]) ?>
+                        <?= $this->Form->control('company_register', ['class' => 'form-control', 'label' => 'Habilitar cadastro de dados de pessoa jurídica', 'options' => $statuses, 'value' => $main->company_register]) ?>
                     </div>
                 </div>
             </div>

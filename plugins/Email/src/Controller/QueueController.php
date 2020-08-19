@@ -26,7 +26,7 @@ class QueueController extends AppController
         parent::initialize();
         $this->Stores = TableRegistry::getTableLocator()->get('Admin.Stores');
         $this->EmailQueues = TableRegistry::getTableLocator()->get('Admin.EmailQueues');
-        $this->store_config = $this->Stores->findConfig('premiumsc');
+        $this->store_config = $this->Stores->findConfig('main');
     }
 
     /**
@@ -69,7 +69,7 @@ class QueueController extends AppController
                 }
 
                 try {
-                    $mail->setTransport('nerdweb')
+                    $mail->setTransport('premiumsc')
                         ->setEmailFormat('html')
                         ->setTemplate('Email.default')
                         ->setFrom($queue->from_email, $queue->from_name)

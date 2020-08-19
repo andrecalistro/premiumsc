@@ -155,30 +155,28 @@ class StoresController extends AppController
         $this->set(compact('orders', 'customers', 'searches', 'categories', 'conversionTaxes', 'bestSellers'));
     }
 
-    public function garrula()
+    public function main()
     {
-        $result = $this->Stores->findConfig('garrula');
+        $result = $this->Stores->findConfig('main');
         $entity = (object)[
             'template_product_form' => 'default',
             'api_token' => '',
-            'nerdpress_synchronize_customers' => 0,
-            'nerdpress_api_url' => '',
             'company_register' => 0
         ];
-        $garrula = $this->Stores->mapFindConfig($entity, $result);
+        $main = $this->Stores->mapFindConfig($entity, $result);
         if ($this->request->is(['post'])) {
-            $data = $this->Stores->prepareSave($this->request->getData(), 'garrula');
+            $data = $this->Stores->prepareSave($this->request->getData(), 'main');
             $entities = $this->Stores->newEntities($data);
             if ($this->Stores->saveMany($entities)) {
                 $this->Flash->success(__("Configurações do Garrula foram salvas."));
-                return $this->redirect(['action' => 'garrula']);
+                return $this->redirect(['action' => 'main']);
             } else {
                 $this->Flash->error(__("As configurações do Garrula não foram salvas. Por favor, tente novamente."));
             }
         }
         $statuses = [0 => 'Não', 1 => 'Sim'];
 
-        $this->set(compact('garrula', 'statuses'));
+        $this->set(compact('main', 'statuses'));
         $this->set('_serialize', 'garrula');
     }
 
