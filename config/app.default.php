@@ -204,14 +204,14 @@ return [
             'tls' => null,
             'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
         ],
-        'nerdweb' => [
+        'premiumsc' => [
             'className' => 'Smtp',
             // The following keys are used in SMTP transports
-            'host' => 'email-smtp.us-west-2.amazonaws.com',
+            'host' => 'email-smtp.us-east-2.amazonaws.com',
             'port' => 587,
             'timeout' => 30,
-            'username' => 'AKIAI4PBQZMG6Q7O2Q5Q',
-            'password' => 'Anv4/X8HTGGnQFo/E+9WzCdr5eElKfhaIdSNeoDAUFY5',
+            'username' => 'AKIAYRZBJYZPCCL2ULVR',
+            'password' => 'BPd7ab3Dr6GS3NxQRZFFlAxhCyAeyaIgQyoWbax6sS5E',
             'client' => null,
             'tls' => true,
             'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),

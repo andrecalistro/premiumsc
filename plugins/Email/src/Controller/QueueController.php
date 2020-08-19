@@ -26,7 +26,7 @@ class QueueController extends AppController
         parent::initialize();
         $this->Stores = TableRegistry::getTableLocator()->get('Admin.Stores');
         $this->EmailQueues = TableRegistry::getTableLocator()->get('Admin.EmailQueues');
-        $this->store_config = $this->Stores->findConfig('garrula');
+        $this->store_config = $this->Stores->findConfig('premiumsc');
     }
 
     /**
