@@ -508,8 +508,8 @@ class CheckoutController extends AppController
         }
 
         $Stores = TableRegistry::getTableLocator()->get('Admin.Stores');
-        $garrula = $Stores->findConfig('garrula');
-        isset($garrula->company_register) ? $company_register = $garrula->company_register : $company_register = false;
+        $main = $Stores->findConfig('main');
+        isset($main->company_register) ? $company_register = $main->company_register : $company_register = false;
 
         unset($customer->password);
         unset($customer->password_confirm);

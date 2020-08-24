@@ -37,7 +37,6 @@
 	<div class="col-xs-12">
 		<div class="logo">
 			<button class="btn btn-default dropdown-toggle" style="cursor: default">
-				<?= $this->Html->image('Admin.logo-header-garrula.png', ['fullBase' => true, 'width' => 35]) ?>
                 Premium Shirts Club
 			</button>
 		</div>

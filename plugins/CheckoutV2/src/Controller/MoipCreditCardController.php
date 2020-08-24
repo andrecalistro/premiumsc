@@ -66,7 +66,7 @@ class MoipCreditCardController extends AppController
     public function consultWaitingOrders($token = null)
     {
         $Stores = TableRegistry::getTableLocator()->get('Admin.Stores');
-        $store_config = $Stores->findConfig('garrula');
+        $store_config = $Stores->findConfig('main');
 
         if (!$token || $token != $store_config->api_token) {
             throw new UnauthorizedException(__('Token inválido. Você não tem permissão para acessar esse metódo.'));

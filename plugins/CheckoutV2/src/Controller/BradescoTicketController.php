@@ -91,9 +91,9 @@ class BradescoTicketController extends AppController
     {
         $order = $this->Order->getOrder($orders_id);
         $Stores = TableRegistry::getTableLocator()->get('Admin.Stores');
-        $garrula = $Stores->findConfig('garrula');
+        $main = $Stores->findConfig('main');
 
-        if ($api_token !== $garrula->api_token) {
+        if ($api_token !== $main->api_token) {
             throw new \Exception(__('Token da api inválido'));
         }
 

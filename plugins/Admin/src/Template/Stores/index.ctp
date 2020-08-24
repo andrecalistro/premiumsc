@@ -262,8 +262,8 @@
                                     ['type' => 'checkbox', 'value' => 1, 'label' => 'Habilitar Google Analytics para Comércio Eletrônico', 'checked' => $store->google_analytics_ecommerce_status == 1 ? true : false]) ?>
                             </div>
                             <div class="col-md-12">
-                                <p>Para o funcionamento do Analytics no painel do Garrula, adicione o usuário
-                                    "garrula-analytics@garrula-185214.iam.gserviceaccount.com" à sua conta do Google
+                                <p>Para o funcionamento do Analytics no painel, adicione o usuário
+                                    "analytics@185214.iam.gserviceaccount.com" à sua conta do Google
                                     Analytics na qual está configurado
                                     este e-commerce.</p>
                             </div>

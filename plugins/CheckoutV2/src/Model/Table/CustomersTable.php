@@ -256,22 +256,8 @@ class CustomersTable extends AppTable
      */
     public function afterSave(Event $event, EntityInterface $entity, ArrayObject $options)
     {
-        $Garrula = TableRegistry::getTableLocator()->get('Admin.Stores');
-        $garrula = $Garrula->findConfig('garrula');
-        if (isset($garrula->nerdpress_synchronize_customers) && $garrula->nerdpress_synchronize_customers) {
-            $customer = [
-                'id' => $entity->id,
-                'name' => $entity->name,
-                'email' => $entity->email,
-            ];
-            $Nerdpress = new NerdpressComponent(new ComponentRegistry());
-            $customer_nerdpress = $Nerdpress->call('customer/view/' . $entity->id);
-            if ($customer_nerdpress['success']) {
-                $result = $Nerdpress->call('customer/update', 'post', $customer);
-            } else {
-                $result = $Nerdpress->call('customer/create', 'post', $customer);
-            }
-        }
+        $Main = TableRegistry::getTableLocator()->get('Admin.Stores');
+
         $this->updateAuthAfterEditUser($entity);
 
         $EmailTemplates = TableRegistry::getTableLocator()->get('Admin.EmailTemplates');
@@ -282,7 +268,7 @@ class CustomersTable extends AppTable
             ->first();
 
         if ($template) {
-            $store = $Garrula->findConfig('store');
+            $store = $Main->findConfig('store');
             $html = $EmailTemplates->buildHtml($template, [
                 'name' => $entity->name,
                 'email' => $entity->email,

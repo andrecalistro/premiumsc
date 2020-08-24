@@ -54,7 +54,7 @@ class ContactForm extends Form
         $session = new Session();
         $store = $session->read('Store');
         $mail = new Email();
-        $mail->setTransport('nerdweb')
+        $mail->setTransport('premiumsc')
             ->setEmailFormat('html')
             ->setTemplate(Configure::read('Theme') . '.contact')
             ->setReplyTo($data['email'], $data['name'])

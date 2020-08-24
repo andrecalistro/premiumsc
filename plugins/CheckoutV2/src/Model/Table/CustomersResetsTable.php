@@ -98,7 +98,7 @@ class CustomersResetsTable extends AppTable
         $token = Security::hash($customer->id . $customer->email . Time::now('America/Sao_Paulo'), 'sha256');
 
         $mail = new Email();
-        $mail->setTransport('nerdweb')
+        $mail->setTransport('premiumsc')
             ->setEmailFormat('html')
             ->setTemplate(Configure::read('Theme') . '.customer-lost-password')
             ->setFrom($store->email_contact, $store->name)

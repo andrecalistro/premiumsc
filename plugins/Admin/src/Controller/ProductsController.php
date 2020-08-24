@@ -24,7 +24,7 @@ use Cake\Routing\Router;
  */
 class ProductsController extends AppController
 {
-    public $garrula;
+    public $main;
     public $import_fields;
 
     /**
@@ -33,9 +33,9 @@ class ProductsController extends AppController
     public function initialize()
     {
         parent::initialize();
-        /** @var StoresTable $Garrula */
-        $Garrula = TableRegistry::getTableLocator()->get("Admin.Stores");
-        $this->garrula = $Garrula->findConfig('garrula');
+        /** @var StoresTable $Main */
+        $Main = TableRegistry::getTableLocator()->get("Admin.Stores");
+        $this->main = $Main->findConfig('main');
         $this->loadComponent('Integrators.Bling');
         $this->import_fields = [
             'null' => 'Não usar',
@@ -61,7 +61,7 @@ class ProductsController extends AppController
      */
     public function index()
     {
-        $this->viewBuilder()->setTemplate('Products/index/' . $this->garrula->template_product_form);
+        $this->viewBuilder()->setTemplate('Products/index/' . $this->main->template_product_form);
         $conditions = [];
         $filter = [
             'name' => '',
@@ -178,7 +178,7 @@ class ProductsController extends AppController
         } else {
             $messageTotalProducts = sprintf(__n("%s PRODUTO NA BASE DE DADOS", "%s PRODUTOS NA BASE DE DADOS", $total), $total);
         }
-        $table_class = 'products-table-' . $this->garrula->template_product_form;
+        $table_class = 'products-table-' . $this->main->template_product_form;
 
         $productsStatuses = $this->Products->ProductsStatuses->find('list')->toArray();
         $this->set(compact('products', 'categories', 'messageTotalProducts', 'filter', 'productsStatuses', 'table_class'));
@@ -190,7 +190,7 @@ class ProductsController extends AppController
      */
     public function view($id = null)
     {
-        $this->viewBuilder()->setTemplate('Products/view/' . $this->garrula->template_product_form);
+        $this->viewBuilder()->setTemplate('Products/view/' . $this->main->template_product_form);
         $product = $this->Products->get($id, [
             'contain' => [
                 'Categories',
@@ -221,7 +221,7 @@ class ProductsController extends AppController
      */
     public function add()
     {
-        $this->viewBuilder()->setTemplate('Products/add/' . $this->garrula->template_product_form);
+        $this->viewBuilder()->setTemplate('Products/add/' . $this->main->template_product_form);
         $product = $this->Products->newEntity();
         if ($this->request->is('post')) {
 
@@ -288,7 +288,7 @@ class ProductsController extends AppController
     {
 
 
-        $this->viewBuilder()->setTemplate('Products/edit/' . $this->garrula->template_product_form);
+        $this->viewBuilder()->setTemplate('Products/edit/' . $this->main->template_product_form);
         $product = $this->Products->get($id, [
             'contain' => [
                 'Filters',

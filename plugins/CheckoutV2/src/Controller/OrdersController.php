@@ -35,9 +35,9 @@ class OrdersController extends AppController
     public function waitingPayment($token = null)
     {
         $Stores = TableRegistry::getTableLocator()->get('Admin.Stores');
-        $garrula_config = $Stores->findConfig('garrula');
+        $main_config = $Stores->findConfig('main');
 
-        if (!$token || $token != $garrula_config->api_token) {
+        if (!$token || $token != $main_config->api_token) {
             throw UnauthorizedException(__('Token inválido. Você não tem permissão para acessar esse metódo.'));
         }
         $due_days = $Stores->getByKeyword('store_due_days');
@@ -69,7 +69,7 @@ class OrdersController extends AppController
     {
         try {
             $Stores = TableRegistry::getTableLocator()->get('Admin.Stores');
-            $store_config = $Stores->findConfig('garrula');
+            $store_config = $Stores->findConfig('main');
             if (!$token || $token != $store_config->api_token) {
                 throw new \Exception(__('Token inválido. Você não tem permissão para acessar esse metódo.'), 403);
             }

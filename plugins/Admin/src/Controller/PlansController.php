@@ -19,7 +19,7 @@ use Subscriptions\Service\Email;
 class PlansController extends AppController
 {
     /** @var object */
-    public $garrula;
+    public $main;
 
     /** @var PlansTable $plansTable */
     public $plansTable;
@@ -30,9 +30,9 @@ class PlansController extends AppController
     public function initialize()
     {
         parent::initialize();
-        /** @var StoresTable $Garrula */
-        $Garrula = TableRegistry::getTableLocator()->get("Admin.Stores");
-        $this->garrula = $Garrula->findConfig('garrula');
+        /** @var StoresTable $Main */
+        $Main = TableRegistry::getTableLocator()->get("Admin.Stores");
+        $this->main = $Main->findConfig('main');
 
         $this->plansTable = TableRegistry::getTableLocator()->get('Subscriptions.Plans');
 

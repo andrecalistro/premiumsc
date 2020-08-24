@@ -68,8 +68,8 @@ class CustomersController extends AppController
         ];
         $customers = $this->paginate($this->Customers);
         $Stores = TableRegistry::getTableLocator()->get('Admin.Stores');
-        $garrula = $Stores->findConfig('garrula');
-        isset($garrula->company_register) ? $company_register = $garrula->company_register : $company_register = false;
+        $main = $Stores->findConfig('main');
+        isset($main->company_register) ? $company_register = $main->company_register : $company_register = false;
 
         $this->set(compact('customers', 'filter', 'company_register'));
         $this->set('_serialize', ['customers']);
@@ -96,8 +96,8 @@ class CustomersController extends AppController
         ]);
 
         $Stores = TableRegistry::getTableLocator()->get('Admin.Stores');
-        $garrula = $Stores->findConfig('garrula');
-        isset($garrula->company_register) ? $company_register = $garrula->company_register : $company_register = false;
+        $main = $Stores->findConfig('main');
+        isset($main->company_register) ? $company_register = $main->company_register : $company_register = false;
         $referer = $this->referer();
 
         $this->set(compact('customer', 'company_register', 'referer'));
@@ -127,8 +127,8 @@ class CustomersController extends AppController
         $statuses = [0 => 'Inativo', 1 => 'Ativo'];
 
         $Stores = TableRegistry::getTableLocator()->get('Admin.Stores');
-        $garrula = $Stores->findConfig('garrula');
-        isset($garrula->company_register) ? $company_register = $garrula->company_register : $company_register = false;
+        $main = $Stores->findConfig('main');
+        isset($main->company_register) ? $company_register = $main->company_register : $company_register = false;
         $customersTypes = $this->Customers->CustomersTypes->find('list')
             ->toArray();
 
@@ -168,8 +168,8 @@ class CustomersController extends AppController
         $statuses = [0 => 'Inativo', 1 => 'Ativo'];
 
         $Stores = TableRegistry::getTableLocator()->get('Admin.Stores');
-        $garrula = $Stores->findConfig('garrula');
-        isset($garrula->company_register) ? $company_register = $garrula->company_register : $company_register = false;
+        $main = $Stores->findConfig('main');
+        isset($main->company_register) ? $company_register = $main->company_register : $company_register = false;
         $customersTypes = $this->Customers->CustomersTypes->find('list')
             ->toArray();
 

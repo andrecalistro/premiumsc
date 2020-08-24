@@ -3332,9 +3332,9 @@ class Initial extends AbstractMigration
         $this->table('users')
 			->insert([
 				[
-					'name' => 'Garrula',
-					'email' => 'garrula@nerdweb.com.br',
-					'password' => (new DefaultPasswordHasher)->hash('hiEmOaPL7p'),
+					'name' => 'Admin',
+					'email' => 'andrecalistro@hotmail.com',
+					'password' => (new DefaultPasswordHasher)->hash('#premiumsc2020'),
 					'rules_id' => 2,
 					'created' => $date,
 					'modified' => $date
@@ -3358,15 +3358,15 @@ class Initial extends AbstractMigration
 		$this->table('stores')
 			->insert([
 				[
-					'code' => 'garrula',
-					'keyword' => 'garrula_api_token',
+					'code' => 'main',
+					'keyword' => 'main_api_token',
 					'value' => Security::hash(Time::now('America/Sao_Paulo'), 'sha1', true),
 					'created' => $date,
 					'modified' => $date
 				],
 				[
-					'code' => 'garrula',
-					'keyword' => 'garrula_template_product_form',
+					'code' => 'main',
+					'keyword' => 'main_template_product_form',
 					'value' => 'default',
 					'created' => $date,
 					'modified' => $date
@@ -3423,7 +3423,7 @@ class Initial extends AbstractMigration
 				[
 					'code' => 'store',
 					'keyword' => 'store_name',
-					'value' => 'Loja Garrula',
+					'value' => 'Loja Premium Shirts Club',
 					'created' => $date,
 					'modified' => $date
 				],

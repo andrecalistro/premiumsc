@@ -26,7 +26,7 @@ class NerdpressComponent extends Component
     {
         parent::initialize($config);
         $Stores = TableRegistry::getTableLocator()->get('Admin.Stores');
-        $this->setConfig('garrula', (array)$Stores->findConfig('garrula'));
+        $this->setConfig('main', (array)$Stores->findConfig('main'));
     }
 
     /**
@@ -37,18 +37,18 @@ class NerdpressComponent extends Component
      */
     public function call($path, $method = 'post', $data = null)
     {
-        if ($this->getConfig('garrula.nerdpress_synchronize_customers')) {
-            if (!$this->getConfig('garrula.nerdpress_api_url')) {
+        if ($this->getConfig('main.nerdpress_synchronize_customers')) {
+            if (!$this->getConfig('main.nerdpress_api_url')) {
                 throw new Exception(__('A URL da api com o Nerdpress não foi preenchida ou está incorreta no administrador do Garrula'));
             }
             $client = new Client();
             $data['token'] = 'd7d5b51e8a034f8ee4e41d43432bb5436f2a8b5f227f9e023cc3cc558d2b484c';
             switch ($method) {
                 case 'get':
-                    $result = $client->get($this->getConfig('garrula.nerdpress_api_url') . $path);
+                    $result = $client->get($this->getConfig('main.nerdpress_api_url') . $path);
                     break;
                 default:
-                    $result = $client->post($this->getConfig('garrula.nerdpress_api_url') . $path, $data);
+                    $result = $client->post($this->getConfig('main.nerdpress_api_url') . $path, $data);
                     break;
             }
             return $result->json;

@@ -168,16 +168,16 @@ class StoresController extends AppController
             $data = $this->Stores->prepareSave($this->request->getData(), 'main');
             $entities = $this->Stores->newEntities($data);
             if ($this->Stores->saveMany($entities)) {
-                $this->Flash->success(__("Configurações do Garrula foram salvas."));
+                $this->Flash->success(__("Configurações foram salvas."));
                 return $this->redirect(['action' => 'main']);
             } else {
-                $this->Flash->error(__("As configurações do Garrula não foram salvas. Por favor, tente novamente."));
+                $this->Flash->error(__("As configurações não foram salvas. Por favor, tente novamente."));
             }
         }
         $statuses = [0 => 'Não', 1 => 'Sim'];
 
         $this->set(compact('main', 'statuses'));
-        $this->set('_serialize', 'garrula');
+        $this->set('_serialize', 'main');
     }
 
     /**

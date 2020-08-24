@@ -195,9 +195,7 @@ class PaypalPlusComponent extends Component
         $profiles = \PayPal\Api\WebProfile::get_list($apiContext);
         if ($profiles) {
             foreach ($profiles as $key => $profile) {
-                //if ($profile->getName() == 'garrula') {
                 return $profile->getId();
-                //}
             }
         }
 
@@ -218,7 +216,7 @@ class PaypalPlusComponent extends Component
 
         $webProfile = new \PayPal\Api\WebProfile($apiContext);
         $webProfile->setFlowConfig($flowConfig)
-            ->setName('garrula_' . uniqid())
+            ->setName('premiumsc_' . uniqid())
             ->setInputFields($inputFields)
             ->setPresentation($presentation);
 

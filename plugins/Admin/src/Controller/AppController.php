@@ -63,7 +63,7 @@ class AppController extends Controller
         $Stores = TableRegistry::getTableLocator()->get('Admin.Stores');
         $this->store = $Stores->getConfig();
         $this->request->getSession()->write('Store', $this->store);
-        $this->set('_store_name', empty($this->store->name) ? 'Nerdweb' : $this->store->name);
+        $this->set('_store_name', empty($this->store->name) ? 'Premium Shirts Club' : $this->store->name);
         $this->set('_store_icon', $this->store->thumb_icon_link);
     }
 
@@ -87,7 +87,7 @@ class AppController extends Controller
 
         $this->set('_class_path', str_replace('/', '-', $this->request->getPath()));
 
-        if (preg_match('/andre|garrula|nerdweb/', $this->request->getServerParams()['SERVER_NAME'])) {
+        if (preg_match('/andre/', $this->request->getServerParams()['SERVER_NAME'])) {
             $this->set('_ambient', 'test');
         }else{
             $this->set('_ambient', 'production');

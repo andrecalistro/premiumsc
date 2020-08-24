@@ -95,7 +95,7 @@ class CustomersConfirmationsTable extends AppTable
         $token = Security::hash($customer->id . $customer->email, 'sha256');
 
         $mail = new Email();
-        $mail->setTransport('nerdweb')
+        $mail->setTransport('premiumsc')
             ->setEmailFormat('html')
             ->setTemplate(Configure::read('Theme') . '.customer-confirmation')
             ->setFrom($store->email_contact, $store->name)
