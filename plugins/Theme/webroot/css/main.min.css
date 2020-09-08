@@ -1,9 +1,4 @@
-/*-----------------------------------------------------------------------------------
-
-    Template Name: Flone - Minimalist eCommerce Bootstrap 4 Template
-    Version: 2.0.2
-
------------------------------------------------------------------------------------
+/*---------------------------------------------------------------------------------
     
     CSS INDEX
     ===================
@@ -2217,7 +2212,7 @@ a.default-btn {
   color: #03563e; }
 .language-currency-wrap .same-language-currency p {
   letter-spacing: .8px;
-  color: #555252;
+  color: #ffffff;
   line-height: 1;
   margin-top: -1px; }
 .language-currency-wrap .same-language-currency:hover > a {

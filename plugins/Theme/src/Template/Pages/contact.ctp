@@ -2,6 +2,10 @@
 /**
  * @var \App\View\AppView $this
  */
+$this->Html->script([
+    'CheckoutV2.sweetalert2.all.min.js',
+    'CheckoutV2.alert.functions.js'
+], ['fullBase' => true, 'block' => 'scriptBottom']);
 ?>
 <div class="breadcrumb-area pt-35 pb-35 bg-gray-3">
     <div class="container">

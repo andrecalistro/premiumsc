@@ -3,6 +3,10 @@
  * @var \App\View\AppView $this
  * @var \Cake\Controller\Component\AuthComponent $_auth
  */
+if ($_auth) {
+    $nameParts = explode(" ", $_auth['name']);
+    $name = reset($nameParts);
+}
 ?>
 <header class="header-area clearfix header-hm8">
     <div class="header-top-area header-padding-2">
@@ -12,7 +16,7 @@
                     <div class="same-language-currency">
                         <p>
                             <a href="#" title="Whatsapp">
-                                <i class="fa fa-whatsapp" aria-hidden="true"></i> <?= $_store->cellphone ?>
+                                <i class="fa fa-whatsapp" aria-hidden="true"></i> <?= $_store->cellphone ?> (Whatsapp)
                             </a>
                         </p>
                     </div>
@@ -32,7 +36,7 @@
                         <div class="account-dropdown">
                             <ul>
                                 <?php if ($_auth): ?>
-                                    <li><a href="<?= $this->Url->build(['controller' => 'customers', 'action' => 'dashboard', 'plugin' => 'CheckoutV2'], ['fullBase' => true]) ?>">Olá, <?= $_auth['name'] ?></a></li>
+                                    <li><a href="<?= $this->Url->build(['controller' => 'customers', 'action' => 'dashboard', 'plugin' => 'CheckoutV2'], ['fullBase' => true]) ?>">Olá, <?= $name ?></a></li>
                                 <?php else: ?>
                                     <li><a href="<?= $this->Url->build(['controller' => 'customers', 'action' => 'register', 'plugin' => 'CheckoutV2'], ['fullBase' => true]) ?>">Login</a></li>
                                     <li><a href="<?= $this->Url->build(['controller' => 'customers', 'action' => 'register', 'plugin' => 'CheckoutV2'], ['fullBase' => true]) ?>">Cadastrar</a></li>

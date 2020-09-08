@@ -2,6 +2,8 @@
 
 namespace CheckoutV2\Controller;
 
+use Cake\Event\Event;
+
 /**
  * CustomersAddresses Controller
  *
@@ -23,6 +25,18 @@ class CustomersAddressesController extends AppController
             ->toArray();
         $this->set(compact('customersAddresses'));
         $this->set('_serialize', ['customersAddresses']);
+    }
+
+    /**
+     * @param Event $event
+     * @return \Cake\Network\Response|void|null
+     */
+    public function beforeRender(Event $event)
+    {
+        parent::beforeRender($event);
+        $this->viewBuilder()->setTheme('CheckoutV2');
+        $this->viewBuilder()->setLayout('CheckoutV2.checkout');
+        $this->set(false, $this->_steps);
     }
 
     /**
