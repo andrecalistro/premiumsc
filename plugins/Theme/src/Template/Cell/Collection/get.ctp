@@ -14,10 +14,10 @@
             <div class="collection-active owl-carousel">
                 <?php foreach($categories as $category): ?>
                 <div class="collection-product">
-                    <div class="collection-img">
-                        <a href="<?= $category->full_link ?>">
-                            <?= $this->Html->image($category->image_link) ?>
-                        </a>
+                    <div class="collection-img" onclick="window.location.href='<?= $category->full_link ?>'"
+                        style="background: url('<?= $category->image_link ?>') no-repeat; background-position: center center; background-size: contain;
+                                height: 300px; width: 100%; cursor: pointer;"
+                    >
                     </div>
                     <div class="collection-content text-center">
                         <span><?= $category->products_total ?> produtos</span>
