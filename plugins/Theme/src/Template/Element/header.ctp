@@ -36,7 +36,7 @@ if ($_auth) {
                         <div class="account-dropdown">
                             <ul>
                                 <?php if ($_auth): ?>
-                                    <li><a href="<?= $this->Url->build(['controller' => 'customers', 'action' => 'dashboard', 'plugin' => 'CheckoutV2'], ['fullBase' => true]) ?>">Olá, <?= $name ?></a></li>
+                                    <li><a href="<?= $this->Url->build(['controller' => 'customers', 'action' => 'orders', 'plugin' => 'CheckoutV2'], ['fullBase' => true]) ?>">Olá <?= $name ?></a></li>
                                 <?php else: ?>
                                     <li><a href="<?= $this->Url->build(['controller' => 'customers', 'action' => 'register', 'plugin' => 'CheckoutV2'], ['fullBase' => true]) ?>">Login</a></li>
                                     <li><a href="<?= $this->Url->build(['controller' => 'customers', 'action' => 'register', 'plugin' => 'CheckoutV2'], ['fullBase' => true]) ?>">Cadastrar</a></li>
